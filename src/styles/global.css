@@ -1,0 +1,40 @@
+/* Default Styles */
+* { margin: 0; padding: 0; box-sizing: border-box }
+
+body {
+  display: grid;
+  grid-template-areas: 
+    "head"
+    "main"
+    "foot";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  gap: 16px;
+}
+
+header {
+  grid-area: head;
+  padding: 0 16px;
+  gap: 12px;
+  border-bottom: 1px solid #000;
+
+  /* Logo */
+  a { 
+    gap: 8px; font-size: 16px; margin-right: auto;
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  /* Control Buttons */
+  button { font-size: 12px }
+  #menuBtn { display: none }
+}
+
+main { grid-area: main; margin: 0 auto }
+
+footer {
+  grid-area: foot;
+  border-top: 1px solid #000;
+}
