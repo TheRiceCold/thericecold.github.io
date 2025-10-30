@@ -1,9 +1,38 @@
 ---
+import '../styles/home.css'
 import Layout from '../layouts/Layout.astro'
 
+const projects = [
+	{name: 'Project 1', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
+	{name: 'Project 2', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
+	{name: 'Project 3', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
+	{name: 'Project 4', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
+]
+
+const posts = [
+	{title: 'Post 1', date: 'October 15, 2025'},
+	{title: 'Post 2', date: 'September 4, 2025'},
+	{title: 'Post 3', date: 'June 12, 2025'},
+	{title: 'Post 4', date: 'March 10, 2025'},
+]
 ---
 <Layout title="Home" description="TheRiceCold's homepage">
 	<main id="home">
-		<h1>Homepage</h1>
+		<section>
+			<h3>Hello there👋!</h3>
+			<p>This website serves as documentation of my professional background, projects, and insights.</p>
+		</section>
+		<section>
+			<h4>Projects</h4>
+      <ul>
+				{projects.map(p => (<li><a>{p.name}</a> - {p.description}</li>))}
+      </ul>
+		</section>
+		<section>
+			<h4>Recent Posts</h4>
+      <ul>
+				{posts.map(p => (<li><a>{p.title}</a> <small>{p.date}</small></li>))}
+      </ul>
+		</section>
 	</main>
 </Layout>

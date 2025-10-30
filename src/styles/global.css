@@ -31,16 +31,25 @@
 * {margin:0;padding:0;box-sizing:border-box}
 
 /* Capitalize */
-a, button, input, mark { all: unset; text-transform: capitalize }
+a,button,input,mark{all:unset;text-transform:capitalize}
 
 /* Cursor Pointer Tags */
-a, button, svg, img {cursor:pointer}
+a,button,svg,img {cursor:pointer}
 
 /* Flex row vertically centered */
-header, li, a { display: flex; align-items: center }
+header,li,a{display:flex;align-items:center}
+
+/* Flex column */
+main,section,aside,ul{display:flex;flex-direction:column}
 
 /* Bold Text */
-button {font-weight: 600}
+button{font-weight: 600}
+
+/* Surface */
+aside,section{background:var(--surface);padding:12px;border:var(--border)}
+
+/* List Style */
+ul{list-style:none;font-size:15px;gap:6px}
 
 body {
   display: grid;
@@ -82,16 +91,3 @@ footer {
   border-top: var(--border);
   background: var(--surface);
 }
-
-.toggle{
-  width:60px;height:30px;background:var(--muted);cursor:pointer;position:relative;
-  transition:background var(--transition);
-  border:1px solid var(--accent-2);
-}
-.dot{
-  position:absolute;top:3px;left:3px;width:24px;height:24px;background:var(--surface);
-  transition:transform var(--transition);
-  border:1px solid var(--accent-3);
-}
-.toggle[data-state="dark"] .dot{transform:translateX(30px)}
-

@@ -1,0 +1,19 @@
+#home {
+  gap:16px;
+  /* width:min-content; */
+
+  li{gap:4px}
+  p,li{font-size:14px}
+  h3,h4{margin-bottom:8px}
+  a {color:var(--accent);&:hover{color: var(--primary)}}
+
+  section{
+    &:first-child a{text-transform:lowercase}
+    &:last-child li{
+      padding-bottom:4px;
+      justify-content:space-between;
+      a::before {content:'✱ '}
+      &:not(:last-child) {border-bottom:var(--border)}
+    }
+  }
+}
