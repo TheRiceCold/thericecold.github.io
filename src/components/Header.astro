@@ -4,10 +4,38 @@ import Me from '../../public/me.svg'
 ---
 <header>
   <a href="/">
-    <Me />
+    <Me/>
     <b>TheRiceCold</b>
   </a>
+
   <button id="themeBtn">theme</button>
   <button id="langBtn">lang</button>
   <button id="menuBtn">☰</button>
+
+  <script>
+    (() => {
+
+      let currentThemeIndex = 0;
+      const
+        themeStates = ['auto','dark','light'],
+        themeBtns = document.querySelectorAll('#themeBtn'),
+        savedTheme = localStorage.getItem('theme') || 'auto'
+
+      const applyTheme = state => {
+        document.documentElement.setAttribute('data-theme', state)
+        localStorage.setItem('theme', state)
+        themeBtns.forEach(b => b.textContent = 'Theme: '+state)
+      }
+
+      if(savedTheme && themeStates.includes(savedTheme))
+        currentThemeIndex = themeStates.indexOf(savedTheme)
+
+      themeBtns.forEach(b => b.onclick = () => {
+        currentThemeIndex = (currentThemeIndex+1) % themeStates.length
+        applyTheme(themeStates[currentThemeIndex])
+      })
+
+      applyTheme(themeStates[currentThemeIndex])
+    })()
+  </script>
 </header>

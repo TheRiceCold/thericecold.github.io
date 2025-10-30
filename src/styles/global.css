@@ -1,5 +1,46 @@
-/* Default Styles */
-* { margin: 0; padding: 0; box-sizing: border-box }
+:root {
+  --bg: #faf4ed;
+  --txt: #575279;
+  --primary: #b4637a;
+  --accent: #907aa9;
+  --accent-2: #56949f;
+  --accent-3: #286983;
+  --accent-4: #907aa9;
+
+  --muted: #797593;
+
+  --surface: #fffaf3;
+  --border: 1px solid var(--muted);
+  --dashed: 1px dashed var(--muted);
+}
+
+[data-theme="dark"] {
+  --bg: #191724;
+  --surface: #1f1d2e;
+  --txt: #e0def4;
+  --primary: #eb6f92;
+  --accent: #c4a7e7;
+  --accent-2: #9ccfd8;
+  --accent-3: #31748f;
+  --accent-4: #c4a7e7;
+
+  --muted: #6e6a86;
+}
+
+/* Reset */
+* {margin:0;padding:0;box-sizing:border-box}
+
+/* Capitalize */
+a, button, input, mark { all: unset; text-transform: capitalize }
+
+/* Cursor Pointer Tags */
+a, button, svg, img {cursor:pointer}
+
+/* Flex row vertically centered */
+header, li, a { display: flex; align-items: center }
+
+/* Bold Text */
+button {font-weight: 600}
 
 body {
   display: grid;
@@ -7,24 +48,26 @@ body {
     "head"
     "main"
     "foot";
+  font-family: Inter,system-ui,sans-serif;
+  /* font-family: Arial,-apple-system, sans-serif; */
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   gap: 16px;
+  background: var(--bg);
+  color: var(--txt);
 }
 
 header {
   grid-area: head;
   padding: 0 16px;
   gap: 12px;
-  border-bottom: 1px solid #000;
+  background: var(--surface);
+  border-bottom: var(--border);
 
   /* Logo */
   a { 
-    gap: 8px; font-size: 16px; margin-right: auto;
-    svg {
-      width: 40px;
-      height: 40px;
-    }
+    gap: 8px;margin-right: auto;
+    svg {width: 40px;height: 40px;background:var(--accent)}
   }
 
   /* Control Buttons */
@@ -32,9 +75,23 @@ header {
   #menuBtn { display: none }
 }
 
-main { grid-area: main; margin: 0 auto }
+main {grid-area: main; margin: 0 auto}
 
 footer {
   grid-area: foot;
-  border-top: 1px solid #000;
+  border-top: var(--border);
+  background: var(--surface);
 }
+
+.toggle{
+  width:60px;height:30px;background:var(--muted);cursor:pointer;position:relative;
+  transition:background var(--transition);
+  border:1px solid var(--accent-2);
+}
+.dot{
+  position:absolute;top:3px;left:3px;width:24px;height:24px;background:var(--surface);
+  transition:transform var(--transition);
+  border:1px solid var(--accent-3);
+}
+.toggle[data-state="dark"] .dot{transform:translateX(30px)}
+
