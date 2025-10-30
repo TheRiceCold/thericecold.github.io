@@ -10,6 +10,11 @@ const applyTheme = state => {
   themeBtns.forEach(b => b.textContent = 'Theme: '+state)
 }
 
+const
+    menu = document.getElementById('menuBtn'),
+    overlay = document.getElementById('overlay'),
+    mobileSidebar = document.getElementById('mobileSidebar');
+
 (() => {
   if(savedTheme && themeStates.includes(savedTheme))
     currentThemeIndex = themeStates.indexOf(savedTheme)
@@ -20,4 +25,14 @@ const applyTheme = state => {
   })
 
   applyTheme(themeStates[currentThemeIndex])
+
+  menu.onclick = () => { mobileSidebar.classList.toggle('show'); overlay.classList.toggle('show') }
+  overlay.onclick = () => { mobileSidebar.classList.remove('show'); overlay.classList.remove('show') }
+
+  // Sidebar Dropdown Menu
+  document.querySelectorAll('#dropdownBtn')
+    .forEach(b => b.onclick = e => {
+      b.nextElementSibling.classList.toggle('show')
+      b.classList.toggle('show')
+    })
 })()

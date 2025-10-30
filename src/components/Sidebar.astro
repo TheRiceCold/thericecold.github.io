@@ -1,11 +1,34 @@
 ---
+import Me from '../../public/me.svg'
 import posts from '../scripts/allPosts.js'
+
+const links = ['about', 'projects', 'artworks', 'blog']
+
 ---
 <aside id="sidebar">
   <h3>Blog posts</h3>
   <input placeholder="search" onclick="location.href='blog'">
   {posts.map(i => (<>
-    <button>{i.label}</button>
-    <ul class="show">{i.posts.map(p => <a>{p}</a>)}</ul>
+    <button id="dropdownBtn">{i.label}</button>
+    <ul>{i.posts.map(p => <a>{p}</a>)}</ul>
   </>))}
+</aside>
+
+<div id="overlay" />
+<aside id="mobileSidebar">
+  <div>
+    <button id="themeBtn"/>
+    <button id="langBtn">Lang</button>
+  </div>
+  <div>{links.map(l => <a href={l}>{l}</a>)}</div>
+  <div>
+    <h3>Blog posts</h3>
+    <input placeholder="search" onclick="location.href='blog'">
+  </div>
+  <ul>
+    {posts.map(i => (<>
+      <button id="dropdownBtn">{i.label}</button>
+      <ul>{i.posts.map(p => <a>{p}</a>)}</ul>
+    </>))}
+  </ul>
 </aside>
