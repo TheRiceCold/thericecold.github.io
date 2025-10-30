@@ -1,0 +1,38 @@
+aside {
+  top:16px;
+  font-size:14px;
+  position:sticky;
+  width:fit-content;height:fit-content;
+  a {
+    font-size: 13px;
+    color:var(--accent);
+    &::before{content:'❖'}
+    &:hover{color:var(--primary)}
+  }
+  /* Search input */
+  input{padding:4px;width:calc(100% - 12px);border:var(--border)}
+}
+#sidebar {
+  grid-area: side;
+  left: 8px;
+  gap: 12px;
+  min-width:200px;height:calc(100vh - 72px);
+  button {padding:0;&::before{content: '✸ '}}
+  ul {display: none}
+  ul.show { display: flex; margin-left: 8px }
+
+  overflow-y:auto;
+  /* Hide Scrollbar */
+  -ms-overflow-style:none; /* For Internet Explorer, Edge */
+  scrollbar-width:none; /* For Firefox */
+  /* For Chrome, Safari, and Opera */
+  &::-webkit-scrollbar{display:none}
+}
+#nav {
+  left: 0;
+  grid-area:nav;
+  min-width:150px;
+  align-items:center;
+  border:var(--dashed);
+  h4{margin-bottom:4px}
+}

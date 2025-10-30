@@ -1,0 +1,11 @@
+---
+import posts from '../scripts/allPosts.js'
+---
+<aside id="sidebar">
+  <h3>Blog posts</h3>
+  <input placeholder="search" onclick="location.href='blog'">
+  {posts.map(i => (<>
+    <button>{i.label}</button>
+    <ul class="show">{i.posts.map(p => <a>{p}</a>)}</ul>
+  </>))}
+</aside>

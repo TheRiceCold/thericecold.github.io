@@ -1,0 +1,13 @@
+---
+const { title = 'Navigator', shortcuts, outline } = Astro.props
+---
+<aside id="nav" class={outline ? 'outline' : ''}>
+  <ul>
+    <h4>⚏ {title} ⚏</h4>
+    {shortcuts.map(c => {
+      if (typeof c === 'object')
+        return <a href={c.link}>{c.label}</a>
+      else return <a href={c}>{c}</a>
+    })}
+  <ul>
+</aside>

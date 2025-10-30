@@ -1,0 +1,7 @@
+body{
+  grid-template-areas:
+    "head head head"
+    "side main nav"
+    "foot foot foot";
+  grid-template-columns: auto 1fr auto;
+}

@@ -1,7 +1,20 @@
 ---
+import '../styles/about.css'
+import '../styles/aside.css'
 import Layout from '../layouts/Layout.astro'
+import Sidebar from '../components/Sidebar.astro'
+import Navigator from '../components/Navigator.astro'
+
+const gh = {label: 'GitHub', link: 'https://github.com/thericecold'}
+
+const shortcuts = [
+  {label: 'Resume', link:''}, gh,
+  {label: 'Duolingo', link: 'https://invite.duolingo.com/BDHTZTB5CWWKT5KLM744IL2KSY'},
+]
 ---
 <Layout title="About" description="About TheRiceCold">
+	<Sidebar/>
+	<Navigator shortcuts={shortcuts}/>
 	<main id="about">
 		<h1>About Page</h1>
 	</main>

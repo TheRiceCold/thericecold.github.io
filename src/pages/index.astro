@@ -1,6 +1,16 @@
 ---
 import '../styles/home.css'
+import '../styles/aside.css'
+
 import Layout from '../layouts/Layout.astro'
+import Sidebar from '../components/Sidebar.astro'
+import Navigator from '../components/Navigator.astro'
+
+
+const shortcuts = [
+  'about', 'projects', 'artworks',
+  { label: 'timeline', link: 'blog' }
+]
 
 const projects = [
 	{name: 'Project 1', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
@@ -17,17 +27,33 @@ const posts = [
 ]
 ---
 <Layout title="Home" description="TheRiceCold's homepage">
+	<Sidebar/>
+	<Navigator shortcuts={shortcuts}/>
+
 	<main id="home">
+		{/*Intro*/}
 		<section>
 			<h3>Hello there👋!</h3>
 			<p>This website serves as documentation of my professional background, projects, and insights.</p>
 		</section>
+
+		{/*Projects*/}
 		<section>
 			<h4>Projects</h4>
       <ul>
 				{projects.map(p => (<li><a>{p.name}</a> - {p.description}</li>))}
       </ul>
 		</section>
+
+		{/*Artworks*/}
+		<section>
+			<h4>Artworks</h4>
+			<div>
+			{Array.from({length:8}).fill('').map(i => <img />)}
+			</div>
+		</section>
+
+		{/*Recent posts*/}
 		<section>
 			<h4>Recent Posts</h4>
       <ul>

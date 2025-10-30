@@ -1,3 +1,11 @@
+body{
+  grid-template-areas:
+    "head head head"
+    "side main nav"
+    "foot foot foot";
+  grid-template-columns: auto 1fr auto;
+}
+
 #home {
   gap:16px;
   /* width:min-content; */
@@ -14,6 +22,17 @@
       justify-content:space-between;
       a::before {content:'✱ '}
       &:not(:last-child) {border-bottom:var(--border)}
+    }
+
+    /* Artworks */
+    div{
+      gap:12px;
+      img{
+        opacity:75%;
+        object-fit:cover;
+        width:100px;height:100px;
+        &:hover{opacity:100%}
+      }
     }
   }
 }
