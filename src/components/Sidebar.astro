@@ -1,34 +1,14 @@
----
-import Me from '../../public/me.svg'
-import posts from '../scripts/allPosts.js'
-
-const links = ['about', 'projects', 'artworks', 'blog']
-
----
 <aside id="sidebar">
   <h3>Blog posts</h3>
-  <input placeholder="search" onclick="location.href='blog'">
-  {posts.map(i => (<>
-    <button id="dropdownBtn">{i.label}</button>
-    <ul>{i.posts.map(p => <a>{p}</a>)}</ul>
-  </>))}
-</aside>
-
-<div id="overlay" />
-<aside id="mobileSidebar">
-  <div>
-    <button id="themeBtn"/>
-    <button id="langBtn">Lang</button>
-  </div>
-  <div>{links.map(l => <a href={l}>{l}</a>)}</div>
-  <div>
-    <h3>Blog posts</h3>
-    <input placeholder="search" onclick="location.href='blog'">
-  </div>
+  <input data-i18n-attr="placeholder:search" onclick="location.href='blog'">
   <ul>
-    {posts.map(i => (<>
-      <button id="dropdownBtn">{i.label}</button>
-      <ul>{i.posts.map(p => <a>{p}</a>)}</ul>
-    </>))}
+    <template data-i18n-list="blog">
+      <button data-button data-i18n-item="category" id="dropdownBtn"/>
+      <ul>
+        <template data-i18n-sublist="posts">
+          <a data-i18n-item />
+        </template>
+      </ul>
+    </template>
   </ul>
 </aside>

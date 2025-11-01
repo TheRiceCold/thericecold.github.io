@@ -1,0 +1,32 @@
+<div id="overlay" />
+<aside id="mobileSidebar">
+  <div>
+    <button
+      id="langBtn"
+      data-i18n-sep=": "
+      data-i18n="language,langName"/>
+    <button
+      id="themeBtn"
+      data-i18n-sep=": "
+      data-i18n="theme,themeVal"/>
+  </div>
+  <div>
+    <template data-i18n-list="links">
+      <a data-i18n-item data-i18n-item-attr="href" />
+    </template>
+  </div>
+  <div>
+    <h3>Blog posts</h3>
+    <input data-i18n-attr="placeholder:search" onclick="location.href='blog'">
+  </div>
+  <ul>
+    <template data-i18n-list="blog">
+      <button data-i18n-item="category" id="dropdownBtn"/>
+      <ul>
+        <template data-i18n-sublist="posts">
+          <a data-i18n-item />
+        </template>
+      </ul>
+    </template>
+  </ul>
+</aside>

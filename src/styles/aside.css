@@ -1,20 +1,26 @@
 aside {
   top:16px;
-  font-size:14px;
   position:sticky;
   width:fit-content;height:fit-content;
+  h3 {font-size: 15px}
   /* Link decoration */
   a {font-size: 13px; &::before{content:'❖'}}
   /* Search input */
-  input{padding:4px;width:calc(100% - 12px);border:var(--border)}
+  input{
+    padding:4px;
+    font-size:13px;
+    border:var(--border);
+    width:calc(100% - 12px);
+  }
+
+  ul>ul{margin-left:8px}
 }
 
 #sidebar {
   grid-area: side;
   left: 8px;
   gap: 12px;
-  min-width:200px;height:calc(100vh - 72px);
-  ul{margin-left: 8px}
+  min-width:200px;height:calc(100% - 56px);
 }
 #nav {
   left: 0;
@@ -54,11 +60,7 @@ aside {
   display:flex;align-items:start;
   &.show{transform:translateX(0)}
 
-  >ul{
-    margin: 12px 0 0 16px;
-    button{font-size:16px}
-    ul{margin-left:8px}
-  }
+  >ul{margin: 12px 0 0 16px}
   div{
     gap: 16px;
     width: 100%;
@@ -73,6 +75,10 @@ aside {
     }
     &:nth-child(3){justify-content:space-between}
   }
+}
+
+@media (max-width: 1024) {
+  #mobileSidebar,#overlay{display:none}
 }
 @media (max-width: 768px){
   #nav, #sidebar{display: none}
