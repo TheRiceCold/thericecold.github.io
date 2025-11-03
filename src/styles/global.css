@@ -40,8 +40,8 @@
 /* Reset */
 * {margin:0;padding:0;box-sizing:border-box}
 
-/* Capitalize */
-a,button,input,mark{all:unset;text-transform:capitalize}
+/* Unset and Capitalize */
+a,button,input{all:unset;text-transform:capitalize}
 
 /* Cursor Pointer Tags */
 a,button,svg,img {cursor:pointer}

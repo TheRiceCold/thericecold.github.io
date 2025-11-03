@@ -1,38 +1,24 @@
-let currentThemeIndex = 0
 const
-  themeStates = ['system','dark','light'],
-  themeBtns = document.querySelectorAll('#themeBtn'),
-  savedTheme = localStorage.getItem('theme') || 'system'
+  menu = document.getElementById('menuBtn'),
+  overlay = document.getElementById('overlay'),
+  mobileSidebar = document.getElementById('mobileSidebar');
 
-const applyTheme = state => {
-  document.documentElement.setAttribute('data-theme', state)
-  localStorage.setItem('theme', state)
-  themeBtns.forEach(b => b.textContent = 'Theme: '+state)
-}
+for (const b of document.querySelectorAll('#langBtn'))
+  b.onclick = langStore.next
 
-const
-    menu = document.getElementById('menuBtn'),
-    overlay = document.getElementById('overlay'),
-    mobileSidebar = document.getElementById('mobileSidebar');
+// Theme
+for (const b of document.querySelectorAll('#themeBtn'))
+  b.onclick = themeStore.next
 
-(() => {
-  if(savedTheme && themeStates.includes(savedTheme))
-    currentThemeIndex = themeStates.indexOf(savedTheme)
+// Mobile Sidebar
+menu.onclick = () => { mobileSidebar.classList.toggle('show'); overlay.classList.toggle('show') }
+overlay.onclick = () => { mobileSidebar.classList.remove('show'); overlay.classList.remove('show') }
 
-  themeBtns.forEach(b => b.onclick = () => {
-    currentThemeIndex = (currentThemeIndex+1) % themeStates.length
-    applyTheme(themeStates[currentThemeIndex])
-  })
+// Sidebar Dropdown Menu
+langStore.onRebind(() => {
+  for(const b of document.querySelectorAll('#dropdownBtn'))
+    b.onclick = () => b.nextElementSibling.classList.toggle('show')
+})
 
-  applyTheme(themeStates[currentThemeIndex])
-
-  menu.onclick = () => { mobileSidebar.classList.toggle('show'); overlay.classList.toggle('show') }
-  overlay.onclick = () => { mobileSidebar.classList.remove('show'); overlay.classList.remove('show') }
-
-  // Sidebar Dropdown Menu
-  document.querySelectorAll('#dropdownBtn')
-    .forEach(b => b.onclick = e => {
-      b.nextElementSibling.classList.toggle('show')
-      b.classList.toggle('show')
-    })
-})()
+langStore.init()
+themeStore.apply()

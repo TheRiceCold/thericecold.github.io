@@ -2,6 +2,24 @@
 
 // import globalTranslations from '../i18n/translations/global.js'
 
+// Cached elements
+let elsText, elsHtml, elsAttr, tmplLists
+let rebindCallbacks = [], debounceTimer = null;
+
+const resolve = (obj, path) => {
+  if (!obj || !path) return undefined
+  const keys = path.split('.')
+  let val = obj;
+  for (let key of keys) {
+    const [prop, index] = key.split(/[-.]/)
+    val = val?.[prop]
+    if (Array.isArray(val) && index !== undefined && index !== '')
+      val = val[Number(index)]
+    if (val === undefined) return undefined
+  }
+  return val
+}
+
 const langStore = (() => {
   let translations = { ...globalTranslations }
   let currentLang =
@@ -11,19 +29,6 @@ const langStore = (() => {
   if (!translations[currentLang]) {
     const fallback = Object.keys(translations)[0] || 'en'
     currentLang = fallback
-  }
-
-  // Cached elements — one-time lookup (static DOM)
-  let elsText, elsHtml, elsAttr, tmplLists
-
-  const resolve = (obj, path) => {
-    if (!obj || !path) return undefined
-    let val = obj
-    for (const k of path.split('.')) {
-      val = val?.[k]
-      if (val === undefined) return
-    }
-    return val
   }
 
   const t = (key, vars) => {
@@ -47,10 +52,15 @@ const langStore = (() => {
     }
   }
 
-  let rebindCallbacks = []
-
-  const onRebind = (cb) => {
+  const onRebind = cb => {
     if (typeof cb === 'function') rebindCallbacks.push(cb)
+  }
+
+  const triggerRebind = () => {
+    clearTimeout(debounceTimer)
+    debounceTimer = setTimeout(() => {
+      for (const fn of rebindCallbacks) fn()
+    }, 50) // adjust delay if needed
   }
 
   const updateI18nElements = () => {
@@ -163,6 +173,7 @@ const langStore = (() => {
     currentLang = lang
     localStorage.setItem('lang', lang)
     updateI18nElements()
+    triggerRebind() // run callbacks safely
   }
 
   const next = () => {

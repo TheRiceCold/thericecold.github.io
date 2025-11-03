@@ -2,13 +2,18 @@ aside {
   top:16px;
   position:sticky;
   width:fit-content;height:fit-content;
+
   h3 {font-size: 15px}
+  a,input{font-size:13px}
+  h3,input{margin-bottom:8px}
+
   /* Link decoration */
-  a {font-size: 13px; &::before{content:'❖'}}
+  a::before{content:'❖'}
+  button{font-size:14px}
+
   /* Search input */
   input{
     padding:4px;
-    font-size:13px;
     border:var(--border);
     width:calc(100% - 12px);
   }
@@ -17,13 +22,11 @@ aside {
 }
 
 #sidebar {
-  grid-area: side;
-  left: 8px;
-  gap: 12px;
+  grid-area:side;left:12px;
   min-width:200px;height:calc(100% - 56px);
 }
 #nav {
-  left: 0;
+  right:12px;
   grid-area:nav;
   min-width:150px;
   align-items:center;

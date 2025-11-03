@@ -6,58 +6,55 @@ import Layout from '../layouts/Layout.astro'
 import Sidebar from '../components/Sidebar.astro'
 import Navigator from '../components/Navigator.astro'
 
-const shortcuts = [
-  'about', 'projects', 'artworks',
-  { label: 'timeline', link: 'blog' }
-]
+import registerScript from '../scripts/registerScript'
+import homeTranslations from '../i18n/translations/home.json?raw'
 
-const projects = [
-	{name: 'Project 1', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
-	{name: 'Project 2', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
-	{name: 'Project 3', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
-	{name: 'Project 4', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'},
-]
+const script = await registerScript(`
+  langStore.registerTranslations(${homeTranslations})
+`)
 
-const posts = [
-	{title: 'Post 1', date: 'October 15, 2025'},
-	{title: 'Post 2', date: 'September 4, 2025'},
-	{title: 'Post 3', date: 'June 12, 2025'},
-	{title: 'Post 4', date: 'March 10, 2025'},
-]
 ---
-<Layout title="Home" description="TheRiceCold's homepage">
+<Layout description="TheRiceCold's homepage">
+	<Navigator shortcuts="links" />
 	<Sidebar/>
-	<Navigator shortcuts={shortcuts}/>
 
 	<main id="home">
 		{/*Intro*/}
 		<section>
-			<h3>Hello there👋!</h3>
-			<p>This website serves as documentation of my professional background, projects, and insights.</p>
+			<h3 data-i18n="welcome"/>
+			<p data-i18n-html="intro"/>
 		</section>
 
 		{/*Projects*/}
 		<section>
-			<h4>Projects</h4>
+			<h4 data-i18n="projects.label"/>
       <ul>
-				{projects.map(p => (<li><a>{p.name}</a> - {p.description}</li>))}
+				<template data-i18n-list="projects.list">
+					<li data-i18n-item data-i18n-html />
+				</template>
       </ul>
 		</section>
 
 		{/*Artworks*/}
 		<section>
-			<h4>Artworks</h4>
+			<h4 data-i18n="links-2"/>
 			<div>
-			{Array.from({length:8}).fill('').map(i => <img />)}
+				{Array.from({length:8}).fill('').map(i => <img />)}
 			</div>
 		</section>
 
 		{/*Recent posts*/}
 		<section>
-			<h4>Recent Posts</h4>
+			<h4 data-i18n="recentPosts.label"/>
       <ul>
-				{posts.map(p => (<li><a>{p.title}</a> <small>{p.date}</small></li>))}
+				<template data-i18n-list="recentPosts.list">
+					<li>
+						<a data-i18n-item="title" />
+						<small data-i18n-item="date" />
+					</li>
+				</template>
       </ul>
 		</section>
 	</main>
+	<script is:inline set:html={script.code}></script>
 </Layout>

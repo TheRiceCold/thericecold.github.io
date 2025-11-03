@@ -8,14 +8,16 @@ body{
 
 #home {
   gap:16px;
-  /* width:min-content; */
+  width:min-content;
 
   li{gap:4px}
   p,li{font-size:14px}
   h3,h4{margin-bottom:8px}
 
   section{
-    a::before {content:'✱ '}
+    &:not(:first-child) a::before {content:'✱ '}
+    &:first-child a{display:inline;text-transform:none}
+
     &:last-child li{
       padding-bottom:4px;
       justify-content:space-between;

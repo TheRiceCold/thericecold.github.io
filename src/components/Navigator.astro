@@ -1,9 +1,9 @@
 ---
-const { title = 'Navigator', shortcuts, outline } = Astro.props
+const { shortcuts, outline } = Astro.props
 ---
 <aside id="nav" class={outline ? 'outline' : ''}>
+  <h3>⚏ <b data-i18n="outline" /> ⚏</h3>
   <ul>
-    <h4>⚏ {title} ⚏</h4>
     <template data-i18n-list={shortcuts}>
       <a data-i18n-item data-i18n-item-attr="href" />
     </template>

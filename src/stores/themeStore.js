@@ -5,19 +5,19 @@ const themeStore = (() => {
   let current = localStorage.getItem('theme') ||
     (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
 
-  function set(theme) {
+  const set = theme => {
     if (!THEMES.includes(theme)) return
     current = theme
     localStorage.setItem('theme', theme)
     apply()
   }
 
-  function apply() {
+  const apply = () => {
     document.documentElement.dataset.theme = current
     langStore.updateI18nElements()
   }
 
-  function next() {
+  const next = () => {
     set(THEMES[
       (THEMES.indexOf(current) + 1) % THEMES.length
     ])
