@@ -6,6 +6,7 @@ import Footer from '../components/Footer.astro'
 import MobileSidebar from '../components/MobileSidebar.astro'
 
 const {
+  page,
   description = "TheRiceCold's Website"
 } = Astro.props
 
@@ -19,7 +20,7 @@ const {
   <link rel="icon" type="image/svg+xml" href="me.svg">
 </head>
 <body>
-  <MobileSidebar />
-  <Header/> <slot/> <Footer/>
+  <MobileSidebar/>
+  <Header/><main id={page}><slot/></main><Footer/>
 </body>
 </html>

@@ -1,7 +1,20 @@
-body{
-  grid-template-areas:
-    "head head head"
-    "side main nav"
-    "foot foot foot";
-  grid-template-columns: auto 1fr auto;
+#about {
+  grid-template-columns:auto 1fr auto;
+  grid-template-areas:"side content nav";
+
+  article{
+    grid-area: content;
+    width: 600px;
+    margin: 0 auto;
+
+    p{padding:8px 0}
+    a{display:inline}
+    b,p{font-size:14px}
+    svg {width:60px;height:60px;margin-right:8px}
+    div{align-items:center}
+    p:not(:last-child){border-bottom:var(--border)}
+    b{margin-top:4px;text-transform:capitalize;&::after{content:':'}}
+  }
 }
+
+#sidebar{height:calc(100% - 92px)}

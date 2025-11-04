@@ -7,44 +7,41 @@ import Sidebar from '../components/Sidebar.astro'
 import Navigator from '../components/Navigator.astro'
 
 import registerScript from '../scripts/registerScript'
-import homeTranslations from '../i18n/translations/home.json?raw'
+import translations from '../i18n/translations/home.json?raw'
 
-const script = await registerScript(`
-  langStore.registerTranslations(${homeTranslations})
-`)
+const script = await registerScript(`langStore.registerTranslations(${translations})`)
 
 ---
-<Layout description="TheRiceCold's homepage">
-	<Navigator shortcuts="links" />
+<Layout page="about" description="TheRiceCold's homepage" page="home">
 	<Sidebar/>
 
-	<main id="home">
+	<section>
 		{/*Intro*/}
-		<section>
+		<article>
 			<h3 data-i18n="welcome"/>
 			<p data-i18n-html="intro"/>
-		</section>
+		</article>
 
 		{/*Projects*/}
-		<section>
+		<article>
 			<h4 data-i18n="projects.label"/>
       <ul>
 				<template data-i18n-list="projects.list">
 					<li data-i18n-item data-i18n-html />
 				</template>
       </ul>
-		</section>
+		</article>
 
 		{/*Artworks*/}
-		<section>
+		<article>
 			<h4 data-i18n="links-2"/>
 			<div>
 				{Array.from({length:8}).fill('').map(i => <img />)}
 			</div>
-		</section>
+		</article>
 
 		{/*Recent posts*/}
-		<section>
+		<article>
 			<h4 data-i18n="recentPosts.label"/>
       <ul>
 				<template data-i18n-list="recentPosts.list">
@@ -54,7 +51,9 @@ const script = await registerScript(`
 					</li>
 				</template>
       </ul>
-		</section>
-	</main>
+		</article>
+	</section>
+
+	<Navigator shortcuts="links" />
 	<script is:inline set:html={script.code}></script>
 </Layout>

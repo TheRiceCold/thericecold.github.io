@@ -1,7 +1,9 @@
 aside {
   top:16px;
   position:sticky;
-  width:fit-content;height:fit-content;
+  min-width:150px;
+  overflow-y:auto;
+  scrollbar-width: thin;
 
   h3 {font-size: 15px}
   a,input{font-size:13px}
@@ -21,22 +23,23 @@ aside {
   ul>ul{margin-left:8px}
 }
 
-#sidebar {
-  grid-area:side;left:12px;
-  min-width:200px;height:calc(100% - 56px);
+#sidebar{
+  grid-area:side;
+  left: 12px;
+  align-self: start;
+  height: calc(100vh - 32px);
 }
+
 #nav {
-  right:12px;
   grid-area:nav;
-  min-width:150px;
+  right:12px;
   align-items:center;
+  height: fit-content;
   border:var(--dashed);
   h4{margin-bottom:4px}
 }
 
 #sidebar, #mobileSidebar {
-  overflow-y:auto;
-  scrollbar-width: thin;
   button+ul{display: none;&.show{display:flex}}
   button:not(#themeBtn,#langBtn) {
     padding:0;&::before{content:'✸ '}

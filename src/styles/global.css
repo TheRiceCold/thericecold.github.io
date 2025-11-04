@@ -38,7 +38,7 @@
 }
 
 /* Reset */
-* {margin:0;padding:0;box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box}
 
 /* Unset and Capitalize */
 a,button,input{all:unset;text-transform:capitalize}
@@ -53,7 +53,7 @@ div{display:flex}
 header,li,a{display:flex;align-items:center}
 
 /* Flex column */
-main,section,aside,ul{display:flex;flex-direction:column}
+section,article,aside,ul{display:flex;flex-direction:column}
 
 /* Bold Text */
 a,button{font-weight: 600}
@@ -62,20 +62,23 @@ a,button{font-weight: 600}
 a{gap: 4px}
 
 /* Surface */
-aside,section{background:var(--surface);padding:12px;border:var(--border)}
+aside,article{background:var(--surface);padding:12px;border:var(--border)}
 
 /* List Style */
 ul{list-style:none;font-size:15px;gap:6px}
 
 body {
+  margin: 0;
   display: grid;
-  font-family: Inter,system-ui,sans-serif;
-  /* font-family: Arial,-apple-system, sans-serif; */
-  grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   gap: 16px;
-  background: var(--bg);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "head" "main" "foot";
+
+  font-family: Inter,system-ui,sans-serif;
+  /* font-family: Arial,-apple-system, sans-serif; */
   color: var(--txt);
+  background: var(--bg);
   a{color: var(--link);&:hover{color:var(--primary)}}
 }
 
@@ -98,7 +101,7 @@ header {
   #menuBtn { display: none }
 }
 
-main {grid-area: main;margin: 0 auto}
+main{grid-area:main;display:grid}
 
 footer {
   grid-area: foot;
