@@ -10,7 +10,7 @@
     "dark": "dark",
     "outline": "Outline",
     "footer": "This is a footer.",
-    "links": ["About", "Projects", "Artworks", "Timeline"],
+    "links": ["about", "projects", "artworks", "timeline"],
     "blog": {
       "label": "Blog Posts",
       "list": [
@@ -48,7 +48,7 @@
     "dark": "oscuro",
     "outline": "Índice",
     "footer": "Esto es pie de pagina.",
-    "links": ["Sobre", "Proyectos", "Obras de Arte", "Cronología"],
+    "links": ["Acerca de mí", "Proyectos", "Obras de Arte", "Cronología"],
     "blog": {
       "label": "Entradas de Blog",
       "list": [
@@ -76,39 +76,39 @@
     }
   },
   "fil": {
-    "language": "wika",
+    "language": "Wikà",
     "langName": "Tagalog",
-    "title": "KaningLamig",
+    "title": "KaningLamíg",
     "search": "hanapin..",
     "theme": "tema",
-    "system": "sistema",
+    "system": "kaayusán",
     "light": "liwanag",
-    "dark": "dilim",
-    "outline": "Balangkas",
-    "footer": "Ito ay paa ng pahina.",
-    "links": ["Tungkol", "Mga Gawa", "Mga Sining", "Hilera ng Panahon"],
+    "dark": "dilím",
+    "outline": "Nilálamán",
+    "footer": "Ito ay paanán ng páhiná.",
+    "links": ["Tungkól sakin", "Mga Gawâ", "Mga Sining", "Hilera ng Panahón"],
     "blog": {
-      "label": "Mga Lathalaing Blog",
+      "label": "Mga paglalathalà",
       "list": [
         {
-          "category": "mga tala",
-          "posts": ["tala 1", "tala 2"]
+          "category": "mga talâ",
+          "posts": ["talâ 1", "talâ 2"]
         },
         {
           "category": "aralin",
-          "posts": ["simuno 1", "simuno 2", "simuno 3"]
+          "posts": ["simunò 1", "simunò 2", "simunò 3"]
         },
         {
-          "category": "mga kaisipan",
-          "posts": ["kaisipan 1", "kaisipan 2", "kaisipan 3", "kaisipan 4"]
+          "category": "mga kaisipán",
+          "posts": ["kaisipán 1", "kaisipán 2", "kaisipán 3", "kaisipán 4"]
         },
         {
-          "category": "mga pananaliksik",
-          "posts": ["pananaliksik 1", "pananaliksik 2", "pananaliksik 3"]
+          "category": "mga pananaliksík",
+          "posts": ["pananaliksík 1", "pananaliksík 2", "pananaliksík 3"]
         },
         {
-          "category": "mga sulatin",
-          "posts": ["isang tula", "isang sulatin"]
+          "category": "mga kasulatán",
+          "posts": ["isáng tulâ", "isáng kasulatán"]
         }
       ]
     }

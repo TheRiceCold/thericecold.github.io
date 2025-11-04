@@ -6,8 +6,8 @@
     "projects": {
       "label": "Featured Projects",
       "list": [
-        "<a href='https://github.com/thericecold/likha'>Likha</a> - A high-performance commandline text editor written from scratch.",
-        "<a href='https://github.com/thericecold/laro'>Laro Engine</a> - A lightweight Game Engine.",
+        "<a href='https://github.com/thericecold/likha'>Likhâ</a> - A high-performance commandline text editor written from scratch.",
+        "<a href='https://github.com/thericecold/laro'>Larô Engine</a> - A lightweight Game Engine.",
         "<a href='https://github.com/thericecold/kaizen'>Kaizen (Archived)</a> - A GJS/Ags written desktop environment for Hyprland Linux"
       ]
     },
@@ -28,8 +28,8 @@
     "projects": {
       "label": "Proyectos destacados",
       "list": [
-        "<a href='https://github.com/thericecold/likha'>Likha</a> - Un editor de texto de línea de comandos de alto rendimiento escrito desde cero.",
-        "<a href='https://github.com/thericecold/laro'>Laro Engine</a> - Un game engine ligero.",
+        "<a href='https://github.com/thericecold/likha'>Likhâ</a> - Un editor de texto de línea de comandos de alto rendimiento escrito desde cero.",
+        "<a href='https://github.com/thericecold/laro'>Larô Engine</a> - Un game engine ligero.",
         "<a href='https://github.com/thericecold/kaizen'>Kaizen (Archived)</a> - Un entorno de escritorio escrito en GJS/Ags para Hyprland Linux."
       ]
     },
@@ -45,23 +45,23 @@
   },
   "fil": {
     "page": "Tahanan",
-    "welcome": "Hello po👋!",
-    "intro": "Ito ay nagsisilbing portfolio digital na pagpapakilala ng aking mga propesyonal na karanasan, mga malikhaing gawa, at iba ibang mga lathala. Kung iyong ninanais na kilalanin pa ang taong ito, <a href='about'>pindutin ito</a>.",
+    "welcome": "Tao po🚪✊!",
+    "intro": "Itó'y nagsisilbíng dihitál na portpolyo upang ipakilala ang aking mga kadalubhasàang karanasán, mga malikhaing gawa, at iba ibang mga paglalathalà. Kung iyong ninanais pang mabatid ang taong itó, <a href='about'>pindutín itó</a>.",
     "projects": {
-      "label": "Mga Tampok na Gawa",
+      "label": "Tampók na mga gawâ",
       "list": [
-        "<a href='https://github.com/thericecold/likha'>Likha</a> - Mabilis na pangwasto ng sulatin sa commandline na ginawa mula sa umpisa.",
-        "<a href='https://github.com/thericecold/laro'>Laro Engine</a> - Magaang Game Engine.",
-        "<a href='https://github.com/thericecold/kaizen'>Kaizen (Archived)</a> - Isang sulatin na kapaligiran ng desktop gamit ang GJS/Ags na takda sa Hyprland Linux."
+        "<a href='https://github.com/thericecold/likha'>Likhâ</a> - Isang matindí at banat na pangwasto ng sulatin sa commandline na gawa mula sa kahig.",
+        "<a href='https://github.com/thericecold/laro'>Larô Engine</a> - Isang langkág na pangawâ ng larô.",
+        "<a href='https://github.com/thericecold/kaizen'>Kaizen (Archived)</a> - Isang kapáligirán ng desktop isinulat gamit ang GJS/Ags na gawâ pang Hyprland Linux."
       ]
     },
     "recentPosts": {
-      "label": "Mga Huling Lathala",
+      "label": "Mga hulíng paglalathalà",
       "list": [
-        { "title": "Lathala 1", "date": "Oktubre 15, 2025" },
-        { "title": "Lathala 2", "date": "Septembre 4, 2025" },
-        { "title": "Lathala 3", "date": "Junyo 12, 2025" },
-        { "title": "Lathain 4", "date": "Marso 10, 2025" }
+        { "title": "Lathalaín 1", "date": "Oktubre 15, 2025" },
+        { "title": "Lathalaín 2", "date": "Septyembre 4, 2025" },
+        { "title": "Lathalaín 3", "date": "Hunyo 12, 2025" },
+        { "title": "Lathalaín 4", "date": "Marso 10, 2025" }
       ]
     }
   },
@@ -72,8 +72,8 @@
     "projects": {
       "label": "注目のプロジェクト",
       "list": [
-        "<a href='https://github.com/thericecold/likha'>Likha</a> -ゼロから書き上げられた高性能なコマンドラインテキストエディタ.",
-        "<a href='https://github.com/thericecold/laro'>Laro Engine</a> -軽量ゲームエンジン.",
+        "<a href='https://github.com/thericecold/likha'>Likhâ</a> -ゼロから書き上げられた高性能なコマンドラインテキストエディタ.",
+        "<a href='https://github.com/thericecold/laro'>Larô Engine</a> -軽量ゲームエンジン.",
         "<a href='https://github.com/thericecold/kaizen'>Kaizen (Archived)</a> - Hyprland Linux 向けの GJS/Ags ベースのデスクトップ環境."
       ]
     },
@@ -94,8 +94,8 @@
     "projects": {
       "label": "精選專案",
       "list": [
-        "<a href='https://github.com/thericecold/likha'>Likha</a> - 一款从零开始编写的高性能命令行文本编辑器.",
-        "<a href='https://github.com/thericecold/laro'>Laro Engine</a> - 轻量级游戏引擎.",
+        "<a href='https://github.com/thericecold/likha'>Likhâ</a> - 一款从零开始编写的高性能命令行文本编辑器.",
+        "<a href='https://github.com/thericecold/laro'>Larô Engine</a> - 轻量级游戏引擎.",
         "<a href='https://github.com/thericecold/kaizen'>Kaizen (Archived)</a> - 一款为Hyprland Linux系统开发的GJS/Ags桌面环境."
       ]
     },
@@ -112,12 +112,12 @@
   "de": {
     "page": "heim",
     "welcome": "Halo👋!",
-    "intro": "Diese Website dient als digitales Portfolio, in dem ich meinen beruflichen Werdegang, meine IT-Projekte, meine kreativen Arbeiten und verschiedene Publikationen präsentiere.Weitere Informationen zu dieser zufälligen Person finden Sie <a href='about'>hier</a>.",
+    "intro": "Diese Website dient als digitales Portfolio, in dem ich meinen beruflichen Werdegang, meine IT-Projekte, meine kreativen Arbeiten und verschiedene Publikationen präsentiere. Weitere Informationen zu dieser zufälligen Person finden Sie <a href='about'>hier</a>.",
     "projects": {
       "label": "vorgestellte Projekte",
       "list":  [
-        "<a href='https://github.com/thericecold/likha'>Likha</a> - Ein von Grund auf neu entwickelter, leistungsstarker Texteditor für die Kommandozeile.",
-        "<a href='https://github.com/thericecold/laro'>Laro Engine</a> - Eine leichtgewichtige Spiel-Engine.",
+        "<a href='https://github.com/thericecold/likha'>Likhâ</a> - Ein von Grund auf neu entwickelter, leistungsstarker Texteditor für die Kommandozeile.",
+        "<a href='https://github.com/thericecold/laro'>Larô Engine</a> - Eine leichtgewichtige Spiel-Engine.",
         "<a href='https://github.com/thericecold/kaizen'>Kaizen (Archived)</a> - Eine von GJS/Ags geschriebene Desktop-Umgebung für Hyprland Linux"
       ]
     },
