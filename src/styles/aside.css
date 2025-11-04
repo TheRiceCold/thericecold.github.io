@@ -37,6 +37,7 @@ aside {
   height: fit-content;
   border:var(--dashed);
   h4{margin-bottom:4px}
+  a{text-transform:none}
 }
 
 #sidebar, #mobileSidebar {

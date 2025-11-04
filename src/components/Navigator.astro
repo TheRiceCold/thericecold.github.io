@@ -1,11 +1,19 @@
 ---
-const { shortcuts, outline } = Astro.props
+
+const { title = 'outline', shortcuts } = Astro.props
+
 ---
-<aside id="nav" class={outline ? 'outline' : ''}>
-  <h3>⚏ <b data-i18n="outline" /> ⚏</h3>
+<aside id="nav">
+  <h3>⚏ <b data-i18n={title}/> ⚏</h3>
   <ul>
-    <template data-i18n-list={shortcuts}>
-      <a data-i18n-item data-i18n-item-attr="href" />
-    </template>
+    {Array.isArray(shortcuts) ? (
+      shortcuts.map(s => (
+        <a href={s.link} data-i18n={s.label ?? ''}>{s.isI18n ? '' : s.label}</a>
+      ))
+    ) : (
+      <template data-i18n-list={shortcuts}>
+        <a data-i18n-item data-i18n-item-attr="href:{en}"/>
+      </template>
+    )}
   <ul>
 </aside>

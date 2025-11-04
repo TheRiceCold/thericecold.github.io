@@ -1,10 +1,10 @@
 // src/stores/langStore.js
 
-// import globalTranslations from '../i18n/translations/global.js'
+// import globalTranslations from '../i18n/translations/global.json'
 
 // Cached elements
 let elsText, elsHtml, elsAttr, tmplLists
-let rebindCallbacks = [], debounceTimer = null;
+let rebinders = [], debounceTimer = null;
 
 const resolve = (obj, path) => {
   if (!obj || !path) return undefined
@@ -52,38 +52,28 @@ const langStore = (() => {
     }
   }
 
-  const onRebind = cb => {
-    if (typeof cb === 'function') rebindCallbacks.push(cb)
-  }
-
-  const triggerRebind = () => {
-    clearTimeout(debounceTimer)
-    debounceTimer = setTimeout(() => {
-      for (const fn of rebindCallbacks) fn()
-    }, 50) // adjust delay if needed
-  }
+  const onRebind = fn => rebinders.push(fn)
 
   const updateI18nElements = () => {
-    // Regular text nodes
+    // Text content
     for (const e of elsText) {
       const keys = e.dataset.i18n.split(',')
       const sep = e.dataset.i18nSep ?? ' '
       e.textContent = keys.map(k => t(k.trim())).join(sep)
     }
 
-    // HTML replacements
+    // HTML content
     for (const e of elsHtml) {
       const keys = e.dataset.i18nHtml.split(',')
       e.innerHTML = keys.map(k => t(k.trim())).join(' ')
     }
 
-    // Attribute replacements
-    for (const e of elsAttr) {
-      const pairs = e.dataset.i18nAttr.split(';').map(p => p.split(':'))
-      for (const [attr, key] of pairs) {
-        if (!attr || !key) continue
-        const val = t(key.trim())
-        if (val) e.setAttribute(attr, val)
+    for (const el of elsAttr) {
+      const entries = el.dataset.i18nAttr.split(',')
+      for (const entry of entries) {
+        const [attr, key] = entry.split(':').map(s => s.trim())
+        const val = t(key)
+        el.setAttribute(attr, val)
       }
     }
 
@@ -94,7 +84,6 @@ const langStore = (() => {
       if (!Array.isArray(list)) continue
 
       const parent = tmpl.parentElement
-      // Clear existing rendered elements (faster than querySelectorAll)
       for (let i = parent.children.length - 1; i >= 0; i--) {
         const el = parent.children[i]
         if (el.tagName !== 'TEMPLATE') parent.removeChild(el)
@@ -102,20 +91,39 @@ const langStore = (() => {
 
       for (const item of list) {
         const clone = tmpl.content.cloneNode(true)
-        const i18nItems = clone.querySelectorAll('[data-i18n-item]')
+        const items = clone.querySelectorAll('[data-i18n-item]')
         const subTmpls = clone.querySelectorAll('template[data-i18n-sublist]')
 
-        for (const elItem of i18nItems) {
-          const itemKey = elItem.dataset.i18nItem
+        for (const el of items) {
+          const itemKey = el.dataset.i18nItem
           const val =
-            itemKey && typeof item === 'object'
-              ? resolve(item, itemKey)
-              : typeof item === 'string'
-              ? item
-              : ''
+            itemKey && typeof item === 'object' ? resolve(item, itemKey) :
+            typeof item === 'string' ? item : ''
 
-          if ('i18nHtml' in elItem.dataset) elItem.innerHTML = val
-          else elItem.textContent = val
+          const attrSpec = el.dataset.i18nItemAttr
+          if (attrSpec) {
+            const parts = attrSpec.split(':')
+            const attrName = parts[0].trim()
+            const rawVal = parts[1] ? parts[1].trim() : null
+
+            let attrValue = rawVal ?? val
+
+            // replace {en} with English translation
+            if (attrValue.includes('{en}')) {
+              const enList = translations['en'][key]
+              if (Array.isArray(enList)) {
+                const enValue =
+                  typeof item === 'string'
+                    ? enList[list.indexOf(item)]
+                    : null
+                attrValue = attrValue.replace('{en}', enValue || '')
+              }
+            }
+            el.setAttribute(attrName, attrValue)
+          }
+
+          if ('i18nHtml' in el.dataset) el.innerHTML = val ?? ''
+          else el.textContent = val ?? ''
         }
 
         for (const sub of subTmpls) {
@@ -124,7 +132,6 @@ const langStore = (() => {
           if (!Array.isArray(subList)) continue
 
           const subParent = sub.parentElement
-          // same clear logic for subitems
           for (let i = subParent.children.length - 1; i >= 0; i--) {
             const el = subParent.children[i]
             if (el.tagName !== 'TEMPLATE') subParent.removeChild(el)
@@ -133,6 +140,7 @@ const langStore = (() => {
           for (const subItem of subList) {
             const subClone = sub.content.cloneNode(true)
             const elSubs = subClone.querySelectorAll('[data-i18n-item]')
+            const attrItems = clone.querySelectorAll('[data-i18n-item-attr]')
 
             for (const elSub of elSubs) {
               const subItemKey = elSub.dataset.i18nItem
@@ -140,8 +148,7 @@ const langStore = (() => {
                 subItemKey && typeof subItem === 'object'
                   ? resolve(subItem, subItemKey)
                   : typeof subItem === 'string'
-                  ? subItem
-                  : ''
+                  ? subItem : ''
 
               if ('i18nHtml' in elSub.dataset) elSub.innerHTML = val
               else elSub.textContent = val
@@ -155,12 +162,13 @@ const langStore = (() => {
       }
     }
 
-    // Rebind events from modified elements
-    for (const fn of rebindCallbacks) fn()
+    clearTimeout(debounceTimer)
+    debounceTimer = setTimeout(() => {
+      for (const fn of rebinders) fn()
+    }, 10)
   }
 
   const init = () => {
-    // Single DOM query pass
     elsText = document.querySelectorAll('[data-i18n]')
     elsHtml = document.querySelectorAll('[data-i18n-html]')
     elsAttr = document.querySelectorAll('[data-i18n-attr]')
@@ -173,7 +181,6 @@ const langStore = (() => {
     currentLang = lang
     localStorage.setItem('lang', lang)
     updateI18nElements()
-    triggerRebind() // run callbacks safely
   }
 
   const next = () => {
@@ -189,7 +196,6 @@ const langStore = (() => {
     setLanguage,
     next, init, t,
     getLanguages: () => Object.keys(translations),
-    get current() { return currentLang },
     onRebind,
   }
 })()

@@ -10,8 +10,9 @@
     p{padding:8px 0}
     a{display:inline}
     b,p{font-size:14px}
-    svg {width:60px;height:60px;margin-right:8px}
     div{align-items:center}
+    small a{text-transform:none}
+    svg {width:60px;height:60px;margin-right:8px}
     p:not(:last-child){border-bottom:var(--border)}
     b{margin-top:4px;text-transform:capitalize;&::after{content:':'}}
   }

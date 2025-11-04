@@ -1,21 +1,89 @@
 ---
 import '../styles/about.css'
 import '../styles/aside.css'
+
+import Me from '../../public/me.svg'
+
 import Layout from '../layouts/Layout.astro'
 import Sidebar from '../components/Sidebar.astro'
 import Navigator from '../components/Navigator.astro'
 
-const gh = {label: 'GitHub', link: 'https://github.com/thericecold'}
+import registerScript from '../scripts/registerScript'
+import translations from '../i18n/translations/about.json?raw'
+
+const name = 'Dale Walter'
+const script = await registerScript(`langStore.registerTranslations(${translations})`)
+
+const addPipeSeparator = (list, index) => index < list.length - 1 ? ' | ' : ''
+
+const gh = {label: 'GitHub', link: 'https://github.com/thericecold' }
 
 const shortcuts = [
-  {label: 'Resume', link:''}, gh,
+  {isI18n: true, label: 'resume', link:''}, gh,
   {label: 'Duolingo', link: 'https://invite.duolingo.com/BDHTZTB5CWWKT5KLM744IL2KSY'},
 ]
+
+const links = [
+  gh, {label: 'YouTube', link: 'https://youtube.com/dalewaltergh'},
+  {label: 'X(Twitter)', link: 'https://x.com/thericecold'},
+  {label: 'Duolingo', link: 'https://invite.duolingo.com/BDHTZTB5CWWKT5KLM744IL2KSY'},
+  {label: 'Instagram', link: 'https://instagram.com/thericecold'},
+  {label: 'TikTok', link: 'https://tiktok.com/@thericecold'},
+  {label: 'Spotify', link: 'https://invite.duolingo.com/BDHTZTB5CWWKT5KLM744IL2KSY'},
+]
+
+const unixList = ['Git', 'Docker', 'Bash', 'Nix']
+const softwareList = ['Photoshop', 'Krita', 'Illustrator/Inkscape', 'Blender']
+const progList = ['C', 'C++', 'Go', 'JavaScript', 'Python', 'Lua', 'Lisp']
+const dbList = ['Postgres', 'MySQL', 'MongoDB', 'Firebase']
+const libList = ['React', 'Vue', 'Tailwind', 'Express', 'Lua', 'SQL', 'Typst']
+const osList = ['NixOS', 'Debian Linux', 'Arch Linux', 'Windows', 'Mac']
+
 ---
-<Layout title="About" description="About TheRiceCold">
+<Layout page="about" description="About TheRiceCold">
 	<Sidebar/>
-	<Navigator shortcuts={shortcuts}/>
-	<main id="about">
-		<h1>About Page</h1>
-	</main>
+
+  <article>
+    <div>
+      <Me />
+      <ul>
+        <h3>{name}</h3>
+        <small data-i18n-html="profession" />
+      </ul>
+    </div>
+		<p data-i18n="summary"/>
+
+		<b data-i18n="programming"/>
+    <p>{progList.map((p, i, list) => p+addPipeSeparator(list, i))}</p>
+
+		<b data-i18n="database"/>
+    <p>{dbList.map((p, i, list) => p+addPipeSeparator(list, i))}</p>
+
+		<b data-i18n="unix"/>
+    <p>{unixList.map((db, i, list) => db+addPipeSeparator(list, i))}</p>
+
+		<b data-i18n="os"/>
+    <p>{osList.map((os, i, list) => os+addPipeSeparator(list, i))}</p>
+
+		<b data-i18n="softwares"/>
+    <p>{softwareList.map((t, i, list) => t+addPipeSeparator(list, i))}</p>
+
+		<b data-i18n="languages.label"/>
+    <p data-i18n="languages.content"/>
+
+		<b data-i18n="extra.label"/>
+    <p data-i18n="extra.content"/>
+
+		<b data-i18n="follow"/>
+		<p>
+      {links.map((l, i, list) => (
+        <>
+          <a href={l.link}>{l.label}</a>
+          {addPipeSeparator(list, i)}
+        </>
+      ))}
+		</p>
+  </article>
+	<Navigator shortcuts={shortcuts} />
+	<script is:inline set:html={script.code}></script>
 </Layout>
