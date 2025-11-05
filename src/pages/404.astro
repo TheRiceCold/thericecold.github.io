@@ -1,0 +1,27 @@
+---
+import {
+  registerPageTranslations,
+  getFinalScript
+} from '../scripts/registerScript'
+
+import '../styles/aside.css'
+import '../styles/404.css'
+
+import Layout from '../layouts/Layout.astro'
+import Sidebar from '../components/Sidebar.astro'
+import Navigator from '../components/Navigator.astro'
+
+registerPageTranslations('404')
+const script = await getFinalScript()
+
+---
+
+<Layout description="Page not found" page="notfound">
+	<Sidebar/>
+  <section>
+    <h1 data-i18n="oops"/>
+    <h3 data-i18n="404"/>
+  </section>
+	<Navigator shortcuts="links"/>
+	<script is:inline set:html={script.code}></script>
+</Layout>

@@ -1,0 +1,16 @@
+#notfound{
+  grid-template-columns:auto 1fr auto;
+  grid-template-areas:"side content nav";
+}
+
+h1{font-size: 48px}
+
+#sidebar{height: calc(100vh - 96px)}
+
+section {
+  grid-area: content;
+  margin: auto auto;
+  gap: 16px;
+  padding-bottom: 32px;
+  align-items: center
+}

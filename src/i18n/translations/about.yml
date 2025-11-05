@@ -21,7 +21,7 @@ en:
   follow: follow me
 
 es:
-  page: Acerca de mí
+  page: Sobre mí
   profession: Programador | Artista | <a>Ver currículum</a>
   summary: >-
     Me formé en Artes y Desarrollo de Videojuegos, y completé un bootcamp de
@@ -64,7 +64,7 @@ fil:
     content: 'Kasarián: XY | MBTI: INTP | Henerasyón: Z | Bayan: Pilipinas'
   follow: tumalunton sakin
 
-jp:
+ja:
   page: について
   profession: プログラマー | 芸術家 | <a>履歴書を見る</a>
   summary: >-
