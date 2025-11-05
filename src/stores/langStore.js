@@ -119,7 +119,7 @@ const langStore = (() => {
                 attrValue = attrValue.replace('{en}', enValue || '')
               }
             }
-            el.setAttribute(attrName, attrValue)
+            el.setAttribute(attrName, attrValue.toLowerCase())
           }
 
           if ('i18nHtml' in el.dataset) el.innerHTML = val ?? ''

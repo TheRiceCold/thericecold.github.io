@@ -1,4 +1,9 @@
 ---
+import {
+  registerPageTranslations,
+  getFinalScript,
+} from '../scripts/registerScript'
+
 import '../styles/about.css'
 import '../styles/aside.css'
 
@@ -8,14 +13,9 @@ import Layout from '../layouts/Layout.astro'
 import Sidebar from '../components/Sidebar.astro'
 import Navigator from '../components/Navigator.astro'
 
-import registerScript from '../scripts/registerScript'
-import translations from '../i18n/translations/about.json?raw'
-
-const name = 'Dale Walter'
-const script = await registerScript(`langStore.registerTranslations(${translations})`)
-
 const addPipeSeparator = (list, index) => index < list.length - 1 ? ' | ' : ''
 
+const name = 'Dale Walter'
 const gh = {label: 'GitHub', link: 'https://github.com/thericecold' }
 
 const shortcuts = [
@@ -38,6 +38,9 @@ const progList = ['C', 'C++', 'Go', 'JavaScript', 'Python', 'Lua', 'Lisp']
 const dbList = ['Postgres', 'MySQL', 'MongoDB', 'Firebase']
 const libList = ['React', 'Vue', 'Tailwind', 'Express', 'Lua', 'SQL', 'Typst']
 const osList = ['NixOS', 'Debian Linux', 'Arch Linux', 'Windows', 'Mac']
+
+registerPageTranslations('about')
+const script = await getFinalScript()
 
 ---
 <Layout page="about" description="About TheRiceCold">

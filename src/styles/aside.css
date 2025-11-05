@@ -10,7 +10,9 @@ aside {
   h3,input{margin-bottom:8px}
 
   /* Link decoration */
+  a{text-transform:none}
   a::before{content:'❖'}
+
   button{font-size:14px}
 
   /* Search input */
@@ -37,7 +39,6 @@ aside {
   height: fit-content;
   border:var(--dashed);
   h4{margin-bottom:4px}
-  a{text-transform:none}
 }
 
 #sidebar, #mobileSidebar {

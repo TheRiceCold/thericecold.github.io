@@ -1,4 +1,9 @@
 ---
+import {
+  registerPageTranslations,
+  getFinalScript,
+} from '../scripts/registerScript'
+
 import '../styles/home.css'
 import '../styles/aside.css'
 
@@ -6,13 +11,11 @@ import Layout from '../layouts/Layout.astro'
 import Sidebar from '../components/Sidebar.astro'
 import Navigator from '../components/Navigator.astro'
 
-import registerScript from '../scripts/registerScript'
-import translations from '../i18n/translations/home.json?raw'
-
-const script = await registerScript(`langStore.registerTranslations(${translations})`)
+registerPageTranslations('home')
+const script = await getFinalScript()
 
 ---
-<Layout page="about" description="TheRiceCold's homepage" page="home">
+<Layout description="TheRiceCold's homepage" page="home">
 	<Sidebar/>
 
 	<section>

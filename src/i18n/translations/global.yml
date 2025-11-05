@@ -1,0 +1,263 @@
+en:
+  language: language
+  langName: English
+  title: TheRiceCold
+  search: search...
+  theme: theme
+  system: system
+  light: light
+  dark: dark
+  outline: Outline
+  footer: This is a footer.
+  links:
+  - About
+  - Projects
+  - Artworks
+  - Timeline
+  blog:
+    label: Blog Posts
+    list:
+    - category: notes
+      posts:
+      - note 1
+      - note 2
+    - category: learn with me
+      posts:
+      - subject 1
+      - subject 2
+      - subject 3
+    - category: insights
+      posts:
+      - insight 1
+      - insight 2
+      - insight 3
+      - insight 4
+    - category: research
+      posts:
+      - research 1
+      - research 2
+      - research 3
+    - category: writings
+      posts:
+      - a poetry
+      - a letter
+
+es:
+  language: idioma
+  langName: Español
+  title: ElArrozFrio
+  search: buscar...
+  theme: tema
+  system: sistema
+  light: claro
+  dark: oscuro
+  outline: Índice
+  footer: Esto es pie de pagina.
+  links:
+  - Acerca de mí
+  - Proyectos
+  - Obras de Arte
+  - Cronología
+  blog:
+    label: Entradas de Blog
+    list:
+    - category: apuntes
+      posts:
+      - apunte 1
+      - apunte 2
+    - category: aprende conmigo
+      posts:
+      - asignatura 1
+      - asignatura 2
+      - asignatura 3
+    - category: pensamientos
+      posts:
+      - pensamiento 1
+      - pensamiento 2
+      - pensamiento 3
+    - category: investigaciones
+      posts:
+      - investigación 1
+      - investigación 2
+      - investigación 3
+      - investigación 4
+    - category: escritos
+      posts:
+      - un poesía
+      - una carta
+
+fil:
+  language: Wikà
+  langName: Tagalog
+  title: KaningLamíg
+  search: hanapin..
+  theme: tema
+  system: kaayusán
+  light: liwanag
+  dark: dilím
+  outline: Nilálamán
+  footer: Ito ay paanán ng páhiná.
+  links:
+  - Tungkól sakin
+  - Mga gawâ
+  - Mga sining
+  - Hilera ng panahón
+  blog:
+    label: Mga paglalathalà
+    list:
+    - category: mga talâ
+      posts:
+      - talâ 1
+      - talâ 2
+    - category: aralin
+      posts:
+      - simunò 1
+      - simunò 2
+      - simunò 3
+    - category: mga kaisipán
+      posts:
+      - kaisipán 1
+      - kaisipán 2
+      - kaisipán 3
+      - kaisipán 4
+    - category: mga pananaliksík
+      posts:
+      - pananaliksík 1
+      - pananaliksík 2
+      - pananaliksík 3
+    - category: mga kasulatán
+      posts:
+      - isáng tulâ
+      - isáng kasulatán
+
+jp:
+  language: 言語
+  langName: 日本語
+  title: 冷やご飯
+  search: 検索...
+  theme: 体裁
+  system: システム
+  light: 光
+  dark: 暗い
+  outline: 目次
+  footer: これはフッターです
+  links:
+  - について
+  - プロジェクト
+  - 美術作品
+  - 年表
+  blog:
+    label: ブログ記事
+    list:
+    - category: メモ
+      posts:
+      - メモ 1
+      - メモ 2
+    - category: 学びましょう
+      posts:
+      - 科目 1
+      - 科目 2
+      - 科目 3
+    - category: 考え
+      posts:
+      - 考え1
+      - 考え2
+      - 考え3
+      - 考え4
+    - category: 研究
+      posts:
+      - 研究 1
+      - 研究 2
+      - 研究 3
+    - category: 著作
+      posts:
+      - 一編の詩
+      - 手紙
+
+ch:
+  language: 语言
+  langName: 中国人
+  title: 冷饭
+  search: 搜索...
+  theme: 格式
+  system: 体系
+  light: 亮
+  dark: 黑暗
+  outline: 目录
+  footer: 这是页脚
+  links:
+  - 关于
+  - 项目
+  - 艺术作品
+  - 时间轴
+  blog:
+    label: 博客文章
+    list:
+    - category: 笔记
+      posts:
+      - 注释 1
+      - 注释 2
+    - category: 和我一起学习吧
+      posts:
+      - 科目 1
+      - 科目 2
+      - 科目 3
+    - category: 思想
+      posts:
+      - 思想 1
+      - 思想 2
+      - 思想 3
+      - 思想 4
+    - category: 研究
+      posts:
+      - 研究 1
+      - 研究 2
+      - 研究 3
+    - category: 书面帖子
+      posts:
+      - 一首诗
+      - 一封信
+
+de:
+  language: Sprache
+  langName: deutsch
+  title: DerReisKalt
+  search: suchen...
+  theme: Thema
+  system: system
+  light: Licht
+  dark: dunkel
+  outline: Gliederung
+  footer: Dies ist eine Fußzeile.
+  links:
+  - Über
+  - Projekte
+  - Kunstwerke
+  - Zeitachse
+  blog:
+    label: Blogeinträge
+    list:
+    - category: Notizen
+      posts:
+      - Notiz 1
+      - Notiz 2
+    - category: Lerne mit mir
+      posts:
+      - Fach 1
+      - Fach 2
+      - Fach 3
+    - category: Gedanken
+      posts:
+      - Gedanke  1
+      - Gedanke 2
+      - Gedanke 3
+      - Gedanke 4
+    - category: Forschungen
+      posts:
+      - Forschung 1
+      - Forschung 2
+      - Forschung 3
+    - category: Schriften
+      posts:
+      - ein Gedicht
+      - ein Brief

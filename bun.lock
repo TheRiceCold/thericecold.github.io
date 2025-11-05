@@ -5,6 +5,7 @@
       "name": "me",
       "dependencies": {
         "astro": "^5.15.2",
+        "js-yaml": "^4.1.0",
         "terser": "^5.44.0",
       },
     },

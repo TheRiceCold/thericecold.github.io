@@ -1,19 +1,23 @@
-import globalTranslations from '../i18n/translations/global.json?raw'
+import {minify} from 'terser'
+import {loadYaml} from './loadYaml'
+
 import langStore from '../stores/langStore.js?raw'
 import themeStore from '../stores/themeStore.js?raw'
 import init from './init.js?raw'
 
-import {minify} from 'terser'
-
 // Why? To inline every script in one page/html.
-export default async (script='') => await minify(/*js*/`(() => {
-// Registrations
-const globalTranslations = ${globalTranslations}
+let script = `
+  const globalTranslations = ${loadYaml('./src/i18n/translations/global.yml')}
 
-${langStore}
-${themeStore}
+  ${langStore}
+  ${themeStore}`
+
+export const registerPageTranslations = page => script = `
+  ${script}
+  langStore.registerTranslations(${loadYaml(`./src/i18n/translations/${page}.yml`)})`
+
+export const getFinalScript = async() => await minify(`(()=>{
 ${script}
-
 // Initialization / Setup content
 ${init}
 })()`, { toplevel: true, compress: true, mangle: true })

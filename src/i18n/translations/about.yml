@@ -1,0 +1,126 @@
+en:
+  page: About me
+  profession: Programmer | Artist | <a>View resume</a>
+  summary: >-
+    I studied Arts and Game Development in college and completed a full-stack
+    web development bootcamp. I am fluent in both English and Tagalog. I also
+    understand some Spanish at B1 Level. Software development is a profession
+    that allows me to combine my creative talents and problem-solving skills.
+  resume: resume
+  programming: programming languages
+  database: database
+  languages:
+    label: spoken languages
+    content: 'English: C1 | Tagalog: Native | Spanish: B1'
+  unix: unix tools
+  os: operating systems
+  softwares: softwares
+  extra:
+    label: additional information
+    content: 'Gender: XY | MBTI: INTP | Generation: Z | Nation: Philippines'
+  follow: follow me
+
+es:
+  page: Acerca de mí
+  profession: Programador | Artista | <a>Ver currículum</a>
+  summary: >-
+    Me formé en Artes y Desarrollo de Videojuegos, y completé un bootcamp de
+    desarrollo web completo. Hablo con fluidez inglés y tagalo. También entiendo
+    algo de español, nivel B1. El desarrollo de software es una profesión que me
+    permite combinar mi creatividad y mi capacidad para resolver problemas.
+  resume: currículum
+  programming: lenguajes de programación
+  database: base de datos
+  languages:
+    label: lenguas habladas
+    content: 'Inglés: C1 | Tagalo: Nativo | Español: B1'
+  unix: herramientas unix
+  os: sistemas operativos
+  softwares: programas informáticos
+  extra:
+    label: información adicional
+    content: 'Género: XY | MBTI: INTP | Generación: Z | Nación: Las Filipinas'
+  follow: sígueme
+
+fil:
+  page: Tungkól sakin
+  profession: Tagaprograma | Alagad ng sining | <a>Tingnán ang lagumbuhay</a>
+  summary: >-
+    Ako'y nag-aral ng sining at pagbuô larô at nagtapós ng buong stack sa pagbuo
+    ng pahinarya. Ako'y duri sa wikang Ingles at Tagalog, bahagyâ ding
+    nakakaintindi ng kastila sa antás na B1. Ang paggawâ ng software ay isang
+    kadalubhasaang nagpapahaya saking pagsamahin ang aking pagkamalikhain at
+    kahusayang paglulutás.
+  resume: lagumbuhay
+  programming: Mga wikang pamprograma
+  languages:
+    label: Mga sinasalitang wika
+    content: 'Inglés: C1 | Tagalog: Tubò | Kastilà: B1'
+  unix: Mga kasangpan sa Unix
+  os: Mga kaayusang pantakbo
+  softwares: Mga kasangkapang panglikha
+  extra:
+    label: karagdagang batid
+    content: 'Kasarián: XY | MBTI: INTP | Henerasyón: Z | Bayan: Pilipinas'
+  follow: tumalunton sakin
+
+jp:
+  page: について
+  profession: プログラマー | 芸術家 | <a>履歴書を見る</a>
+  summary: >-
+    私は大学でアートとゲーム開発を学び、フルスタックWeb開発ブートキャンプを修了しました。私は英語とタガログ語を流暢に話します。また、B1レベルのスペイン語も多少理解できます。ソフトウェア開発は、私の創造的な才能と問題解決能力を融合できる職業です。
+  resume: 履歴書
+  programming: プログラミング言語
+  database: データベース
+  languages:
+    label: 話されている言語
+    content: '英語: C1 | タガログ語: 母語話者 | スペイン語: B1'
+  unix: Unixツール
+  os: オペレーティングシステム
+  softwares: ソフトウェア
+  extra:
+    label: 追加情報
+    content: '性別: XY | MBTI: INTP | 世代: Z | 国: フィリピン'
+  follow: ついてきて。
+
+ch:
+  page: 关于
+  profession: 程序员 | 艺术家 | <a>查看简历</a>
+  summary: >-
+    我在大学里学的是艺术和游戏开发，还完成了全栈网页开发训练营的学习。我能说一口流利的英语和菲律宾语。我还懂一点西班牙语，水平达到B1级。软件开发是一项让我能够将我的创造才能和解决问题的能力结合在一起的专业。
+  resume: 简历
+  programming: 编程语言
+  database: 数据库
+  languages:
+    label: 所说的语言
+    content: '英语: C1 | 他加禄语: 母语者 | 西班牙语: B1'
+  unix: Unix工具
+  os: 操作系统
+  softwares: 软件
+  extra:
+    label: 附加信息
+    content: '性别: XY | MBTI: INTP | 世代: Z | 国: 菲律宾'
+  follow: 关注我
+
+de:
+  page: über
+  profession: Programmierer | Künstler | <a>Lebenslauf anzeigen</a>
+  summary: >-
+    Ich habe Arts and Game Development an der Hochschule studiert und ein
+    Full-Stack-Webentwicklungs-Bootcamp abgeschlossen. Ich spreche fließend
+    Englisch und Tagalog. Ich verstehe auch etwas Spanisch auf dem Niveau B1.
+    Softwareentwicklung ist eine Profession, die es mir erlaubt, meine kreativen
+    Talente und meine Fähigkeiten im Problemlösen zu vereinen.
+  resume: Lebenslauf
+  programming: Programmiersprachen
+  database: Datenbank
+  languages:
+    label: gesprochene Sprachen
+    content: 'Englisch: C1 | Tagalog: Muttersprachler | Spanisch: B1'
+  unix: Unix-Werkzeuge
+  os: Betriebssysteme
+  softwares: software
+  extra:
+    label: zusätzliche Informationen
+    content: 'Geschlecht: XY | MBTI: INTP | Generation: Z | Nation: Philippinen'
+  follow: Folge mir
