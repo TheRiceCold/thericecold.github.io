@@ -33,11 +33,16 @@
           width:100px;height:100px;
           &:hover{opacity:100%}
         }
+        @media(max-width: 1440px){
+          img:last-child{display:none}
+        }
+        /* Hides Last 3 Images to display only 5 */
         @media(max-width: 1024px){
           img:nth-last-child(-n+3){display:none}
         }
+        /* Hides Last 5 Images to display only 3 */
         @media(max-width: 425px){
-          img:nth-child(5){display:none}
+          img:nth-last-child(-n+5){display:none}
         }
       }
     }
