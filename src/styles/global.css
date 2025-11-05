@@ -44,7 +44,7 @@
 a,button,input{all:unset;text-transform:capitalize}
 
 /* Cursor Pointer Tags */
-a,button,svg,img {cursor:pointer}
+a,button,svg,img{cursor:pointer}
 
 /* Flex Row Tags */
 div{display:flex}

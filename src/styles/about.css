@@ -1,4 +1,4 @@
-#about {
+#about{
   grid-template-columns:auto 1fr auto;
   grid-template-areas:"side content nav";
 
@@ -17,5 +17,3 @@
     b{margin-top:4px;text-transform:capitalize;&::after{content:':'}}
   }
 }
-
-#sidebar{height:calc(100% - 92px)}

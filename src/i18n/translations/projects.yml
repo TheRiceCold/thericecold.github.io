@@ -1,0 +1,365 @@
+en:
+  page: My Projects
+  category: Categories
+  shortcuts: [Featured, Configurations, Simple projects, Archived]
+  feature:
+    label: Featured Projects
+    list:
+      - name: Likhâ
+        link: https://github.com/thericecold/likha
+        desc: A high-performance commandline text editor written from scratch.
+        tags: [c++, terminal]
+      - name: Larô Engine
+        link: https://github.com/thericecold/laro
+        desc: A lightweight game engine.
+        tags: [c++, graphics, physics]
+      - name: Astíg
+        link: https://github.com/thericecold/thericecold.github.io
+        desc: A template for multilingual personal websites.
+        tags: [javascript, astro, template]
+
+  config:
+    label: Configurations
+    list:
+      - name: dots
+        link: https://github.com/thericecold/dots
+        desc: Personalized riced NixOS configuration.
+        tags: [nixos, hyprland, unixporn]
+      - name: Kaivim
+        link: https://github.com/thericecold/kaivim
+        desc: Personal standalone neovim Nix package configured using NVF.
+        tags: [neovim, nix, lua]
+      - name: Kimacs
+        link: https://github.com/thericecold/kimacs
+        desc: Personal standalone Nix package for Emacs configuration.
+        tags: [elisp, emacs, nix]
+
+  simple:
+    label: Simple Projects
+    list:
+      - name: Lagumbuhay
+        link: https://github.com/thericecold/lagumbuhay
+        desc: A resume template written in Typst.
+        tags: [typst, template, document]
+      - name: fzf-lua-projectile
+        link: https://github.com/thericecold/fzf-lua-projectile
+        desc: A neovim plugin for searching git projects using fzf-lua.
+        tags: [neovim, lua, fzf]
+
+  archive:
+    label: Archived Projects
+    list:
+      - name: Kaizen
+        link: https://github.com/thericecold/kaizen
+        desc: A GJS/Ags written desktop environment for Hyprland Linux.
+        tags: [typescript, gtk, hyprland]
+
+      - name: Platform for Professionals
+        link: https://github.com/thericecold/online-platform-for-professionals
+        desc: An old project to finish my fullstack web bootcamp.
+        tags: [nextjs, reactjs]
+
+es:
+  page: Mis Proyectos
+  category: Categorías
+  shortcuts: [Descados, Configuración, Sencillos, Archivados]
+  feature:
+    label: Proyectos destacados
+    list:
+      - name: Likhâ
+        link: https://github.com/thericecold/likha
+        desc: Un editor de texto de línea de comandos de alto rendimiento escrito desde cero.
+        tags: [c++, terminal]
+      - name: Larô Engine
+        link: https://github.com/thericecold/laro
+        desc: Un game engine ligero.
+        tags: [c++, gráficos, física]
+      - name: Astíg
+        link: https://github.com/thericecold/thericecold.github.io
+        desc: Plantilla multilingüe para sitio web personal
+        tags: [javascript, astro, plantilla]
+
+  config:
+    label: Configuración
+    list:
+      - name: dots
+        link: https://github.com/thericecold/dots
+        desc: Configuración personalizada de NixOS.
+        tags: [nixos, hyprland, unixporn]
+      - name: Kaivim
+        link: https://github.com/thericecold/kaivim
+        desc: Paquete Nix independiente y personalizado para neovim configurado con NVF.
+        tags: [neovim, nix, lua]
+      - name: Kimacs
+        link: https://github.com/thericecold/kimacs
+        desc: Paquete Nix independiente personal para la configuración de Emacs.
+        tags: [elisp, emacs, nix]
+
+  simple:
+    label: Proyectos Sencillos
+    list:
+      - name: Lagumbuhay
+        link: https://github.com/thericecold/lagumbuhay
+        desc: Plantilla de currículum escrita en Typst.
+        tags: [typst, plantilla, documento]
+      - name: fzf-lua-projectile
+        link: https://github.com/thericecold/fzf-lua-projectile
+        desc: Un complemento de neovim para buscar proyectos git utilizando fzf-lua.
+        tags: [neovim, lua, fzf]
+
+  archive:
+    label: Proyectos Archivados
+    list:
+      - name: Kaizen
+        link: https://github.com/thericecold/kaizen
+        desc: Un entorno de escritorio escrito en GJS/Ags para Hyprland Linux.
+        tags: [typescript, gtk, hyprland]
+
+      - name: Plataforma para Profesionales
+        link: https://github.com/thericecold/online-platform-for-professionals
+        desc: Un proyecto antiguo para mi bootcamp de desarrollo web completo.
+        tags: [nextjs, reactjs]
+
+fil:
+  page: Aking mga gawa
+  category: Mga kaurián
+  shortcuts: [Mga tampók, Mga pasadyâ, Mga payák, Mga sínupan]
+  feature:
+    label: Mga Tampók
+    list:
+      - name: Likhâ
+        link: https://github.com/thericecold/likha
+        desc: Isang matindí at banat na pangwasto ng sulatin sa commandline.
+        tags: [c++, terminal]
+      - name: Larô Engine
+        link: https://github.com/thericecold/laro
+        desc: Isang langkág na pangawâ ng larô.
+        tags: [c++, grápikó, písiká]
+      - name: Astíg
+        link: https://github.com/thericecold/thericecold.github.io
+        desc: >-
+          Isang maraminhang wikang na pasimundán na pahinaryang pansarili.
+        tags: [javascript, astro, pasimundán]
+
+  config:
+    label: Mga Pasadyâ
+    list:
+      - name: dots
+        link: https://github.com/thericecold/dots
+        desc: Pasadyâng hain na "riced" sa NixOS.
+        tags: [nixos, hyprland, unixporn]
+      - name: Kaivim
+        link: https://github.com/thericecold/kaivim
+        desc: Isang pasadyâng Neovim isinalubitbít sa Nix na buô kalakíp ang NVF.
+        tags: [neovim, nix, lua]
+      - name: Kimacs
+        link: https://github.com/thericecold/kimacs
+        desc: Isang pasadyâng Emacs na isinalubitbít sa Nix.
+        tags: [elisp, emacs, nix]
+
+  simple:
+    label: Mga Payák
+    list:
+      - name: Lagumbuhay
+        link: https://github.com/thericecold/lagumbuhay
+        desc: Isang pasimundáng lagumuhay na isulat sa Typst.
+        tags: [typst, pasimundán, kasulatán]
+      - name: fzf-lua-projectile
+        link: https://github.com/thericecold/fzf-lua-projectile
+        desc: Isang salubitbít sa Neovim pang hanap ng mga gawang git gamit ang fzf-lua.
+        tags: [neovim, lua, fzf]
+
+  archive:
+    label: Mga Sínupan
+    list:
+      - name: Kaizen
+        link: https://github.com/thericecold/kaizen
+        desc: Isang kapáligirán ng desktop isinulat gamit ang GJS/Ags na gawâ pang Hyprland Linux.
+        tags: [typescript, gtk, hyprland]
+
+      - name: Basakayang pang mga Dalubhasà
+        link: https://github.com/thericecold/online-platform-for-professionals
+        desc: Isang lumang gawa panapos sa aking buong stack sa pagbuo ng pahinarya na bootcamp.
+        tags: [nextjs, reactjs]
+
+jp:
+  page: 私のプロジェクト
+  category: カテゴリ
+  shortcuts: [注目, カスタマイズされた, シンプル, アーカイブ]
+  feature:
+    label: 注目のプロジェクト
+    list:
+      - name: Likhâ
+        link: https://github.com/thericecold/likha
+        desc: ゼロから書き上げられた高性能なコマンドラインテキストエディタ。
+        tags: [c++, terminal]
+      - name: Larô Engine
+        link: https://github.com/thericecold/laro
+        desc: 軽量ゲームエンジン。
+        tags: [c++, 図形, 物理学]
+      - name: Astíg
+        link: https://github.com/thericecold/thericecold.github.io
+        desc: 多言語対応の個人用ウェブサイトテンプレート。
+        tags: [javascript, astro, テンプレート]
+
+  config:
+    label: 設定
+    list:
+      - name: dots
+        link: https://github.com/thericecold/dots
+        desc: 私のカスタム NixOS 設定。
+        tags: [nixos, hyprland, unixporn]
+      - name: Kaivim
+        link: https://github.com/thericecold/kaivim
+        desc: NVFを使用して構成および構築された独立したNix Neovimパッケージ。
+        tags: [neovim, nix, lua]
+      - name: Kimacs
+        link: https://github.com/thericecold/kimacs
+        desc: カスタマイズされたEmacs専用Nixパッケージ。
+        tags: [elisp, emacs, nix]
+
+  simple:
+    label: 簡易プロジェクト
+    list:
+      - name: Lagumbuhay
+        link: https://github.com/thericecold/lagumbuhay
+        desc: Typstで作成された履歴書テンプレート。
+        tags: [typst, テンプレート, 文書]
+      - name: fzf-lua-projectile
+        link: https://github.com/thericecold/fzf-lua-projectile
+        desc: fzf-lua を使用して Git プロジェクトを検索するための Neovim プラグイン。
+        tags: [neovim, lua, fzf]
+
+  archive:
+    label: アーカイブ済みプロジェクト
+    list:
+      - name: 改善
+        link: https://github.com/thericecold/kaizen
+        desc: Hyprland Linux 向けの GJS/Ags ベースのデスクトップ環境。
+        tags: [typescript, gtk, hyprland]
+
+      - name: プロフェッショナル向けプラットフォーム
+        link: https://github.com/thericecold/online-platform-for-professionals
+        desc: フルスタックWeb開発ブートキャンプを修了するための古いプロジェクト。
+        tags: [nextjs, reactjs]
+
+ch:
+  page: 我的项目
+  category: 类别
+  shortcuts: [精选, 定制的, 简单, 已归档]
+  feature:
+    label: 精選專案
+    list:
+      - name: Likhâ
+        link: https://github.com/thericecold/likha
+        desc: 一款从零开始编写的高性能命令行文本编辑器。
+        tags: [c++, terminal]
+      - name: Larô Engine
+        link: https://github.com/thericecold/laro
+        desc: 轻量级游戏引擎。
+        tags: [c++, 图形, 物理学]
+      - name: Astíg
+        link: https://github.com/thericecold/thericecold.github.io
+        desc: 多语言个人网站模板。
+        tags: [javascript, astro, 模板]
+  config:
+    label: 定制的
+    list:
+      - name: dots
+        link: https://github.com/thericecold/dots
+        desc: 我的自定义 NixOS 配置。
+        tags: [nixos, hyprland, unixporn]
+      - name: Kaivim
+        link: https://github.com/thericecold/kaivim
+        desc: 一个使用NVF配置和构建的独立Nix Neovim软件包。
+        tags: [neovim, nix, lua]
+      - name: Kimacs
+        link: https://github.com/thericecold/kimacs
+        desc: 一个定制化的Emacs独立Nix软件包。
+        tags: [elisp, emacs, nix]
+
+  simple:
+    label: 简单项目
+    list:
+      - name: Lagumbuhay
+        link: https://github.com/thericecold/lagumbuhay
+        desc: 一份用Typst编写的简历模板。
+        tags: [typst, 图形, 文件]
+      - name: fzf-lua-projectile
+        link: https://github.com/thericecold/fzf-lua-projectile
+        desc: 一个用于通过 fzf-lua 搜索 Git 项目的 Neovim 插件。
+        tags: [neovim, lua, fzf]
+
+  archive:
+    label: 档案项目
+    list:
+      - name: 改善
+        link: https://github.com/thericecold/kaizen
+        desc: 一款为Hyprland Linux系统开发的GJS/Ags桌面环境。
+        tags: [typescript, gtk, hyprland]
+
+      - name: 专业人士平台
+        link: https://github.com/thericecold/online-platform-for-professionals
+        desc: 一个旧项目，用于完成我的全栈网页开发训练营。
+        tags: [nextjs, reactjs]
+
+de:
+  page: Mich projekten
+  category: Kategorie
+  shortcuts: [vorgestellt, Konfigurationen, einfache Projekte, archiviert]
+  feature:
+    label: vorgestellte Projekte
+    list:
+      - name: Likhâ
+        link: https://github.com/thericecold/likha
+        desc: Ein von Grund auf neu entwickelter, leistungsstarker Texteditor für die Kommandozeile.
+        tags: [c++, terminal]
+      - name: Larô Engine
+        link: https://github.com/thericecold/laro
+        desc: Eine leichtgewichtige Spiel-Engine.
+        tags: [c++, Grafiken, Physik]
+      - name: Astíg
+        link: https://github.com/thericecold/thericecold.github.io
+        desc: Ein Template für mehrsprachige persönliche Websites.
+        tags: [javascript, astro, Vorlage]
+
+  config:
+    label: Konfiguration
+    list:
+      - name: dots
+        link: https://github.com/thericecold/dots
+        desc: Personalisierte NixOS-Konfiguration.
+        tags: [nixos, hyprland, unixporn]
+      - name: Kaivim
+        link: https://github.com/thericecold/kaivim
+        desc: Ein eigenständiges, mit NVF erstelltes Neovim-Paket.
+        tags: [neovim, nix, lua]
+      - name: Kimacs
+        link: https://github.com/thericecold/kimacs
+        desc: Ein eigenständiges, angepasstes Emacs-Nix-Paket.
+        tags: [elisp, emacs, nix]
+
+  simple:
+    label: Einfache Projekte
+    list:
+      - name: Lagumbuhay
+        link: https://github.com/thericecold/lagumbuhay
+        desc: Eine in Typst geschriebene Lebenslaufvorlage.
+        tags: [typst, Vorlage, Dokument]
+      - name: fzf-lua-projectile
+        link: https://github.com/thericecold/fzf-lua-projectile
+        desc: Ein Neovim-Plugin zum Durchsuchen von Git-Projekten mit fzf-lua.
+        tags: [neovim, lua, fzf]
+
+  archive:
+    label: Archivierte Projekte
+    list:
+      - name: Kaizen
+        link: https://github.com/thericecold/kaizen
+        desc: Eine von GJS/Ags geschriebene Desktop-Umgebung für Hyprland Linux.
+        tags: [typescript, gtk, hyprland]
+
+      - name: Plattform für Fachleute
+        link: https://github.com/thericecold/online-platform-for-professionals
+        desc: Ein altes Projekt, um mein Fullstack-Web-Bootcamp abzuschließen.
+        tags: [nextjs, reactjs]

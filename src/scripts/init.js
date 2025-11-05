@@ -1,4 +1,5 @@
 const
+  xBtn = document.getElementById('xBtn'),
   menu = document.getElementById('menuBtn'),
   overlay = document.getElementById('overlay'),
   mobileSidebar = document.getElementById('mobileSidebar');
@@ -12,7 +13,9 @@ for (const b of document.querySelectorAll('#themeBtn'))
 
 // Mobile Sidebar
 menu.onclick = () => { mobileSidebar.classList.toggle('show'); overlay.classList.toggle('show') }
-overlay.onclick = () => { mobileSidebar.classList.remove('show'); overlay.classList.remove('show') }
+const hideSidebar = () => { mobileSidebar.classList.remove('show'); overlay.classList.remove('show') }
+xBtn.onclick = hideSidebar
+overlay.onclick = hideSidebar
 
 // Sidebar Dropdown Menu
 langStore.onRebind(() => {

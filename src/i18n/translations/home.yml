@@ -3,20 +3,21 @@ en:
   welcome: "Hello there👋!"
   intro: >-
     This website serves as a digital portfolio showcasing my professional
-    background, computing projects, creative works, and various publications. To
-    find out more about this random individual <a href='about'>click here</a>.
+    background, computing projects, creative works, and various publications.
+    To find out more about this random individual <a href="about">click here</a>.
   projects:
     label: Featured Projects
     list:
       - >-
-        <a href='https://github.com/thericecold/likha'>Likhâ</a> - A
-        high-performance commandline text editor written from scratch.
+        <a href="https://github.com/thericecold/likha">Likhâ</a> -
+        A high-performance commandline text editor written from scratch.
+      - <a href="https://github.com/thericecold/laro">Larô Engine</a> - A lightweight game engine.
       - >-
-        <a href='https://github.com/thericecold/laro'>Larô Engine</a> - A
-        lightweight Game Engine.
+        <a href="https://github.com/thericecold/kaizen">Kaizen (Archived)</a> -
+        A GJS/Ags written desktop environment for Hyprland Linux.
       - >-
-        <a href='https://github.com/thericecold/kaizen'>Kaizen (Archived)</a> -
-        A GJS/Ags written desktop environment for Hyprland Linux
+        <a href="https://github.com/thericecold/thericecold.github.io">Astíg</a> -
+        A template for multilingual personal websites. Showcase your projects, artworks, blogs and more.
   recentPosts:
     label: Recent Posts
     list:
@@ -33,22 +34,22 @@ es:
   page: Casa
   welcome: "Hola👋!"
   intro: >-
-    Este sitio web sirve de portfolio digital en el que presento mi trayectoria
-    profesional, proyectos informáticos, obras creativas y diversas
-    publicaciones. Si quieres saber más sobre este tipo, <a href='about'>haz
-    clic aquí</a>.
+    Este sitio web sirve de portfolio digital en el que presento mi trayectoria profesional,
+    proyectos informáticos, obras creativas y diversas publicaciones.
+    Si quieres saber más sobre este tipo, <a href="about">haz clic aquí</a>.
   projects:
     label: Proyectos destacados
     list:
       - >-
-        <a href='https://github.com/thericecold/likha'>Likhâ</a> - Un editor de
-        texto de línea de comandos de alto rendimiento escrito desde cero.
+        <a href="https://github.com/thericecold/likha">Likhâ</a> -
+        Un editor de texto de línea de comandos de alto rendimiento escrito desde cero.
+      - <a href="https://github.com/thericecold/laro">Larô Engine</a> - Un game engine ligero.
       - >-
-        <a href='https://github.com/thericecold/laro'>Larô Engine</a> - Un game
-        engine ligero.
-      - >-
-        <a href='https://github.com/thericecold/kaizen'>Kaizen (Archived)</a> -
+        <a href="https://github.com/thericecold/kaizen">Kaizen (Archived)</a> -
         Un entorno de escritorio escrito en GJS/Ags para Hyprland Linux.
+      - >-
+        <a href="https://github.com/thericecold/thericecold.github.io">Astíg</a> -
+        Plantilla multilingüe para sitio web personal. Muestra tus proyectos, obras de arte, blogs y más.
   recentPosts:
     label: Últimas entradas
     list:
@@ -66,22 +67,23 @@ fil:
   welcome: "Tao po🚪✊!"
   intro: >-
     Itó'y nagsisilbíng dihitál na portpolyo upang ipakilala ang aking mga
-    kadalubhasàang karanasán, mga malikhaing gawa, at iba ibang mga
-    paglalathalà. Kung iyong ninanais pang mabatid ang taong itó, <a
-    href='about'>pindutín itó</a>.
+    kadalubhasàang karanasán, mga malikhaing gawa, at iba ibang mga paglalathalà.
+    Kung iyong ninanais pang mabatid ang taong itó, <a href="about">pindutín itó</a>.
   projects:
     label: Tampók na mga gawâ
     list:
       - >-
-        <a href='https://github.com/thericecold/likha'>Likhâ</a> - Isang matindí
-        at banat na pangwasto ng sulatin sa commandline na gawa mula sa kahig.
+        <a href="https://github.com/thericecold/likha">Likhâ</a> -
+        Isang matindí at banat na pangwasto ng sulatin sa commandline na gawa mula sa kahig.
       - >-
-        <a href='https://github.com/thericecold/laro'>Larô Engine</a> - Isang
-        langkág na pangawâ ng larô.
+        <a href="https://github.com/thericecold/laro">Larô Engine</a> -
+        Isang langkág na pangawâ ng larô.
       - >-
-        <a href='https://github.com/thericecold/kaizen'>Kaizen (Archived)</a> -
-        Isang kapáligirán ng desktop isinulat gamit ang GJS/Ags na gawâ pang
-        Hyprland Linux.
+        <a href="https://github.com/thericecold/kaizen">Kaizen (Archived)</a> -
+        Isang kapáligirán ng desktop isinulat gamit ang GJS/Ags na gawâ pang Hyprland Linux.
+      - >-
+        <a href="https://github.com/thericecold/thericecold.github.io">Astíg</a> -
+        Isang maraminhang wikang pasimundán na pansariling pahinarya. Ipakítang-gilas ang mga gawa, likha, lathain at iba pa.
   recentPosts:
     label: Mga hulíng paglalathalà
     list:
@@ -98,20 +100,21 @@ jp:
   page: 家
   welcome: "こんにちは👋!"
   intro: >-
-    本ウェブサイトは私のデジタルポートフォリオとして、専門的経歴、コンピュータプロジェクト、クリエイティブ作品、および各種出版物を紹介しています。このランダムな人物についてもっと知りたい場合は、<a
-    href='about'>こちらをクリックしてください</a>。
+    本ウェブサイトは私のデジタルポートフォリオとして、専門的経歴、コンピュータプロジェクト、クリエイティブ作品、および各種出版物を紹介しています。
+    このランダムな人物についてもっと知りたい場合は、<a href="about">こちらをクリックしてください</a>。
   projects:
     label: 注目のプロジェクト
     list:
       - >-
-        <a href='https://github.com/thericecold/likha'>Likhâ</a>
-        -ゼロから書き上げられた高性能なコマンドラインテキストエディタ.
+        <a href="https://github.com/thericecold/likha">Likhâ</a> -
+        ゼロから書き上げられた高性能なコマンドラインテキストエディタ。
+      - <a href="https://github.com/thericecold/laro">Larô Engine</a> - 軽量ゲームエンジン。
       - >-
-        <a href='https://github.com/thericecold/laro'>Larô Engine</a>
-        -軽量ゲームエンジン.
+        <a href="https://github.com/thericecold/kaizen">Kaizen (Archived)</a> -
+        Hyprland Linux 向けの GJS/Ags ベースのデスクトップ環境。
       - >-
-        <a href='https://github.com/thericecold/kaizen'>Kaizen (Archived)</a> -
-        Hyprland Linux 向けの GJS/Ags ベースのデスクトップ環境.
+        <a href="https://github.com/thericecold/thericecold.github.io">Astíg</a> -
+        多言語対応の個人用ウェブサイトテンプレート。プロジェクト、アート作品、ブログなどを紹介できます。
   recentPosts:
     label: 最近のブログ
     list:
@@ -128,18 +131,21 @@ ch:
   page: 家
   welcome: "你好👋!"
   intro: >-
-    本网站作为我的数字作品集，展示了我的专业背景、计算机项目、创意作品以及各类出版物。要了解更多关于这个随机个人的信息，<a
-    href='about'>请点击此处</a>。
+    本网站作为我的数字作品集，展示了我的专业背景、计算机项目、创意作品以及各类出版物。
+    要了解更多关于这个随机个人的信息，<a href="about">请点击此处</a>。
   projects:
     label: 精選專案
     list:
       - >-
-        <a href='https://github.com/thericecold/likha'>Likhâ</a> -
-        一款从零开始编写的高性能命令行文本编辑器.
-      - '<a href=''https://github.com/thericecold/laro''>Larô Engine</a> - 轻量级游戏引擎.'
+        <a href="https://github.com/thericecold/likha">Likhâ</a> -
+        一款从零开始编写的高性能命令行文本编辑器。
+      - <a href="https://github.com/thericecold/laro">Larô Engine</a> - 轻量级游戏引擎。
       - >-
-        <a href='https://github.com/thericecold/kaizen'>Kaizen (Archived)</a> -
-        一款为Hyprland Linux系统开发的GJS/Ags桌面环境.
+        <a href="https://github.com/thericecold/kaizen">Kaizen (Archived)</a> -
+        一款为Hyprland Linux系统开发的GJS/Ags桌面环境。
+      - >-
+        <a href="https://github.com/thericecold/thericecold.github.io">Astíg</a> -
+        多语言个人网站模板。展示您的项目、艺术作品、博客等内容。
   recentPosts:
     label: 近期博客
     list:
@@ -156,22 +162,22 @@ de:
   page: heim
   welcome: "Halo👋!"
   intro: >-
-    Diese Website dient als digitales Portfolio, in dem ich meinen beruflichen
-    Werdegang, meine IT-Projekte, meine kreativen Arbeiten und verschiedene
-    Publikationen präsentiere. Weitere Informationen zu dieser zufälligen Person
-    finden Sie <a href='about'>hier</a>.
+    Diese Website dient als digitales Portfolio, in dem ich meinen beruflichen Werdegang, 
+    meine IT-Projekte, meine kreativen Arbeiten und verschiedene Publikationen präsentiere. 
+    Weitere Informationen zu dieser zufälligen Person finden Sie <a href="about">hier</a>.
   projects:
     label: vorgestellte Projekte
     list:
       - >-
-        <a href='https://github.com/thericecold/likha'>Likhâ</a> - Ein von Grund
-        auf neu entwickelter, leistungsstarker Texteditor für die Kommandozeile.
+        <a href="https://github.com/thericecold/likha">Likhâ</a> -
+        Ein von Grund auf neu entwickelter, leistungsstarker Texteditor für die Kommandozeile.
+      - <a href="https://github.com/thericecold/laro">Larô Engine</a> - Eine leichtgewichtige Spiel-Engine.
       - >-
-        <a href='https://github.com/thericecold/laro'>Larô Engine</a> - Eine
-        leichtgewichtige Spiel-Engine.
+        <a href="https://github.com/thericecold/kaizen">Kaizen (Archived)</a> -
+        Eine von GJS/Ags geschriebene Desktop-Umgebung für Hyprland Linux.
       - >-
-        <a href='https://github.com/thericecold/kaizen'>Kaizen (Archived)</a> -
-        Eine von GJS/Ags geschriebene Desktop-Umgebung für Hyprland Linux
+        <a href="https://github.com/thericecold/thericecold.github.io">Astíg</a> -
+        Ein Template für mehrsprachige persönliche Websites. Präsentieren Sie Ihre Projekte, Kunstwerke, Blogs und mehr.
   recentPosts:
     label: Aktuelle Beiträge
     list:

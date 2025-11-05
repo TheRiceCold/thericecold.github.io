@@ -43,7 +43,7 @@ aside {
 
 #sidebar, #mobileSidebar {
   button+ul{display: none;&.show{display:flex}}
-  button:not(#themeBtn,#langBtn) {
+  ul button{
     padding:0;&::before{content:'✸ '}
   }
 }
@@ -67,6 +67,7 @@ aside {
   transition:transform 0.3s ease;
   display:flex;align-items:start;
   &.show{transform:translateX(0)}
+  #xBtn{display:none}
 
   >ul{margin: 12px 0 0 16px}
   div{
@@ -76,13 +77,16 @@ aside {
     align-items: center;
     input{margin-left:16px;width:40%}
     border-bottom: var(--border);
-    &:first-child{font-size:12px;justify-content:end}
+    &:first-child{
+      font-size:12px;justify-content:end
+    }
     &:nth-child(2) {
       justify-content: center;
       a::before{content: ''}
     }
     &:nth-child(3){justify-content:space-between}
   }
+  @media(max-width: 425px){width:100%;#xBtn{display:block}}
 }
 
 @media (max-width: 1024) {

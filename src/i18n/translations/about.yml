@@ -6,7 +6,7 @@ en:
     web development bootcamp. I am fluent in both English and Tagalog. I also
     understand some Spanish at B1 Level. Software development is a profession
     that allows me to combine my creative talents and problem-solving skills.
-  resume: resume
+  resume: Resume
   programming: programming languages
   database: database
   languages:
@@ -28,7 +28,7 @@ es:
     desarrollo web completo. Hablo con fluidez inglés y tagalo. También entiendo
     algo de español, nivel B1. El desarrollo de software es una profesión que me
     permite combinar mi creatividad y mi capacidad para resolver problemas.
-  resume: currículum
+  resume: Currículum
   programming: lenguajes de programación
   database: base de datos
   languages:
@@ -51,7 +51,7 @@ fil:
     nakakaintindi ng kastila sa antás na B1. Ang paggawâ ng software ay isang
     kadalubhasaang nagpapahaya saking pagsamahin ang aking pagkamalikhain at
     kahusayang paglulutás.
-  resume: lagumbuhay
+  resume: Lagumbuhay
   programming: Mga wikang pamprograma
   languages:
     label: Mga sinasalitang wika

@@ -1,0 +1,38 @@
+#projects{
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:"side content nav";
+
+  span{align-self:end}
+  small{font-size:14px;&:before{content: '★ '}}
+  p{font-size: 15px;margin-bottom:auto}
+
+  section{
+    grid-area: content;
+    margin: 0 auto;
+
+    article {
+      gap: 16px;
+      border: none;
+      display: grid;
+      background: none;
+      grid-template-columns: repeat(5, 1fr);
+      div {
+        gap: 4px;
+        width: 260px;
+        height: 150px;
+        padding: 12px;
+        cursor: pointer;
+        border: var(--border);
+        flex-direction: column;
+        background: var(--surface);
+        &:hover{
+          border: 1px solid var(--primary);
+          b{color:var(--primary)}
+        }
+      }
+      @media(max-width: 1440px){grid-template-columns: repeat(3, 1fr)}
+      @media(max-width: 1024px){grid-template-columns: repeat(2, 1fr)}
+      @media(max-width: 425px){grid-template-columns: repeat(1, 1fr)}
+    }
+  }
+}

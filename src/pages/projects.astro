@@ -1,0 +1,86 @@
+---
+import {
+  registerPageTranslations,
+  getFinalScript,
+} from '../scripts/registerScript'
+
+import '../styles/projects.css'
+import '../styles/aside.css'
+
+import Layout from '../layouts/Layout.astro'
+import Sidebar from '../components/Sidebar.astro'
+import Navigator from '../components/Navigator.astro'
+
+registerPageTranslations('projects')
+const script = await getFinalScript()
+
+---
+<Layout description="TheRiceCold's projects" page="projects">
+  <Sidebar/>
+
+  <section>
+    <h3 data-i18n="feature.label"/>
+    <article>
+      <template data-i18n-list="feature.list">
+        <div>
+          <b data-i18n-item="name"/>
+          <p data-i18n-item="desc"/>
+          <span>
+            <template data-i18n-sublist="tags">
+              <small data-i18n-item/>
+            </template>
+          </span>
+        </div>
+      </template>
+    </article><br>
+
+    <h3 data-i18n="config.label"/>
+    <article>
+      <template data-i18n-list="config.list">
+        <div>
+          <b data-i18n-item="name"/>
+          <p data-i18n-item="desc"/>
+          <span>
+            <template data-i18n-sublist="tags">
+              <small data-i18n-item/>
+            </template>
+          </span>
+        </div>
+      </template>
+    </article><br>
+
+
+    <h3 data-i18n="simple.label"/>
+    <article>
+      <template data-i18n-list="simple.list">
+        <div>
+          <b data-i18n-item="name"/>
+          <p data-i18n-item="desc"/>
+          <span>
+            <template data-i18n-sublist="tags">
+              <small data-i18n-item/>
+            </template>
+          </span>
+        </div>
+      </template>
+    </article><br>
+
+    <h3 data-i18n="archive.label"/>
+    <article>
+      <template data-i18n-list="archive.list">
+        <div>
+          <b data-i18n-item="name"/>
+          <p data-i18n-item="desc"/>
+          <span>
+            <template data-i18n-sublist="tags">
+              <small data-i18n-item/>
+            </template>
+          </span>
+        </div>
+      </template>
+    </article><br>
+  </section>
+
+  <Navigator title="category" shortcuts="shortcuts" />
+  <script is:inline set:html={script.code}></script>
+</Layout>

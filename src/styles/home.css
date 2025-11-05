@@ -1,4 +1,4 @@
-#home {
+#home{
   grid-template-columns:auto 1fr auto;
   grid-template-areas:"side content nav";
 
@@ -33,16 +33,13 @@
           width:100px;height:100px;
           &:hover{opacity:100%}
         }
+        @media(max-width: 1024px){
+          img:nth-last-child(-n+3){display:none}
+        }
+        @media(max-width: 425px){
+          img:nth-child(5){display:none}
+        }
       }
     }
-  }
-}
-
-div{
-  @media(max-width: 1024px){
-    img:nth-last-child(-n+3){display:none}
-  }
-  @media(max-width: 425px){
-    img:nth-child(5){display:none}
   }
 }
