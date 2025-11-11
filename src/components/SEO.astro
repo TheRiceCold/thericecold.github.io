@@ -1,0 +1,92 @@
+---
+const {
+  languages, lang, title, description, pubDate,
+} = Astro.props
+
+const url = new URL(Astro.request.url)
+const slug = url.pathname.split('/').pop()
+const ogImageUrl = `${Astro.site}og/${slug}-${lang}.png`
+
+const blogPostScript = `
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "${title}",
+  "description": "${description}",
+  "datePublished": "${pubDate.toISOString()}",
+  "dateModified": "${pubDate.toISOString()}",
+  "author": { "@type": "Person", "name": "Dale Walter" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "thericecold",
+    "logo": { "@type": "ImageObject", "url": "${Astro.site}me.svg" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "${Astro.url.href}" },
+  "image": {
+    "@type": "ImageObject",
+    "url": "${ogImageUrl}",
+    "width": "1200",
+    "height": "630"
+  }
+}`
+
+const breadcrumbScript = `
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "${Astro.site}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "${Astro.site+lang}/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "${title}",
+      "item": "${Astro.url.href}"
+    }
+  ]
+}`
+
+---
+<meta name="description" content={description}>
+
+<meta property="og:title" content={title}>
+<meta property="og:description" content={description}>
+<meta property="og:image" content={ogImageUrl}>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content={pubDate.toISOString()}>
+<meta property="og:locale" content={`${lang}_${lang.toUpperCase()}`} />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content={title}>
+<meta name="twitter:description" content={description}>
+<meta name="twitter:image" content={ogImageUrl}>
+<meta name="twitter:site" content="@thericecold" />
+<meta name="twitter:creator" content="@thericecold" />
+
+<meta property="og:url" content={Astro.url.href} />
+<meta property="og:thericecold" content="thericecold" />
+
+<meta name="keywords" content="your, keywords, here" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#faf4ed" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1f1d2e" media="(prefers-color-scheme: dark)" />
+
+<link rel="canonical" href={Astro.url.href} />
+<link rel="alternate" hreflang="x-default" href={`${Astro.site}en/blog/${slug}`} />
+{languages.map(l => (
+  <link rel="alternate" hreflang={l} href={`${Astro.site}${l}/blog/${slug}`} />
+))}
+<script type="application/ld+json" set:html={blogPostScript}></script>
+<script type="application/ld+json" set:html={breadcrumbScript}></script>
