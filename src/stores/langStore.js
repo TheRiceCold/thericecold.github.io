@@ -1,34 +1,27 @@
 // src/stores/langStore.js
 
-// import globalTranslations from '../i18n/translations/global.json'
-
-// Cached elements
-let elsText, elsHtml, elsAttr, tmplLists
-let rebinders = [], debounceTimer = null;
-
-const resolve = (obj, path) => {
-  if (!obj || !path) return undefined
-  const keys = path.split('.')
-  let val = obj;
-  for (let key of keys) {
-    const [prop, index] = key.split(/[-.]/)
-    val = val?.[prop]
-    if (Array.isArray(val) && index !== undefined && index !== '')
-      val = val[Number(index)]
-    if (val === undefined) return undefined
-  }
-  return val
-}
-
 const langStore = (() => {
-  let translations = { ...globalTranslations }
+  let translations = { }
   let currentLang =
     localStorage.getItem('lang') ||
     navigator.language?.split('-')[0] || 'en'
 
-  if (!translations[currentLang]) {
-    const fallback = Object.keys(translations)[0] || 'en'
-    currentLang = fallback
+  // Cached elements
+  let elsText, elsHtml, elsAttr, tmplLists
+  let rebinders = [], debounceTimer = null
+
+  const resolve = (obj, path) => {
+    if (!obj || !path) return undefined
+    const keys = path.split('.')
+    let val = obj
+    for (let key of keys) {
+      const [prop, index] = key.split(/[-.]/)
+      val = val?.[prop]
+      if (Array.isArray(val) && index !== undefined && index !== '')
+        val = val[Number(index)]
+      if (val === undefined) return undefined
+    }
+    return val
   }
 
   const t = (key, vars) => {
@@ -48,7 +41,7 @@ const langStore = (() => {
   const registerTranslations = (pageTranslations = {}) => {
     for (const [lang, data] of Object.entries(pageTranslations)) {
       if (!translations[lang]) translations[lang] = {}
-      Object.assign(translations[lang], globalTranslations[lang] || {}, data)
+      Object.assign(translations[lang], data)
     }
   }
 
@@ -118,8 +111,10 @@ const langStore = (() => {
                     : null
                 attrValue = attrValue.replace('{en}', enValue || '')
               }
+              el.setAttribute(attrName, attrValue.toLowerCase())
+            } else {
+              el.setAttribute(attrName, resolve(item, attrValue))
             }
-            el.setAttribute(attrName, attrValue.toLowerCase())
           }
 
           if ('i18nHtml' in el.dataset) el.innerHTML = val ?? ''
@@ -173,7 +168,6 @@ const langStore = (() => {
     elsHtml = document.querySelectorAll('[data-i18n-html]')
     elsAttr = document.querySelectorAll('[data-i18n-attr]')
     tmplLists = document.querySelectorAll('template[data-i18n-list]')
-    updateI18nElements()
   }
 
   const setLanguage = lang => {
@@ -181,6 +175,8 @@ const langStore = (() => {
     currentLang = lang
     localStorage.setItem('lang', lang)
     updateI18nElements()
+
+    // document.dispatchEvent(new CustomEvent('langchange',{detail:{lang: currentLang}}))
   }
 
   const next = () => {
@@ -196,6 +192,7 @@ const langStore = (() => {
     setLanguage,
     next, init, t,
     getLanguages: () => Object.keys(translations),
+    // get current() { return currentLang },
     onRebind,
   }
 })()

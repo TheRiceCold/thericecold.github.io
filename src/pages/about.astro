@@ -1,8 +1,5 @@
 ---
-import {
-  registerPageTranslations,
-  getFinalScript,
-} from '../scripts/registerScript'
+import {registerScript} from '../scripts/registerScript'
 
 import '../styles/about.css'
 import '../styles/aside.css'
@@ -39,8 +36,7 @@ const dbList = ['Postgres', 'MySQL', 'MongoDB', 'Firebase']
 const libList = ['React', 'Vue', 'Tailwind', 'Express', 'Lua', 'SQL', 'Typst']
 const osList = ['NixOS', 'Debian Linux', 'Arch Linux', 'Windows', 'Mac']
 
-registerPageTranslations('about')
-const script = await getFinalScript()
+const script = await registerScript({ page: 'about' })
 
 ---
 <Layout page="about" description="About TheRiceCold">

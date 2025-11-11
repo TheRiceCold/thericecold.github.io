@@ -1,5 +1,6 @@
 en:
   page: Home
+  description: TheRiceCold's Homepage
   welcome: "Hello there👋!"
   intro: >-
     This website serves as a digital portfolio showcasing my professional
@@ -21,18 +22,23 @@ en:
   recentPosts:
     label: Recent Posts
     list:
-      - title: Post 1
-        date: 'October 15, 2025'
+      - title: "C++ Series: ZERO"
+        link: en/blog/cpp-series-0
+        date: 'November 06, 2025'
       - title: Post 2
+        link: en/blog/cpp-series-0
         date: 'September 4, 2025'
       - title: Post 3
+        link: en/blog/cpp-series-0
         date: 'June 12, 2025'
       - title: Post 4
+        link: en/blog/cpp-series-0
         date: 'March 10, 2025'
 
 es:
-  page: Casa
-  welcome: "Hola👋!"
+  page: Inicio
+  description: Página web de ElArrozFrio
+  welcome: Hola👋!
   intro: >-
     Este sitio web sirve de portfolio digital en el que presento mi trayectoria profesional,
     proyectos informáticos, obras creativas y diversas publicaciones.
@@ -53,18 +59,23 @@ es:
   recentPosts:
     label: Últimas entradas
     list:
-      - title: Entrada 1
+      - title: "Serie C++: Cero"
+        link: es/blog/cpp-series-0
         date: 15 de octubre de 2025
       - title: Entrada 2
+        link: es/blog/cpp-series-0
         date: 4 de septiembre de 2025
       - title: Entrada 3
+        link: es/blog/cpp-series-0
         date: 12 de junio de 2025
       - title: Entrada 4
+        link: es/blog/cpp-series-0
         date: 10 de marzo de 2025
 
 fil:
   page: Tahanan
-  welcome: "Tao po🚪✊!"
+  description: Tahanan ni KaningLamig
+  welcome: Tao po🚪✊!
   intro: >-
     Itó'y nagsisilbíng dihitál na portpolyo upang ipakilala ang aking mga
     kadalubhasàang karanasán, mga malikhaing gawa, at iba ibang mga paglalathalà.
@@ -87,18 +98,23 @@ fil:
   recentPosts:
     label: Mga hulíng paglalathalà
     list:
-      - title: Lathalaín 1
+      - title: "C++ Serye: Kopong"
+        link: fil/blog/cpp-series-0
         date: 'Oktubre 15, 2025'
       - title: Lathalaín 2
+        link: fil/blog/cpp-series-0
         date: 'Septyembre 4, 2025'
       - title: Lathalaín 3
+        link: fil/blog/cpp-series-0
         date: 'Hunyo 12, 2025'
       - title: Lathalaín 4
+        link: fil/blog/cpp-series-0
         date: 'Marso 10, 2025'
 
 ja:
   page: 家
-  welcome: "こんにちは👋!"
+  description: 冷めたご飯のホームページ
+  welcome: こんにちは👋!
   intro: >-
     本ウェブサイトは私のデジタルポートフォリオとして、専門的経歴、コンピュータプロジェクト、クリエイティブ作品、および各種出版物を紹介しています。
     このランダムな人物についてもっと知りたい場合は、<a href="about">こちらをクリックしてください</a>。
@@ -119,17 +135,22 @@ ja:
     label: 最近のブログ
     list:
       - title: ブログ 1
+        link: ja/blog/cpp-series-0
         date: 2025年10月15日
       - title: ブログ 2
+        link: ja/blog/cpp-series-0
         date: 2025年9月4日
       - title: ブログ 3
+        link: ja/blog/cpp-series-0
         date: 2025年6月12日
       - title: ブログ 4
+        link: ja/blog/cpp-series-0
         date: 2025年3月10日
 
-ch:
+zh:
   page: 家
-  welcome: "你好👋!"
+  description: 冷米饭的主页
+  welcome: 你好👋!
   intro: >-
     本网站作为我的数字作品集，展示了我的专业背景、计算机项目、创意作品以及各类出版物。
     要了解更多关于这个随机个人的信息，<a href="about">请点击此处</a>。
@@ -150,17 +171,22 @@ ch:
     label: 近期博客
     list:
       - title: 博客 1
+        link: zh/blog/cpp-series-0
         date: 2025年10月15日
       - title: 博客 2
+        link: zh/blog/cpp-series-0
         date: 2025年9月4日
       - title: 博客 3
+        link: zh/blog/cpp-series-0
         date: 2025年6月12日
       - title: 博客 4
+        link: zh/blog/cpp-series-0
         date: 2025年3月10日
 
 de:
   page: heim
-  welcome: "Halo👋!"
+  description: DerReisKalts Homepage
+  welcome: Halo👋!
   intro: >-
     Diese Website dient als digitales Portfolio, in dem ich meinen beruflichen Werdegang, 
     meine IT-Projekte, meine kreativen Arbeiten und verschiedene Publikationen präsentiere. 
@@ -182,10 +208,14 @@ de:
     label: Aktuelle Beiträge
     list:
       - title: Beitrag 1
+        link: de/blog/cpp-series-0
         date: 15. Oktober 2025
       - title: Beitrag 2
+        link: de/blog/cpp-series-0
         date: 4. September 2025
       - title: Beitrag 3
+        link: de/blog/cpp-series-0
         date: 12. Juni 2025
       - title: Beitrag 4
+        link: de/blog/cpp-series-0
         date: 10. März 2025

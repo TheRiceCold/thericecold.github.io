@@ -1,8 +1,5 @@
 ---
-import {
-  registerPageTranslations,
-  getFinalScript,
-} from '../scripts/registerScript'
+import {registerScript} from '../scripts/registerScript'
 
 import '../styles/home.css'
 import '../styles/aside.css'
@@ -11,8 +8,7 @@ import Layout from '../layouts/Layout.astro'
 import Sidebar from '../components/Sidebar.astro'
 import Navigator from '../components/Navigator.astro'
 
-registerPageTranslations('home')
-const script = await getFinalScript()
+const script = await registerScript({ page: 'home' })
 
 ---
 <Layout description="TheRiceCold's homepage" page="home">
@@ -56,7 +52,7 @@ const script = await getFinalScript()
       <ul>
 				<template data-i18n-list="recentPosts.list">
 					<li>
-						<a data-i18n-item="title"/>
+						<a data-i18n-item="title" data-i18n-item-attr="href:link" />
 						<small data-i18n-item="date"/>
 					</li>
 				</template>
