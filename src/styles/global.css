@@ -2,11 +2,14 @@
   --bg: #faf4ed;
   --txt: #575279;
   --primary: #b4637a;
+
+  --muted: #9893a5;
+  --subtle: #797593;
+
+  --rose: #d7827e;
   --accent: #907aa9;
   --accent-2: #56949f;
   --accent-3: #286983;
-
-  --muted: #797593;
 
   --surface: #fffaf3;
   --border: 1px solid var(--muted);
@@ -20,21 +23,26 @@
 
 [data-theme="dark"] {
   --bg: #191724;
-  --surface: #1f1d2e;
-  --muted: #6e6a86;
   --txt: #e0def4;
   --primary: #eb6f92;
+
+  --muted: #6e6a86;
+  --subtle: #908caa;
+
+  --rose: #ebbcba;
   --accent: #c4a7e7;
   --accent-2: #9ccfd8;
   --accent-3: #31748f;
+
+  --surface: #1f1d2e;
   --link: var(--accent);
 }
 
 @media (prefers-color-scheme: dark){
-  html[data-theme="system"]{ --bg:#191724;--surface:#1f1d2e;--muted:#6e6a86;--txt:#e0def4;--primary:#eb6f92;--accent:#c4a7e7;--accent-2:#9ccfd8;--accent-3:#31748f;--accent-4:#c4a7e7;--link:var(--accent)}
+  html[data-theme="system"]{--bg:#191724;--surface:#1f1d2e;--muted:#6e6a86;--subtle:#797593;--txt:#e0def4;--primary:#eb6f92;--accent:#c4a7e7;--accent-2:#9ccfd8;--accent-3:#31748f;--accent-4:#c4a7e7;--link:var(--accent)}
 }
 @media (prefers-color-scheme: light){
-  html[data-theme="system"]{ --bg:var(--lp-bg);--surface:var(--lp-surface);--muted:var(--lp-muted);--text:var(--lp-text);--accent:var(--lp-accent);--accent-2:var(--lp-accent-2);--accent-3:var(--lp-accent-3);--accent-4:var(--lp-accent-4); }
+  html[data-theme="system"]{ --bg:var(--lp-bg);--surface:var(--lp-surface);--muted:var(--lp-muted);--subtle:var(--subtle);--text:var(--lp-text);--accent:var(--lp-accent);--accent-2:var(--lp-accent-2);--accent-3:var(--lp-accent-3);--accent-4:var(--lp-accent-4)}
 }
 
 /* Reset */
@@ -79,26 +87,27 @@ body {
   /* font-family: Arial,-apple-system, sans-serif; */
   color: var(--txt);
   background: var(--bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
   a{color: var(--link);&:hover{color:var(--primary)}}
-}
 
-header {
-  grid-area: head;
-  padding: 0 16px;
-  gap: 12px;
-  background: var(--surface);
-  border-bottom: var(--border);
+  > header{
+    grid-area: head;
+    gap:12px;
+    padding:0 16px;
+    background: var(--surface);
+    border-bottom: var(--border);
 
-  /* Logo */
-  a {
-    color: var(--txt);
-    gap: 8px;margin-right: auto;
-    svg {width: 40px;height: 40px;background:var(--accent)}
+    /* Logo */
+    a{
+      color: var(--txt);
+      gap: 8px;margin-right: auto;
+      svg {width: 40px;height: 40px;background:var(--accent)}
+    }
+
+    /* Control Buttons */
+    button{font-size: 12px}
+    #menuBtn{display: none}
   }
-
-  /* Control Buttons */
-  button { font-size: 12px }
-  #menuBtn { display: none }
 }
 
 main{grid-area:main;display:grid}
