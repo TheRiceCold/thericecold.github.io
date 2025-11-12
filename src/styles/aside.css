@@ -1,17 +1,16 @@
 aside {
-  top:16px;
-  position:sticky;
   min-width:150px;
-  overflow-y:auto;
-  scrollbar-width: thin;
+  max-width:225px;
+  position:sticky;top:16px;
+  display:flex;flex-direction:column;
+  overflow-y:auto;scrollbar-width:thin;
+  padding:12px;background:var(--surface);
 
-  h3 {font-size: 15px}
+  h3{font-size: 15px}
   a,input{font-size:13px}
-  h3,input{margin-bottom:8px}
 
   /* Link decoration */
   a{text-transform:none}
-  a::before{content:'❖'}
 
   button{font-size:14px}
 
@@ -22,14 +21,21 @@ aside {
     width:calc(100% - 12px);
   }
 
-  ul>ul{margin-left:8px}
+  ul {
+    gap: 8px;
+    font-size: 15px;
+    > ul{margin-left:8px}
+  }
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &:-webkit-scrollbar{display:none}
 }
 
 #sidebar{
-  grid-area:side;
-  left: 12px;
-  align-self: start;
-  height: calc(100vh - 32px);
+  grid-area:side;left:12px;border:var(--border);
+  a:before{content:'❖'}
+  h3,input{margin-bottom:8px}
 }
 
 #nav {
@@ -37,14 +43,17 @@ aside {
   right:12px;
   align-items:center;
   height: fit-content;
+  max-height: calc(100vh - 32px);
   border:var(--dashed);
-  h4{margin-bottom:4px}
+  h3{margin-bottom:8px}
+  a:before{content:'❖'}
 }
 
 #sidebar, #mobileSidebar {
   button+ul{display: none;&.show{display:flex}}
   ul button{
-    padding:0;&::before{content:'✸ '}
+    padding:0;
+    &:before{content:'✸ '}
   }
 }
 
@@ -60,38 +69,37 @@ aside {
   z-index:2;
   padding:0;
   position:fixed;
-  width:50%;height:100%;
   top:0;right:0;bottom:0;
+  border-left: var(--border);
 
   transform:translateX(100%);
   transition:transform 0.3s ease;
   display:flex;align-items:start;
   &.show{transform:translateX(0)}
-  #xBtn{display:none}
+  header {
+    flex-direction: column;
+    nav {
+      gap: 16px;
+      padding: 12px 16px;
+      border-bottom: var(--border);
+    }
+    div {
+      padding: 12px 16px;
+      border-bottom: var(--border);
+      justify-content: space-between;
+      input{width:50%}
+    }
+  }
 
-  >ul{margin: 12px 0 0 16px}
-  div{
+  footer {
     gap: 16px;
     width: 100%;
-    padding: 8px;
-    align-items: center;
-    input{margin-left:16px;width:40%}
-    border-bottom: var(--border);
-    &:first-child{
-      font-size:12px;justify-content:end
-    }
-    &:nth-child(2) {
-      justify-content: center;
-      a::before{content: ''}
-    }
-    &:nth-child(3){justify-content:space-between}
+    padding: 4px 16px;
+    justify-content: end
   }
-  @media(max-width: 425px){width:100%;#xBtn{display:block}}
-}
 
-@media (max-width: 1024) {
-  #mobileSidebar,#overlay{display:none}
-}
-@media (max-width: 768px){
-  #nav, #sidebar{display: none}
+  > ul {
+    height: 100%;
+    padding: 12px;
+  }
 }

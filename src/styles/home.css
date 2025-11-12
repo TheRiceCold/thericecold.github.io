@@ -1,8 +1,8 @@
-#home{
+#home {
   grid-template-columns:auto 1fr auto;
   grid-template-areas:"side content nav";
 
-  section{
+  section {
     margin: 0 auto;
     grid-area: content;
     width: min-content;
@@ -14,11 +14,13 @@
     h3,h4{margin-bottom:8px}
 
     article {
-      &:not(:first-child) a::before {content:'✱ '}
-      &:first-child a{display:inline;text-transform:none}
-      &:nth-child(2) li{align-items:start}
+      padding:12px;border:var(--border);background:var(--surface);
 
-      &:last-child li{
+      ul{gap:4px}
+      &:not(:first-child) a:before {content:'✱ '}
+      &:first-child a {display:inline;text-transform:none}
+
+      &:last-child li {
         padding-bottom:4px;
         justify-content:space-between;
         &:not(:last-child) {border-bottom:var(--border)}
@@ -27,24 +29,34 @@
       /* Artworks */
       div{
         gap:12px;
-        img{
+        img {
           opacity:75%;
           object-fit:cover;
           width:100px;height:100px;
           &:hover{opacity:100%}
         }
-        @media(max-width: 1440px){
-          img:last-child{display:none}
-        }
+
+        /*Desktop*/
+        @media(max-width:1440px){img:last-child{display:none}}
+        /* Hides Last 2 Images to display only 6 */
+        @media(max-width:1200px){img:nth-last-child(-n+2){display:none}}
         /* Hides Last 3 Images to display only 5 */
-        @media(max-width: 1024px){
-          img:nth-last-child(-n+3){display:none}
-        }
-        /* Hides Last 5 Images to display only 3 */
-        @media(max-width: 425px){
-          img:nth-last-child(-n+5){display:none}
-        }
+        @media(max-width:1100px){img:nth-last-child(-n+3){display:none}}
+
+        /* Tablets and Smartphones */
+        /* Displays all, bc sidebars are hidden */
+        @media(max-width:1000px){img{display:block !important}}
+        @media(max-width:900px){img:last-child{display:none !important}}
+        @media(max-width:800px){img:nth-last-child(-n+2){display:none !important}}
+        @media(max-width:700px){img:nth-last-child(-n+3){display:none !important}}
+        @media(max-width:550px){img:nth-last-child(-n+4){display:none !important}}
       }
     }
   }
+}
+
+@media (max-width: 1000px){
+  #nav, #sidebar{display: none}
+  header button {display:none}
+  #menuBtn {display:block !important}
 }

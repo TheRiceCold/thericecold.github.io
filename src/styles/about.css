@@ -1,11 +1,12 @@
-#about{
-  grid-template-columns:auto 1fr auto;
+#about {
+  grid-template-columns: auto 1fr auto;
   grid-template-areas:"side content nav";
 
   article{
-    grid-area: content;
-    width: 600px;
-    margin: 0 auto;
+    margin:0 auto;
+    grid-area:content;
+    width:600px;height:fit-content;
+    padding:12px;border:var(--border);background: var(--surface);
 
     p{padding:8px 0}
     a{display:inline}
@@ -14,6 +15,12 @@
     small a{text-transform:none}
     svg {width:60px;height:60px;margin-right:8px}
     p:not(:last-child){border-bottom:var(--border)}
-    b{margin-top:4px;text-transform:capitalize;&::after{content:':'}}
+    b{margin-top:4px;text-transform:capitalize;&:after{content:':'}}
   }
+}
+
+@media (max-width: 1020px){
+  #nav, #sidebar{display: none}
+  header button {display:none}
+  #menuBtn {display:block !important}
 }
