@@ -83,6 +83,6 @@ const script = await registerScript({ page: 'about' })
       ))}
 		</p>
   </article>
-	<Navigator shortcuts={shortcuts} />
+	<Navigator title="visit" shortcuts={shortcuts} />
 	<script is:inline set:html={script.code}></script>
 </Layout>

@@ -1,0 +1,196 @@
+en:
+  sidebarBlog:
+    title: Blog Posts
+    list:
+    - category: notes
+      posts:
+        - title: note 1
+          link: /
+        - title: note 2
+          link: /
+    - category: learn with me
+      posts:
+        - title: C++ Series
+          link: /en/blog/cpp-series-0
+    - category: insights
+      posts:
+        - title: insight 1
+          link: /
+        - title: insight 2
+          link: /
+    - category: research
+      posts:
+        - title: research 1
+          link: /
+        - title: research 2
+          link: /
+    - category: writings
+      posts:
+        - title: a poetry
+          link: /
+        - title: a letter
+          link: /
+es:
+  sidebarBlog:
+    title: Entradas de Blog
+    list:
+    - category: apuntes
+      posts:
+        - title: apunte 1
+          link: /
+        - title: apunte 2
+          link: /
+    - category: aprende conmigo
+      posts:
+        - title: Serie C++
+          link: /es/blog/cpp-series-0
+    - category: pensamientos
+      posts:
+        - title: pensamiento 1
+          link: /
+        - title: pensamiento 2
+          link: /
+    - category: investigaciones
+      posts:
+        - title: investigación 1
+          link: /
+        - title: investigación 2
+          link: /
+    - category: escritos
+      posts:
+        - title: un poesía
+          link: /
+        - title: una carta
+          link: /
+
+fil:
+  sidebarBlog:
+    title: Mga paglalathalà
+    list:
+    - category: mga talâ
+      posts:
+        - title: talâ 1
+          link: /
+        - title: talâ 2
+          link: /
+    - category: aralin
+      posts:
+        - title: Serye C++
+          link: /fil/blog/cpp-series-0
+    - category: mga kaisipán
+      posts:
+        - title: kaisipán 1
+          link: /
+        - title: kaisipán 2
+          link: /
+    - category: mga pananaliksík
+      posts:
+        - title: pananaliksík 1
+          link: /
+        - title: pananaliksík 2
+          link: /
+    - category: mga kasulatán
+      posts:
+        - title: isáng tulâ
+          link: /
+        - title: isáng kasulatán
+          link: /
+
+ja:
+  sidebarBlog:
+    title: ブログ記事
+    list:
+    - category: メモ
+      posts:
+        - title: メモ 1
+          link: /
+        - title: メモ 2
+          link: /
+    - category: 学びましょう
+      posts:
+        - title: C++シリーズ
+          link: /ja/blog/cpp-series-0
+    - category: 考え
+      posts:
+        - title: 考え1
+          link: /
+        - title: 考え2
+          link: /
+    - category: 研究
+      posts:
+        - title: 研究 1
+          link: /
+        - title: 研究 2
+          link: /
+    - category: 著作
+      posts:
+        - title: 一編の詩
+          link: /
+        - title: 手紙
+          link: /
+
+zh:
+  sidebarBlog:
+    title: 博客文章
+    list:
+    - category: 笔记
+      posts:
+        - title: 注释 1
+          link: /
+        - title: 注释 2
+          link: /
+    - category: 和我一起学习吧
+      posts:
+        - title: C++系列
+          link: /zh/blog/cpp-series-0
+    - category: 思想
+      posts:
+        - title: 思想 1
+          link: /
+        - title: 思想 2
+          link: /
+    - category: 研究
+      posts:
+        - title: 研究 1
+          link: /
+        - title: 研究 2
+          link: /
+    - category: 书面帖子
+      posts:
+        - title: 一首诗
+          link: /
+        - title: 一封信
+          link: /
+
+de:
+  sidebarBlog:
+    title: Blogeinträge
+    list:
+    - category: Notizen
+      posts:
+        - title: Notiz 1
+          link: /
+        - title: Notiz 2
+          link: /
+    - category: Lerne mit mir
+      posts:
+        - title: C++-Reihe
+          link: /de/blog/cpp-series-0
+    - category: Gedanken
+      posts:
+        - title: Gedanke 1
+          link: /
+        - title: Gedanke 2
+          link: /
+    - category: Forschungen
+      posts:
+        - title: Forschung 1
+          link: /
+        - title: Forschung 2
+          link: /
+    - category: Schriften
+      posts:
+        - title: ein Gedicht
+          link: /
+        - title: ein Brief
+          link: /

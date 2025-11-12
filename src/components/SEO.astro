@@ -1,13 +1,12 @@
 ---
-const {
-  languages, lang, title, description, pubDate,
-} = Astro.props
+const {lang, title, description, pubDate} = Astro.props
 
-const url = new URL(Astro.request.url)
-const slug = url.pathname.split('/').pop()
-const ogImageUrl = `${Astro.site}og/${slug}-${lang}.png`
-
-const blogPostScript = `
+const
+  url = new URL(Astro.request.url),
+  slug = url.pathname.split('/').pop(),
+  ogImageUrl = `${Astro.site}og/${slug}-${lang}.png`,
+  languages = ['en', 'es', 'fil', 'ja', 'zh', 'de'],
+  blogPostScript = `
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
@@ -28,9 +27,8 @@ const blogPostScript = `
     "width": "1200",
     "height": "630"
   }
-}`
-
-const breadcrumbScript = `
+}`,
+  breadcrumbScript = `
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",

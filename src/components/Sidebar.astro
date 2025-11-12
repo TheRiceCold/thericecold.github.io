@@ -1,14 +1,27 @@
+---
+import {getTranslations} from '../scripts/getTranslations'
+
+const {lang = '', title = '', items = []} = Astro.props
+
+const t = getTranslations(lang)
+
+---
+
 <aside id="sidebar">
-  <h3 data-i18n="blog.label"/>
-  <input data-i18n-attr="placeholder:search" onclick="location.href='blog'">
+  {title ? <h3>{title}</h3> : <h3 data-i18n="sidebarBlog.title"/>}
+  {lang !== '' ? <input placeholder={t.search}> : (
+    <input data-i18n-attr="placeholder:search" onclick="location.href='blog'">
+  )}
   <ul>
-    <template data-i18n-list="blog.list">
-      <button data-button data-i18n-item="category" id="dropdownBtn"/>
-      <ul>
-        <template data-i18n-sublist="posts">
-          <a data-i18n-item />
-        </template>
-      </ul>
-    </template>
+    {items.length === 0 ? (
+      <template data-i18n-list="sidebarBlog.list">
+        <button data-button data-i18n-item="category" id="dropdownBtn"/>
+        <ul>
+          <template data-i18n-sublist="posts">
+            <a data-i18n-item="title" data-i18n-item-attr="href:link" />
+          </template>
+        </ul>
+      </template>
+    ): (items.map(i => <a href={i.link}>{i.label}</a>))}
   </ul>
 </aside>

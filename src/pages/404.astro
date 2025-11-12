@@ -1,8 +1,5 @@
 ---
-import {
-  registerPageTranslations,
-  getFinalScript
-} from '../scripts/registerScript'
+import {registerScript} from '../scripts/registerScript'
 
 import '../styles/aside.css'
 import '../styles/404.css'
@@ -11,8 +8,7 @@ import Layout from '../layouts/Layout.astro'
 import Sidebar from '../components/Sidebar.astro'
 import Navigator from '../components/Navigator.astro'
 
-registerPageTranslations('404')
-const script = await getFinalScript()
+const script = await registerScript({ page: 404 })
 
 ---
 

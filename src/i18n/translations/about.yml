@@ -1,5 +1,6 @@
 en:
   page: About me
+  visit: Visit
   profession: Programmer | Artist | <a>View resume</a>
   summary: >-
     I studied Arts and Game Development in college and completed a full-stack
@@ -22,6 +23,7 @@ en:
 
 es:
   page: Sobre mí
+  visit: Visitar
   profession: Programador | Artista | <a>Ver currículum</a>
   summary: >-
     Me formé en Artes y Desarrollo de Videojuegos, y completé un bootcamp de
@@ -44,6 +46,7 @@ es:
 
 fil:
   page: Tungkól sakin
+  visit: Puntahán
   profession: Tagaprograma | Alagad ng sining | <a>Tingnán ang lagumbuhay</a>
   summary: >-
     Ako'y nag-aral ng sining at pagbuô larô at nagtapós ng buong stack sa pagbuo
@@ -66,6 +69,7 @@ fil:
 
 ja:
   page: について
+  visit: 訪問
   profession: プログラマー | 芸術家 | <a>履歴書を見る</a>
   summary: >-
     私は大学でアートとゲーム開発を学び、フルスタックWeb開発ブートキャンプを修了しました。私は英語とタガログ語を流暢に話します。また、B1レベルのスペイン語も多少理解できます。ソフトウェア開発は、私の創造的な才能と問題解決能力を融合できる職業です。
@@ -85,6 +89,7 @@ ja:
 
 zh:
   page: 关于
+  visit: 访问
   profession: 程序员 | 艺术家 | <a>查看简历</a>
   summary: >-
     我在大学里学的是艺术和游戏开发，还完成了全栈网页开发训练营的学习。我能说一口流利的英语和菲律宾语。我还懂一点西班牙语，水平达到B1级。软件开发是一项让我能够将我的创造才能和解决问题的能力结合在一起的专业。
@@ -104,6 +109,7 @@ zh:
 
 de:
   page: über
+  visit: Besuch
   profession: Programmierer | Künstler | <a>Lebenslauf anzeigen</a>
   summary: >-
     Ich habe Arts and Game Development an der Hochschule studiert und ein

@@ -1,6 +1,7 @@
 en:
   page: Home
   description: TheRiceCold's Homepage
+  navigate: Navigate
   welcome: "Hello there👋!"
   intro: >-
     This website serves as a digital portfolio showcasing my professional
@@ -22,22 +23,23 @@ en:
   recentPosts:
     label: Recent Posts
     list:
+      - title: "C++ Series: ONE"
+        link: en/blog/cpp-series-1
+        date: November 12, 2025
       - title: "C++ Series: ZERO"
         link: en/blog/cpp-series-0
-        date: 'November 06, 2025'
-      - title: Post 2
-        link: en/blog/cpp-series-0
-        date: 'September 4, 2025'
+        date: November 06, 2025
       - title: Post 3
         link: en/blog/cpp-series-0
-        date: 'June 12, 2025'
+        date: June 12, 2025
       - title: Post 4
         link: en/blog/cpp-series-0
-        date: 'March 10, 2025'
+        date: March 10, 2025
 
 es:
   page: Inicio
   description: Página web de ElArrozFrio
+  navigate: Navegar
   welcome: Hola👋!
   intro: >-
     Este sitio web sirve de portfolio digital en el que presento mi trayectoria profesional,
@@ -59,12 +61,12 @@ es:
   recentPosts:
     label: Últimas entradas
     list:
+      - title: "Serie C++: UNO"
+        link: es/blog/cpp-series-1
+        date: 12 de noviembre de 2025
       - title: "Serie C++: Cero"
         link: es/blog/cpp-series-0
-        date: 15 de octubre de 2025
-      - title: Entrada 2
-        link: es/blog/cpp-series-0
-        date: 4 de septiembre de 2025
+        date: 6 de noviembre de 2025
       - title: Entrada 3
         link: es/blog/cpp-series-0
         date: 12 de junio de 2025
@@ -75,6 +77,7 @@ es:
 fil:
   page: Tahanan
   description: Tahanan ni KaningLamig
+  navigate: Manalaktak
   welcome: Tao po🚪✊!
   intro: >-
     Itó'y nagsisilbíng dihitál na portpolyo upang ipakilala ang aking mga
@@ -98,22 +101,23 @@ fil:
   recentPosts:
     label: Mga hulíng paglalathalà
     list:
-      - title: "C++ Serye: Kopong"
+      - title: "C++ Serye: ISA"
+        link: fil/blog/cpp-series-1
+        date: Ika-12 ng Nobyembre, 2025
+      - title: "C++ Serye: KOPONG"
         link: fil/blog/cpp-series-0
-        date: 'Oktubre 15, 2025'
-      - title: Lathalaín 2
-        link: fil/blog/cpp-series-0
-        date: 'Septyembre 4, 2025'
+        date: Ika-6 ng Nobyembre, 2025
       - title: Lathalaín 3
         link: fil/blog/cpp-series-0
-        date: 'Hunyo 12, 2025'
+        date: Ika-12 ng Hunyo, 2025
       - title: Lathalaín 4
         link: fil/blog/cpp-series-0
-        date: 'Marso 10, 2025'
+        date: Ika-10 ng Marso , 2025
 
 ja:
   page: 家
   description: 冷めたご飯のホームページ
+  navigate: ナビゲートする
   welcome: こんにちは👋!
   intro: >-
     本ウェブサイトは私のデジタルポートフォリオとして、専門的経歴、コンピュータプロジェクト、クリエイティブ作品、および各種出版物を紹介しています。
@@ -134,12 +138,12 @@ ja:
   recentPosts:
     label: 最近のブログ
     list:
-      - title: ブログ 1
+      - title: "C++シリーズ: 一"
+        link: ja/blog/cpp-series-1
+        date: 2025年11月12日
+      - title: "C++シリーズ: ゼロ"
         link: ja/blog/cpp-series-0
-        date: 2025年10月15日
-      - title: ブログ 2
-        link: ja/blog/cpp-series-0
-        date: 2025年9月4日
+        date: 2025年11月6日
       - title: ブログ 3
         link: ja/blog/cpp-series-0
         date: 2025年6月12日
@@ -150,6 +154,7 @@ ja:
 zh:
   page: 家
   description: 冷米饭的主页
+  navigate: 导航
   welcome: 你好👋!
   intro: >-
     本网站作为我的数字作品集，展示了我的专业背景、计算机项目、创意作品以及各类出版物。
@@ -170,12 +175,12 @@ zh:
   recentPosts:
     label: 近期博客
     list:
-      - title: 博客 1
+      - title: "C++系列: 一"
+        link: zh/blog/cpp-series-1
+        date: 2025年11月12日
+      - title: "C++系列: 零"
         link: zh/blog/cpp-series-0
-        date: 2025年10月15日
-      - title: 博客 2
-        link: zh/blog/cpp-series-0
-        date: 2025年9月4日
+        date: 2025年11月6日
       - title: 博客 3
         link: zh/blog/cpp-series-0
         date: 2025年6月12日
@@ -186,6 +191,7 @@ zh:
 de:
   page: heim
   description: DerReisKalts Homepage
+  navigate: navigieren
   welcome: Halo👋!
   intro: >-
     Diese Website dient als digitales Portfolio, in dem ich meinen beruflichen Werdegang, 
@@ -207,12 +213,12 @@ de:
   recentPosts:
     label: Aktuelle Beiträge
     list:
-      - title: Beitrag 1
+      - title: "C++-Reihe: EINS"
+        link: de/blog/cpp-series-1
+        date: 12. November 2025
+      - title: "C++-Reihe: NULL"
         link: de/blog/cpp-series-0
-        date: 15. Oktober 2025
-      - title: Beitrag 2
-        link: de/blog/cpp-series-0
-        date: 4. September 2025
+        date: 6. November 2025
       - title: Beitrag 3
         link: de/blog/cpp-series-0
         date: 12. Juni 2025

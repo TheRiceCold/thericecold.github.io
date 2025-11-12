@@ -1,19 +1,30 @@
 ---
 import Me from '../../public/me.svg'
+import {getTranslations} from '../scripts/getTranslations'
+
+const {lang = ''} = Astro.props
+const t = getTranslations(lang)
 
 ---
 <header>
   <a href="/">
     <Me/>
-    <b data-i18n="title"/>
+    {lang !== '' ? <b>{t.title}</b> : <b data-i18n="title"/>}
   </a>
-  <button
-    id="langBtn"
-    data-i18n-sep=": "
-    data-i18n="language,langName"/>
-  <button
-    id="themeBtn"
-    data-i18n-sep=": "
-    data-i18n="theme,themeVal"/>
+  {lang !== '' ? (
+    <button id="blogLangBtn">
+      {t.language}: {t.langName}
+    </button>
+  ) : <button
+      id="langBtn"
+      data-i18n-sep=": "
+      data-i18n="language,langName"/>}
+
+  {lang !== '' ? <button id="themeBtn"/> :
+    <button
+      id="themeBtn"
+      data-i18n-sep=": "
+      data-i18n="theme,themeVal"/>}
+
   <button id="menuBtn">☰</button>
 </header>

@@ -1,27 +1,52 @@
 // src/stores/langStore.js
 
+let translations = { }
+const resolve = (obj, path) => {
+  if (!obj || !path) return undefined
+  const keys = path.split('.')
+  let val = obj
+  for (let key of keys) {
+    const [prop, index] = key.split(/[-.]/)
+    val = val?.[prop]
+    if (Array.isArray(val) && index !== undefined && index !== '')
+      val = val[Number(index)]
+    if (val === undefined) return undefined
+  }
+  return val
+}
 const langStore = (() => {
-  let translations = { }
   let currentLang =
     localStorage.getItem('lang') ||
     navigator.language?.split('-')[0] || 'en'
 
   // Cached elements
-  let elsText, elsHtml, elsAttr, tmplLists
+  let elsText, elsHtml, elsAttr, templateLists
   let rebinders = [], debounceTimer = null
 
-  const resolve = (obj, path) => {
-    if (!obj || !path) return undefined
-    const keys = path.split('.')
-    let val = obj
-    for (let key of keys) {
-      const [prop, index] = key.split(/[-.]/)
-      val = val?.[prop]
-      if (Array.isArray(val) && index !== undefined && index !== '')
-        val = val[Number(index)]
-      if (val === undefined) return undefined
+  const applyListItemAttr = (templateKey, list, listItem, el) => {
+    const itemKey = el.dataset.i18nItem
+    const fallbackVal =
+      itemKey && typeof listItem === 'object'
+      ? resolve(listItem, itemKey) :
+      typeof listItem === 'string' ? listItem : ''
+
+    const itemAttr = el.dataset.i18nItemAttr
+    if (itemAttr) {
+      const [attr, key] = itemAttr.split(':')
+      let value = key ? key.trim() : fallbackVal
+
+      // replace {en} with English translation
+      if (value.includes('{en}')) {
+        const enList = translations.en[templateKey]
+        if (Array.isArray(enList))
+          value = value.replace('{en}', (typeof listItem === 'string') ? enList[list.indexOf(listItem)] : '')
+        el.setAttribute(attr, value.toLowerCase())
+      }
+      else el.setAttribute(attr, resolve(listItem, value))
     }
-    return val
+
+    if ('i18nHtml' in el.dataset) el.innerHTML = fallbackVal ?? ''
+    else el.textContent = fallbackVal ?? ''
   }
 
   const t = (key, vars) => {
@@ -61,6 +86,7 @@ const langStore = (() => {
       e.innerHTML = keys.map(k => t(k.trim())).join(' ')
     }
 
+    // Attributes
     for (const el of elsAttr) {
       const entries = el.dataset.i18nAttr.split(',')
       for (const entry of entries) {
@@ -71,57 +97,29 @@ const langStore = (() => {
     }
 
     // List templates
-    for (const tmpl of tmplLists) {
-      const key = tmpl.dataset.i18nList
+    for (const template of templateLists) {
+      const key = template.dataset.i18nList
       const list = t(key)
       if (!Array.isArray(list)) continue
 
-      const parent = tmpl.parentElement
+      const parent = template.parentElement
       for (let i = parent.children.length - 1; i >= 0; i--) {
         const el = parent.children[i]
         if (el.tagName !== 'TEMPLATE') parent.removeChild(el)
       }
 
+      // List
       for (const item of list) {
-        const clone = tmpl.content.cloneNode(true)
+        const clone = template.content.cloneNode(true)
         const items = clone.querySelectorAll('[data-i18n-item]')
-        const subTmpls = clone.querySelectorAll('template[data-i18n-sublist]')
+        const subTemplateLists = clone.querySelectorAll('template[data-i18n-sublist]')
 
-        for (const el of items) {
-          const itemKey = el.dataset.i18nItem
-          const val =
-            itemKey && typeof item === 'object' ? resolve(item, itemKey) :
-            typeof item === 'string' ? item : ''
+        // List Items
+        for (const el of items)
+          applyListItemAttr(key, list, item, el)
 
-          const attrSpec = el.dataset.i18nItemAttr
-          if (attrSpec) {
-            const parts = attrSpec.split(':')
-            const attrName = parts[0].trim()
-            const rawVal = parts[1] ? parts[1].trim() : null
-
-            let attrValue = rawVal ?? val
-
-            // replace {en} with English translation
-            if (attrValue.includes('{en}')) {
-              const enList = translations['en'][key]
-              if (Array.isArray(enList)) {
-                const enValue =
-                  typeof item === 'string'
-                    ? enList[list.indexOf(item)]
-                    : null
-                attrValue = attrValue.replace('{en}', enValue || '')
-              }
-              el.setAttribute(attrName, attrValue.toLowerCase())
-            } else {
-              el.setAttribute(attrName, resolve(item, attrValue))
-            }
-          }
-
-          if ('i18nHtml' in el.dataset) el.innerHTML = val ?? ''
-          else el.textContent = val ?? ''
-        }
-
-        for (const sub of subTmpls) {
+        // SubList
+        for (const sub of subTemplateLists) {
           const subKey = sub.dataset.i18nSublist
           const subList = item[subKey]
           if (!Array.isArray(subList)) continue
@@ -132,22 +130,14 @@ const langStore = (() => {
             if (el.tagName !== 'TEMPLATE') subParent.removeChild(el)
           }
 
+          // SubList Items
           for (const subItem of subList) {
             const subClone = sub.content.cloneNode(true)
-            const elSubs = subClone.querySelectorAll('[data-i18n-item]')
+            const subItems  = subClone.querySelectorAll('[data-i18n-item]')
             const attrItems = clone.querySelectorAll('[data-i18n-item-attr]')
 
-            for (const elSub of elSubs) {
-              const subItemKey = elSub.dataset.i18nItem
-              const val =
-                subItemKey && typeof subItem === 'object'
-                  ? resolve(subItem, subItemKey)
-                  : typeof subItem === 'string'
-                  ? subItem : ''
-
-              if ('i18nHtml' in elSub.dataset) elSub.innerHTML = val
-              else elSub.textContent = val
-            }
+            for (const subEl of subItems)
+              applyListItemAttr(key, subList, subItem, subEl)
 
             subParent.appendChild(subClone)
           }
@@ -167,7 +157,7 @@ const langStore = (() => {
     elsText = document.querySelectorAll('[data-i18n]')
     elsHtml = document.querySelectorAll('[data-i18n-html]')
     elsAttr = document.querySelectorAll('[data-i18n-attr]')
-    tmplLists = document.querySelectorAll('template[data-i18n-list]')
+    templateLists = document.querySelectorAll('template[data-i18n-list]')
   }
 
   const setLanguage = lang => {
