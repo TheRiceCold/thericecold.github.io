@@ -3,6 +3,7 @@ en:
   langName: English
   title: TheRiceCold
   search: search...
+  read: Read in
   theme: theme
   system: system
   light: light
@@ -15,6 +16,7 @@ es:
   language: idioma
   langName: Español
   title: ElArrozFrio
+  read: Leer en
   search: buscar...
   theme: tema
   system: sistema
@@ -28,6 +30,7 @@ fil:
   language: Wikà
   langName: Tagalog
   title: KaningLamíg
+  read: Basahin sa
   search: hanapin..
   theme: tema
   system: kaayusán
@@ -41,6 +44,7 @@ ja:
   language: 言語
   langName: 日本語
   title: 冷やご飯
+  read: 読む
   search: 検索...
   theme: 体裁
   system: システム
@@ -54,6 +58,7 @@ zh:
   language: 语言
   langName: 中国人
   title: 冷饭
+  read: 阅读
   search: 搜索...
   theme: 格式
   system: 体系
@@ -67,6 +72,7 @@ de:
   language: Sprache
   langName: deutsch
   title: DerReisKalt
+  read: einlesen
   search: suchen...
   theme: Thema
   system: system

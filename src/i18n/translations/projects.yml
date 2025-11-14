@@ -45,6 +45,10 @@ en:
         link: https://github.com/thericecold/fzf-lua-projectile
         desc: A neovim plugin for searching git projects using fzf-lua.
         tags: [neovim, lua, fzf]
+      - name: tinyMd
+        link: https://github.com/thericecold/tinyMd
+        desc: A small js script for converting markdown to html.
+        tags: [javascript, package]
 
   archive:
     label: Archived Projects
