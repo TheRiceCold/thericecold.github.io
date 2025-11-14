@@ -1,0 +1,22 @@
+---
+import {getCollection} from 'astro:content'
+import PostLayout from '../../../layouts/PostLayout.astro'
+
+import {tinyMd} from '../../../scripts/tinyMd'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('learn')
+  return posts.map(post => ({
+    params: {
+      lang: post.data.lang,
+      slug: post.id.split('/').pop().replace('.md', '')
+    },
+    props: {post},
+  }))
+}
+
+---
+
+<PostLayout {...Astro.props.post.data}>
+  <div id="content" set:html={tinyMd(Astro.props.post.body)} />
+</PostLayou>

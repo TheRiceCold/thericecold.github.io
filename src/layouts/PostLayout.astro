@@ -3,6 +3,8 @@ import '../styles/global.css'
 import '../styles/aside.css'
 import '../styles/blog.css'
 
+import {registerScript} from '../scripts/registerScript'
+
 import SEO from '../components/SEO.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
@@ -13,8 +15,56 @@ import MobileSidebar from '../components/MobileSidebar.astro'
 const {
   lang, title,
   description, pubDate,
-  tags, sidebar
+  prologue, tags, sidebar
 } = Astro.props
+
+const script = await registerScript({ extraScript: `
+// Generate outline/table of contents
+const article = document.querySelector('article')
+const outlineList = document.querySelector('#nav ul')
+const outlineItems = article.querySelectorAll('h1, h2, h3, h4, hr')
+
+for (let i = 0; i < outlineItems.length; i++) {
+  const item = outlineItems[i]
+  if (item.tagName === 'HR') {
+    const hr = document.createElement('hr')
+    outlineList.appendChild(hr)
+    continue
+  }
+
+  if (!item.id) item.id = 'heading-'+i
+
+  const li = document.createElement('li')
+  const a = document.createElement('a')
+
+  a.href = '#'+item.id
+  a.textContent = item.textContent
+  a.id = 'lvl-'+parseInt(item.tagName.charAt(1))
+
+  a.onclick = e => {
+    e.preventDefault()
+    item.scrollIntoView({behavior:'smooth'})
+  }
+
+  li.appendChild(a)
+  outlineList.appendChild(li)
+}
+
+window.addEventListener('scroll', () => {
+  let active = ''
+
+  for (const item of outlineItems) {
+    if (item.tagName === 'HR') continue
+    if(item.getBoundingClientRect().top <= 100) active = item.id
+  }
+
+  for (const l of outlineList.querySelectorAll('a')) {
+    l.classList.remove('active')
+    if (l.getAttribute('href') === '#'+active)
+      l.classList.add('active')
+  }
+})`, lang})
+
 
 ---
 <!DOCTYPE html>
@@ -28,8 +78,9 @@ const {
 </head>
 <body>
   <Header lang={lang}/>
+  <MobileSidebar lang={lang} {...sidebar}/>
   <main>
-    <Sidebar lang={lang} {...sidebar} />
+    <Sidebar lang={lang} {...sidebar}/>
     <Navigator lang={lang} />
     <article>
       <header>
@@ -44,9 +95,11 @@ const {
           {tags.map(t => <span>{t}</span>)}
         </div>
       </header>
+      {prologue ? <i id="prologue">"{prologue}"</i> : null}
       <slot/>
     </article>
   </main>
   <Footer/>
+  <script is:inline set:html={script.code}></script>
 </body>
 </html>
