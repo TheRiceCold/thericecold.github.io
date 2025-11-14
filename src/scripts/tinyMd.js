@@ -13,7 +13,11 @@ export function tinyMd(md) {
     }
 
     // Headers
-    if (trimmed.startsWith('### ')) {
+    if (trimmed.startsWith('#### ')) {
+      endParagraph()
+      html += `<h4>${formatInline(trimmed.slice(5))}</h4>`
+      continue
+    } else if (trimmed.startsWith('### ')) {
       endParagraph()
       html += `<h3>${formatInline(trimmed.slice(4))}</h3>`
       continue
@@ -26,6 +30,9 @@ export function tinyMd(md) {
       html += `<h1>${formatInline(trimmed.slice(2))}</h1>`
       continue
     }
+
+    // Horizontal Line
+    if (trimmed === '---') { endParagraph();html += '<hr>';continue }
 
     // Lists
     if (trimmed.startsWith('- ')) {

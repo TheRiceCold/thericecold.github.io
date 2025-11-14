@@ -1,5 +1,5 @@
 ---
-import {getTranslations} from '../scripts/getTranslations'
+import {getTranslations} from '../scripts/getters'
 
 const {lang = '', title = '', items = []} = Astro.props
 
@@ -10,7 +10,7 @@ const t = getTranslations(lang)
 <aside id="sidebar">
   {title ? <h3>{title}</h3> : <h3 data-i18n="sidebarBlog.title"/>}
   {lang !== '' ? <input placeholder={t.search}> : (
-    <input data-i18n-attr="placeholder:search" onclick="location.href='blog'">
+    <input data-i18n-attr="placeholder:search" onclick="location.href='/blog'">
   )}
   <ul>
     {items.length === 0 ? (
@@ -22,6 +22,6 @@ const t = getTranslations(lang)
           </template>
         </ul>
       </template>
-    ): (items.map(i => <a href={i.link}>{i.label}</a>))}
+    ) : (items.map(i => <a href={i.link}>{i.label}</a>))}
   </ul>
 </aside>

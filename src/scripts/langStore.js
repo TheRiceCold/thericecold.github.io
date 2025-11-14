@@ -64,9 +64,9 @@ const langStore = (() => {
   }
 
   const registerTranslations = (pageTranslations = {}) => {
-    for (const [lang, data] of Object.entries(pageTranslations)) {
+    for (const lang in pageTranslations) {
       if (!translations[lang]) translations[lang] = {}
-      Object.assign(translations[lang], data)
+      Object.assign(translations[lang], pageTranslations[lang])
     }
   }
 
@@ -170,9 +170,8 @@ const langStore = (() => {
   }
 
   const next = () => {
-    const langs = Object.keys(translations)
-    if (!langs.length) return
-    const next = langs[(langs.indexOf(currentLang) + 1) % langs.length]
+    if (!languages.length) return
+    const next = languages[(languages.indexOf(currentLang) + 1) % languages.length]
     setLanguage(next)
   }
 

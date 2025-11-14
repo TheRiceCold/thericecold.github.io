@@ -43,12 +43,13 @@ export const registerScript = async({
   const isBlog = page === '' || page === undefined
 
   return await minify(`(()=>{
+  const languages = ${loadYaml('./src/i18n/languages.yml')}
   const themeBtns = document.querySelectorAll('#themeBtn')
 
   ${themeStore(lang)}
 
   // Dynamic Translations
-  ${isBlog ? `const translations = ${loadYaml(`./src/i18n/translations/global.yml`)}` : `
+  ${isBlog ? `const translations = ${loadYaml('./src/i18n/translations/global.yml')}` : `
     ${langStore}
     ${registerTranslations('sidebar-blog')}
     ${registerTranslations('global')}
@@ -76,10 +77,9 @@ export const registerScript = async({
     mobileSidebar = document.getElementById('mobileSidebar');
 
   // Mobile Sidebar
-  //menu.onclick = () => { mobileSidebar.classList.toggle('show'); overlay.classList.toggle('show') }
-  //const hideSidebar = () => { mobileSidebar.classList.remove('show'); overlay.classList.remove('show') }
-  //xBtn.onclick = hideSidebar
-  //overlay.onclick = hideSidebar
+  menu.onclick = () => { mobileSidebar.classList.toggle('show'); overlay.classList.toggle('show') }
+  const hideSidebar = () => { mobileSidebar.classList.remove('show'); overlay.classList.remove('show') }
+  overlay.onclick = hideSidebar
 
   themeStore.apply()
 

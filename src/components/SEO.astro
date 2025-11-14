@@ -1,11 +1,14 @@
 ---
+import {getLanguages} from '../scripts/getters'
+
 const {lang, title, description, pubDate} = Astro.props
 
 const
   url = new URL(Astro.request.url),
-  slug = url.pathname.split('/').pop(),
+  pathSegments = url.pathname.split('/').filter(s => s),
+  slug = pathSegments[2],
+  collectionName = pathSegments[1],
   ogImageUrl = `${Astro.site}og/${slug}-${lang}.png`,
-  languages = ['en', 'es', 'fil', 'ja', 'zh', 'de'],
   blogPostScript = `
 {
   "@context": "https://schema.org",
@@ -42,8 +45,8 @@ const
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Blog",
-      "item": "${Astro.site+lang}/blog"
+      "name": "${collectionName}",
+      "item": "${Astro.site+lang}/${collectionName}"
     },
     {
       "@type": "ListItem",
@@ -82,9 +85,9 @@ const
 <meta name="theme-color" content="#1f1d2e" media="(prefers-color-scheme: dark)" />
 
 <link rel="canonical" href={Astro.url.href} />
-<link rel="alternate" hreflang="x-default" href={`${Astro.site}en/blog/${slug}`} />
-{languages.map(l => (
-  <link rel="alternate" hreflang={l} href={`${Astro.site}${l}/blog/${slug}`} />
+<link rel="alternate" hreflang="x-default" href={`${Astro.site}en/${collectionName}/${slug}`} />
+{getLanguages().map(l => (
+  <link rel="alternate" hreflang={l} href={`${Astro.site}${l}/${collectionName}/${slug}`} />
 ))}
 <script type="application/ld+json" set:html={blogPostScript}></script>
 <script type="application/ld+json" set:html={breadcrumbScript}></script>
