@@ -19,8 +19,8 @@ main {
       text-align:center;
       border-bottom:var(--dashed);
     }
-    ul{gap: 6px}
-    hr{margin: 6px 0}
+    ul{gap: 6px;margin-bottom:8px}
+    hr{margin: 4px 0}
     a{color:var(--subtle)}
     li{margin-right: 8px}
     #lvl-1 {
