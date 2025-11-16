@@ -12,7 +12,7 @@ main {
   hr{border:none;border-top:var(--dashed)}
 
   #nav {
-    padding:0;
+    padding:0 0 4px 0;
     h3 {
       width:100%;
       padding:12px;
@@ -49,7 +49,7 @@ main {
     margin: 0 auto;
     header {
       gap:16px;
-      padding:20px;
+      padding:16px 20px;
       align-items:start;
       flex-direction:column;
       border: var(--border);
@@ -77,50 +77,70 @@ main {
     }
 
     #content {
-      padding: 12px 0;
+      padding:16px 0;
       line-height: 1.7;
       border: var(--border);
       flex-direction: column;
       border-top:var(--dashed);
       background: var(--surface);
 
-      *{margin: 0 16px}
+      >*{margin: 0 16px}
       p{margin: 0 20px}
+      p,b{font-size:15px}
+      b{margin:0;white-space:nowrap}
+      a{display:inline;;color:var(--pine)}
       h1 {
         font-size: 22px;
         color: var(--rose);
         &:before{content: '◉ '}
-        ~ p {margin: 8px 0 16px 28px}
+        ~ p {margin: 4px 16px 8px 28px}
         ~ b, ~ ul, ~ a {margin-left:28px}
         ~ b p {margin-left:28px}
+        ~ ul p {margin-left:28px}
       }
       h2 {
         font-size: 20px;
         margin-left: 24px;
         color: var(--foam);
         &:before{content:'○ '}
-        ~ p {margin: 4px 0 16px 36px}
+        ~ p {margin: 4px 16px 8px 36px}
         ~ b, ~ ul, ~ a {margin-left:36px}
         ~ b p {margin-left:36px}
+        ~ ul p {margin-left:36px}
       }
       h3 {
         font-size: 18px;
         margin-left: 32px;
         color: var(--gold);
         &:before{content:'✸ '}
-        ~ p {margin: 4px 0 16px 36px}
-        ~ b, ~ ul, ~ a {margin-left:36px}
-        ~ b p {margin-left:36px}
+        ~ p {margin: 4px 16px 8px 42px}
+        ~ b, ~ ul, ~ a {margin-left:42px}
+        ~ b p {margin-left:42px}
+        ~ ul p {margin-left:42px}
       }
 
-      b ~ p{margin-bottom:4px}
-      p,b{font-size:15px}
+      h4 {
+        font-size: 16px;
+        margin-left: 40px;
+        color: var(--iris);
+        &:before{content:'✿ '}
+        ~ p {margin: 4px 16px 8px 50px}
+        ~ b, ~ a {margin-left:50px}
+        ~ ul {margin-left:58px}
+        ~ b p {margin-top:0;margin-left:50px}
+        ~ ul p {margin-top:0;margin-left:50px}
+      }
+
+      b ~ p {margin-bottom:4px}
+
       ul {
-        gap: 4px;
+        gap: 8px;
+        margin-bottom: 12px;
         li {
-          gap:4px;
-          &:before{content:'•'}
-          &:last-child{margin-bottom:16px}
+          display: inline;
+          line-height: 1.5;
+          text-indent: -10px;
+          &:before{content:'• '}
         }
       }
       img{width: 100%;margin-top:16px}

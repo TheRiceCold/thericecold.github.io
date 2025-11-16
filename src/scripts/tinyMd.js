@@ -42,10 +42,12 @@ export function tinyMd(md) {
       continue
     }
 
-    // Check if line contains inline elements that should be block-level and don't wrap in paragraph
-    if (/(\*\*|\[!\[|\`[^`]+\`)/.test(trimmed) && currentParagraph.length === 0) {
-      html += formatInline(trimmed)
-      continue
+    const isStandalone = /^(\*\*|\*|`|\[|!\[).*(\*\*|\*|`|\))$/.test(trimmed);
+
+    // If it's a standalone element on its own line, output directly
+    if (isStandalone && currentParagraph.length === 0) {
+      html += formatInline(trimmed);
+      continue;
     }
 
     // Regular text
@@ -59,12 +61,8 @@ export function tinyMd(md) {
 
   function endParagraph() {
     if (currentParagraph.length > 0) {
-      // Only wrap in <p> if it's plain text without block elements
-      const content = currentParagraph.join(' ')
-      if (/^[^*`\!\[].*[^*`\!\] ]$/.test(content))
-        html += `<p>${formatInline(content)}</p>`
-      else html += formatInline(content)
-      currentParagraph = []
+      html += `<p>${formatInline(currentParagraph.join(' '))}</p>`;
+      currentParagraph = [];
     }
   }
 

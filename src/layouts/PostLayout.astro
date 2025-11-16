@@ -22,7 +22,7 @@ const script = await registerScript({ extraScript: `
 // Generate outline/table of contents
 const article = document.querySelector('article')
 const outlineList = document.querySelector('#nav ul')
-const outlineItems = article.querySelectorAll('h1, h2, h3, h4, hr')
+const outlineItems = article.querySelectorAll('h1, h2, h3, hr')
 
 for (let i = 0; i < outlineItems.length; i++) {
   const item = outlineItems[i]
