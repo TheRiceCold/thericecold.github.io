@@ -84,51 +84,64 @@ main {
       border-top:var(--dashed);
       background: var(--surface);
 
-      >*{margin: 0 16px}
-      p{margin: 0 20px}
+      blockquote{
+        margin:12px 0;
+        padding:8px 0;
+        color:var(--love);
+        text-align:center;
+        background:var(--bg);
+        border:1px dashed var(--love);
+      }
+
+      p{margin:0 20px}
+      code{
+        padding:2px 4px;
+        font-weight:bold;
+        border-radius:2px;
+        color:var(--subtle);
+        border:var(--border);
+        background:var(--bg);
+      }
       p,b{font-size:15px}
+      b+ul{margin-top:4px}
       b{margin:0;white-space:nowrap}
-      a{display:inline;;color:var(--pine)}
+      a{display:inline;font-weight:600;color:var(--pine)}
       h1 {
-        font-size: 22px;
-        color: var(--rose);
-        &:before{content: '◉ '}
-        ~ p {margin: 4px 16px 8px 28px}
-        ~ b, ~ ul, ~ a {margin-left:28px}
-        ~ b p {margin-left:28px}
-        ~ ul p {margin-left:28px}
+        font-size:22px;
+        margin-left:16px;
+        color:var(--rose);
+        &:before{content:'◉ '}
+        ~ ul li{margin-left:40px}
+        ~ p{margin:4px 24px 8px 28px}
+        ~ b p, ~ b, ~ a{margin-left:28px}
       }
       h2 {
-        font-size: 20px;
-        margin-left: 24px;
-        color: var(--foam);
+        font-size:20px;
+        margin-left:24px;
+        color:var(--foam);
         &:before{content:'○ '}
-        ~ p {margin: 4px 16px 8px 36px}
-        ~ b, ~ ul, ~ a {margin-left:36px}
-        ~ b p {margin-left:36px}
-        ~ ul p {margin-left:36px}
+        ~ ul li{margin-left:48px}
+        ~ p{margin:4px 24px 8px 36px}
+        ~ b p, ~ b, ~ a{margin-left:36px}
       }
       h3 {
-        font-size: 18px;
-        margin-left: 32px;
-        color: var(--gold);
+        font-size:18px;
+        margin-left:32px;
+        color:var(--gold);
         &:before{content:'✸ '}
-        ~ p {margin: 4px 16px 8px 42px}
-        ~ b, ~ ul, ~ a {margin-left:42px}
-        ~ b p {margin-left:42px}
-        ~ ul p {margin-left:42px}
+        ~ ul li{margin-left:56px}
+        ~ p{margin:4px 24px 8px 44px}
+        ~ b p, ~ b, ~ a{margin-left:44px}
       }
 
       h4 {
-        font-size: 16px;
-        margin-left: 40px;
-        color: var(--iris);
+        font-size:16px;
+        margin-left:40px;
+        color:var(--iris);
         &:before{content:'✿ '}
-        ~ p {margin: 4px 16px 8px 50px}
-        ~ b, ~ a {margin-left:50px}
-        ~ ul {margin-left:58px}
-        ~ b p {margin-top:0;margin-left:50px}
-        ~ ul p {margin-top:0;margin-left:50px}
+        ~ ul li{margin-left:60px}
+        ~ p{margin:4px 24px 8px 52px}
+        ~ b p, ~ ul li, ~ b, ~ a{margin-left:52px}
       }
 
       b ~ p {margin-bottom:4px}
