@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "@astrojs/sitemap": "^3.6.0",
-    "astro": "^5.15.2",
+    "astro": "5.16.2",
     "js-yaml": "^4.1.0",
     "terser": "^5.44.0"
   },

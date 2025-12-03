@@ -6,8 +6,14 @@ pkgs.mkShell {
   buildInputs = with pkgs; [ bun git ];
 
   shellHook = ''
-    echo "🚀 Bun development environment ready!"
-    echo "bun version: $(bun --version)"
+    if [ ! -d "node_modules" ]; then
+      echo "🚀 Installing dependencies..."
+      bun install
+      echo "✅ Dependencies installed!"
+    fi
+
+    echo "🍞 Bun version: $(bun --version)"
+    echo "✨ Ready for development!"
   '';
 }
 
