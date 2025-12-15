@@ -23,12 +23,12 @@ en:
   recentPosts:
     label: Recent Posts
     list:
-      - title: "The C++ Doctrine 1: "
+      - title: "The C++ Saga 1: The Apprentice's Gate"
         date: November 16, 2025
-        link: en/learn/the-cpp-doctrine-1
-      - title: "The C++ Doctrine 0: "
+        link: en/learn/the-cpp-saga-1
+      - title: "The C++ Saga 0: Raw Power for a Digital World"
         date: November 06, 2025
-        link: en/learn/the-cpp-doctrine-0
+        link: en/learn/the-cpp-saga-0
       - title: Post 3
         date: June 12, 2025
         link: /
@@ -63,10 +63,10 @@ es:
     list:
       - title: "Serie C++: UNO"
         date: 16 de noviembre de 2025
-        link: es/learn/the-cpp-doctrine-1
-      - title: "Serie C++: Cero"
+        link: es/learn/the-cpp-saga-1
+      - title: "Doctrina de C++ 0: Poder bruto para un Mundo Digital"
         date: 6 de noviembre de 2025
-        link: es/learn/the-cpp-doctrine-0
+        link: es/learn/the-cpp-saga-0
       - title: Entrada 3
         date: 12 de junio de 2025
         link: /
@@ -101,12 +101,12 @@ fil:
   recentPosts:
     label: Mga hulíng paglalathalà
     list:
-      - title: "C++ Serye: ISA"
+      - title: "Doktrina C++ 1:"
         date: Ika-16 ng Nobyembre, 2025
-        link: fil/learn/the-cpp-doctrine-1
-      - title: "C++ Serye: KOPONG"
+        link: fil/learn/the-cpp-saga-1
+      - title: "Doktrina C++ 0: Bisà sa Isang Mundo ng Dihitál"
         date: Ika-6 ng Nobyembre, 2025
-        link: fil/learn/the-cpp-doctrine-0
+        link: fil/learn/the-cpp-saga-0
       - title: Lathalaín 3
         date: Ika-12 ng Hunyo, 2025
         link: /
@@ -140,10 +140,10 @@ ja:
     list:
       - title: "C++シリーズ: 一"
         date: 2025年11月16日
-        link: ja/learn/the-cpp-doctrine-1
+        link: ja/learn/the-cpp-saga-1
       - title: "C++シリーズ: ゼロ"
         date: 2025年11月6日
-        link: ja/learn/the-cpp-doctrine-0
+        link: ja/learn/the-cpp-saga-0
       - title: ブログ 3
         date: 2025年6月12日
         link: /
@@ -177,10 +177,10 @@ zh:
     list:
       - title: "C++系列: 一"
         date: 2025年11月16日
-        link: zh/learn/the-cpp-doctrine-1
+        link: zh/learn/the-cpp-saga-1
       - title: "C++系列: 零"
         date: 2025年11月6日
-        link: zh/learn/the-cpp-doctrine-0
+        link: zh/learn/the-cpp-saga-0
       - title: 博客 3
         date: 2025年6月12日
         link: /
@@ -215,10 +215,10 @@ de:
     list:
       - title: "C++-Reihe: EINS"
         date: 16. November 2025
-        link: de/learn/the-cpp-doctrine-1
+        link: de/learn/the-cpp-saga-1
       - title: "C++-Reihe: NULL"
         date: 6. November 2025
-        link: de/learn/the-cpp-doctrine-0
+        link: de/learn/the-cpp-saga-0
       - title: Beitrag 3
         date: 12. Juni 2025
         link: /

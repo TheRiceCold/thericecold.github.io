@@ -10,8 +10,8 @@ en:
           link: /
     - category: learn with me
       posts:
-        - title: The C++ Doctrine
-          link: /en/learn/the-cpp-doctrine-0
+        - title: The C++ Saga
+          link: /en/learn/the-cpp-saga-0
     - category: insights
       posts:
         - title: insight 1
@@ -43,7 +43,7 @@ es:
     - category: aprende conmigo
       posts:
         - title: Serie C++
-          link: /es/learn/the-cpp-doctrine-0
+          link: /es/learn/the-cpp-saga-0
     - category: pensamientos
       posts:
         - title: pensamiento 1
@@ -76,7 +76,7 @@ fil:
     - category: aralin
       posts:
         - title: Serye C++
-          link: /fil/learn/the-cpp-doctrine-0
+          link: /fil/learn/the-cpp-saga-0
     - category: mga kaisipán
       posts:
         - title: kaisipán 1
@@ -109,7 +109,7 @@ ja:
     - category: 学びましょう
       posts:
         - title: C++シリーズ
-          link: /ja/learn/the-cpp-doctrine-0
+          link: /ja/learn/the-cpp-saga-0
     - category: 考え
       posts:
         - title: 考え1
@@ -142,7 +142,7 @@ zh:
     - category: 和我一起学习吧
       posts:
         - title: C++系列
-          link: /zh/learn/the-cpp-doctrine-0
+          link: /zh/learn/the-cpp-saga-0
     - category: 思想
       posts:
         - title: 思想 1
@@ -175,7 +175,7 @@ de:
     - category: Lerne mit mir
       posts:
         - title: C++-Reihe
-          link: /de/learn/the-cpp-doctrine-0
+          link: /de/learn/the-cpp-saga-0
     - category: Gedanken
       posts:
         - title: Gedanke 1
