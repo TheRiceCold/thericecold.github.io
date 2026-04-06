@@ -6,7 +6,7 @@ en:
   intro: >-
     This website serves as a digital portfolio showcasing my professional
     background, computing projects, creative works, and various publications.
-    To find out more about this random individual <a href="about">click here</a>.
+    To find out more about this random individual, <a href="about">click here</a>.
   projects:
     label: Featured Projects
     list:
@@ -42,9 +42,9 @@ es:
   navigate: Navegar
   welcome: Hola👋!
   intro: >-
-    Este sitio web sirve de portfolio digital en el que presento mi trayectoria profesional,
-    proyectos informáticos, obras creativas y diversas publicaciones.
-    Si quieres saber más sobre este tipo, <a href="about">haz clic aquí</a>.
+    Bienvenido a mi web que sirve de portfolio donde presento mi trayectoria profesional, 
+    mis proyectos de informática, mis obras creativas(de vez en cuando) y mis publicaciones o blog. 
+    Bueno, esto es solo una introducción. Si desea saber más, <a href="about">haga clic aquí</a>.
   projects:
     label: Proyectos destacados
     list:
