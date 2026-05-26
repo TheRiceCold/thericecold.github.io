@@ -12,12 +12,7 @@ const
 
 ---
 <header>
-  <a href="/">
-    <Me/>
-    {lang !== ''
-      ? <b>{getTranslations(lang).title}</b>
-      : <b data-i18n="title"/>}
-  </a>
+  <a href="/" data-i18n="title"/>
 
   <!-- Language Button -->
   {lang !== '' ? (

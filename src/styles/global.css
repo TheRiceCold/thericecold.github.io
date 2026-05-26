@@ -1,44 +1,49 @@
+/* Kaolin: Breeze(Light) | Aurora(Dark) */
 :root {
-  --bg: #faf4ed;
-  --surface: #fffaf3;
-  --overlay: #f2e9e1;
-  --muted: #9893a5;
-  --subtle: #797593;
-  --txt: #575279;
-  --love: #b4637a;
-  --gold: #ea9d34;
-  --rose: #d7827e;
-  --pine: #286983;
-  --foam: #56949f;
-  --iris: #907aa9;
+  /* Background */
+  --bg: #e8edf5;
+  --surface: #fafbfd;
+  /* Text */
+  --txt: #2c3448;
+  --subtle: #9aa5c0;
+  --muted: #c5cedc;
+  /*Accents*/
+  --cyan: #3d9ec9;--ao: #4c7ec9;
+  --oro: #d4b650;--orange: #d48e50;
+  --red: #d4626a;--rosa: #cc80a0;
+  --iris: #9e85cc;
+  --green: #6caf85;
+
   --border: 1px solid var(--muted);
   --dashed: 1px dashed var(--muted);
 
   --scrollbar-bg: var(--surface);
   --scrollbar-thumb: var(--iris);
-  --scrollbar-thumb-hover: #f6c177;
+  --scrollbar-thumb-hover: var(--oro);
 }
 
 [data-theme="dark"] {
-  --bg: #191724;
-  --surface: #1f1d2e;
-  --overlay: #26233a;
-  --muted: #6e6a86;
-  --subtle: #908caa;
-  --txt: #e0def4;
-  --love: #eb6f92;
-  --gold: #f6c177;
-  --rose: #ebbcba;
-  --pine: #31748f;
-  --foam: #9ccfd8;
-  --iris: #c4a7e7;
+  /* Background */
+	--bg: #0a0c14;
+  --surface: #121620;
+  /* Text */
+  --txt: #d9e0f0;
+  --subtle: #a9b3d0;
+  --muted: #3a4058;
+
+  /*Accents*/
+  --cyan: #6bc3df;--ao: #5c9ce0;
+  --oro: #e5c76b;--orange: #e5a06b;
+  --red: #e06c75;--rosa: #e394b8;
+  --green: #8fc9a3;
+  --iris: #b392e0;
 }
 
 @media (prefers-color-scheme: dark){
-  html[data-theme="system"]{--bg:#191724;--surface:#1f1d2e;--overlay:#26233a;--muted:#6e6a86;--subtle:#908caa;--txt:#e0def4;--love:#eb6f92;--gold:#f6c177;--rose:#ebbcba;--pine:#31748f;--foam:#9ccfd8;--iris:#c4a7e7}
+		html[data-theme="system"]{--bg:#0a0c14;--surface:#121620;--muted:#3a4058;--subtle:#a9b3d0;--txt:#d9e0f0;--cyan:#6bc3df;--ao:#5c9ce0;--green:#8fc9a3;--oro:#e5c76b;--orange:#e5a06b;--red:#e06c75;--rosa:#e394b8;--iris:#b392e0}
 }
 @media (prefers-color-scheme: light){
-  html[data-theme="system"]{--bg:var(--bg);--surface:var(--surface);--overlay:var(--overlay);--muted:var(--muted);--subtle:var(--subtle);--txt:var(--txt);--love:var(--love);--gold:var(--gold);--rose:var(--rose);--pine:var(--pine);--foam:var(--foam);--iris:var(--iris)}
+		html[data-theme="system"]{--bg:var(--bg);--surface:var(--surface);--muted:var(--muted);--subtle:var(--subtle);--txt:var(--txt);--red:var(--red);--oro:var(--oro);--rosa:var(--rosa);--cyan:var(--cyan);--ao:var(--ao);--iris:var(--iris);--orange:var(--orange)}
 }
 
 /* Reset */
@@ -72,24 +77,23 @@ body {
   color: var(--txt);
   background: var(--bg);
   transition: background-color 0.3s ease, color 0.3s ease;
-  a{gap:4px;color: var(--iris);&:hover{color:var(--love)}}
-  button:hover{color:var(--rose)}
+  a{gap:4px;color: var(--iris);&:hover{color:var(--cyan)}}
+  button:hover{color:var(--rosa)}
 
   > header{
     grid-area:head;
     font-size:12px;
-    padding:0 16px;
+    padding: 8px 18px;
     background:var(--surface);
     border-bottom:var(--border);
 
-    /* Logo */
+    /* Title */
     a {
-      gap:8px;
       color:var(--txt);
       margin-right:auto;
-      align-items: center;
-      b {font-size:16px}
-      svg {width:40px;height:40px;background:var(--iris)}
+			font-size: 18px;
+			font-weight: bold;
+			&:hover{color:var(--ao)}
     }
 
     /* Control Buttons */

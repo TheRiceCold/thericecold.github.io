@@ -10,7 +10,7 @@ const t = getTranslations(lang)
 <aside id="sidebar">
   {title ? <h3>{title}</h3> : <h3 data-i18n="sidebarBlog.title"/>}
   {lang !== '' ? <input placeholder={t.search}> : (
-    <input data-i18n-attr="placeholder:search" onclick="location.href='/blog'">
+    <input data-i18n-attr="placeholder:search">
   )}
   <ul>
     {items.length === 0 ? (
