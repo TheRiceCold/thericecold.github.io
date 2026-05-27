@@ -37,8 +37,8 @@ fil:
   light: liwanag
   dark: dilím
   outline: Nilálamán
-  footer: Ito ay paanán ng páhiná.
-  links: [Tungkól sakin, Mga gawâ, Mga sining, Hilera ng panahón]
+  footer: Ito ay paanán ng̃ páhiná.
+  links: [Tungkól sa akin, Mg̃a gawâ, Mg̃a sining, Hanay ng̃ panahón]
 
 ja:
   language: 言語
@@ -53,20 +53,6 @@ ja:
   outline: 目次
   footer: これはフッターです
   links: [について, プロジェクト, 美術作品, 年表]
-
-zh:
-  language: 语言
-  langName: 中国人
-  title: 冷饭
-  read: 阅读
-  search: 搜索...
-  theme: 格式
-  system: 体系
-  light: 亮
-  dark: 黑暗
-  outline: 目录
-  footer: 这是页脚
-  links: [关于, 项目, 艺术作品, 时间轴]
 
 de:
   language: Sprache

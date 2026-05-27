@@ -17,8 +17,12 @@ const script = await registerScript({ page: 'home' })
 	<section>
 		{/*Intro*/}
 		<article>
-			<h3 data-i18n="welcome"/>
-			<p data-i18n-html="intro"/>
+		  <h3 data-i18n="welcome"/>
+		  <ul>
+			<template data-i18n-list="intro">
+			  <p data-i18n-item data-i18n-html />
+			</template>
+		  </ul>
 		</article>
 
 		{/*Projects*/}

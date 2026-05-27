@@ -2,11 +2,16 @@ en:
   page: Home
   description: TheRiceCold's Homepage
   navigate: Navigate
-  welcome: "Hello there👋!"
-  intro: >-
-    This website serves as a digital portfolio showcasing my professional
-    background, computing projects, creative works, and various publications.
-    To find out more about this random individual, <a href="about">click here</a>.
+  welcome: Hello there.
+  intro:
+    - >-
+       My name is <b>Dale Walter</b>. I am a sad <b>Emacs</b> user and a tryhard polyglot.
+       <br>Well, of course I <b>code</b> and <b>write</b> nodes in <b>Org-mode</b>.
+       <br>I also have a lot of strong views, like <b>C++</b> being the <b>superior programming language</b>.<br>
+    - >-
+       Anyways, this place is a showcase of my professional background, computing works, digital arts,
+       <br>as well as my thoughts on many topics, which I publish as blog posts.
+       <br>To find out more about this random fella, <a href="about">click here</a>.
   projects:
     label: Featured Projects
     list:
@@ -16,10 +21,7 @@ en:
       - <a href="https://github.com/thericecold/laro">Larô Engine</a> - A lightweight game engine.
       - >-
         <a href="https://github.com/thericecold/kaizen">Kaizen (Archived)</a> -
-        A GJS/Ags written desktop environment for Hyprland Linux.
-      - >-
-        <a href="https://github.com/thericecold/thericecold.github.io">Astíg</a> -
-        A template for multilingual personal websites. Showcase your projects, artworks, blogs and more.
+        A <b>desktop environment</b> for <b>Hyprland Linux</b>, written with <b>GJS/Ags</b>.
   recentPosts:
     label: Recent Posts
     list:
@@ -40,31 +42,33 @@ es:
   page: Inicio
   description: Página web de ElArrozFrio
   navigate: Navegar
-  welcome: Hola👋!
-  intro: >-
-    Bienvenido a mi web que sirve de portfolio donde presento mi trayectoria profesional, 
-    mis proyectos de informática, mis obras creativas(de vez en cuando) y mis publicaciones o blog. 
-    Bueno, esto es solo una introducción. Si desea saber más, <a href="about">haga clic aquí</a>.
+  welcome: Encantado.
+  intro:
+    - >-
+       Me llamo <b>Dalí</b>. Soy un usuario pobrecito de <b>Emacs</b> y un políglota poser.
+       <br>Sí, claro que sé <b>programar</b> y también <b>escribo</b> nodos en <b>Org-mode</b>.
+       <br>Además, tengo convicciones firmes, como que <b>C++</b> es <b>el mejor lenguaje de programación</b>.<br>
+    - >-
+       Pero bueno, esto muestra mis experiencias profesionales, los proyectos de informática,
+       <br>mis trabajos de arte digital, y mis reflexiones sobre muchos temas que publiqué en un blog.
+       <br>Si quieres saber más sobre mí, <a href="about">haz clic aquí</a>.
   projects:
     label: Proyectos destacados
     list:
       - >-
         <a href="https://github.com/thericecold/likha">Likhâ</a> -
         Un editor de texto de línea de comandos de alto rendimiento escrito desde cero.
-      - <a href="https://github.com/thericecold/laro">Larô Engine</a> - Un game engine ligero.
+      - <a href="https://github.com/thericecold/laro">Larô Engine</a> - Un motor de video juego ligero.
       - >-
         <a href="https://github.com/thericecold/kaizen">Kaizen (Archived)</a> -
-        Un entorno de escritorio escrito en GJS/Ags para Hyprland Linux.
-      - >-
-        <a href="https://github.com/thericecold/thericecold.github.io">Astíg</a> -
-        Plantilla multilingüe para sitio web personal. Muestra tus proyectos, obras de arte, blogs y más.
+        Un <b>entorno de escritorio</b> en <b>GJS/Ags</b> para <b>Hyprland Linux</b>.
   recentPosts:
     label: Últimas entradas
     list:
       - title: "Serie C++: UNO"
         date: 16 de noviembre de 2025
         link: es/learn/the-cpp-saga-1
-      - title: "Doctrina de C++ 0: Poder bruto para un Mundo Digital"
+      - title: "Serie C++ 0: Poder bruto para un Mundo Digital"
         date: 6 de noviembre de 2025
         link: es/learn/the-cpp-saga-0
       - title: Entrada 3
@@ -78,50 +82,53 @@ fil:
   page: Tahanan
   description: Tahanan ni KaningLamig
   navigate: Manalaktak
-  welcome: Tao po🚪✊!
-  intro: >-
-    Itó'y nagsisilbíng dihitál na portpolyo upang ipakilala ang aking mga
-    kadalubhasàang karanasán, mga malikhaing gawa, at iba ibang mga paglalathalà.
-    Kung iyong ninanais pang mabatid ang taong itó, <a href="about">pindutín itó</a>.
+  welcome: Uy.
+  intro:
+    - >-
+       Ako si Wali. Ako'y gumagamit ng̃ <b>Emacs</b> at pilit na políglota.
+       <br>Oo, malamáng <b>nagcocode</b> ako, at <b>nagsusulat</b> din ng̃ mg̃a nodo sa <b>Org-mode</b>.
+       <br>Madami din mg̃a pananáw, tulad ng̃ <b>C++</b>, ang <b>pinakaangat</b> ng̃ wikà na pang-programa.
+    - >-
+       O, s'ya pala, itóng páhiná ay pagpapakita at pagmamapurí sa aking mg̃a kadalubhasàang kakayahán,
+       <br>mg̃a guhit dihitál, at aking mg̃a kaisipá bilang lathalà sa aking blog.
+       <br>Kung ibig mo pa akóng mabatíd, <a href="about">pindutín itó</a>.
   projects:
-    label: Tampók na mga gawâ
+    label: Tampók na mg̃a gawâ
     list:
       - >-
         <a href="https://github.com/thericecold/likha">Likhâ</a> -
-        Isang matindí at banat na pangwasto ng sulatin sa commandline na gawa mula sa kahig.
+        Isang matindí at banat na pangwasto ng̃ sulatin sa commandline na gawa mula sa kahig.
       - >-
         <a href="https://github.com/thericecold/laro">Larô Engine</a> -
-        Isang langkág na pangawâ ng larô.
+        Isang langkág na pangawâ ng̃ larô.
       - >-
-        <a href="https://github.com/thericecold/kaizen">Kaizen (Archived)</a> -
-        Isang kapáligirán ng desktop isinulat gamit ang GJS/Ags na gawâ pang Hyprland Linux.
-      - >-
-        <a href="https://github.com/thericecold/thericecold.github.io">Astíg</a> -
-        Isang maraminhang wikang pasimundán na pansariling pahinarya. Ipakítang-gilas ang mga gawa, likha, lathain at iba pa.
+        <a href="https://github.com/thericecold/kaizen">Kaizen (Sínupan)</a> -
+        Isang <b>desktop environment</b> gawâ gamit ang <b>GJS/Ags</b> ukol sa <b>Hyprland Linux</b>.
   recentPosts:
-    label: Mga hulíng paglalathalà
+    label: Mg̃a hulíng paglalathalà
     list:
       - title: "Doktrina C++ 1:"
-        date: Ika-16 ng Nobyembre, 2025
+        date: Ika-16 ng̃ Noviembre, 2025
         link: fil/learn/the-cpp-saga-1
-      - title: "Doktrina C++ 0: Bisà sa Isang Mundo ng Dihitál"
-        date: Ika-6 ng Nobyembre, 2025
+      - title: "Doktrina C++ 0: Bisà sa Isang Mundo ng̃ Dihitál"
+        date: Ika-6 ng̃ Noviembre, 2025
         link: fil/learn/the-cpp-saga-0
       - title: Lathalaín 3
-        date: Ika-12 ng Hunyo, 2025
+        date: Ika-12 ng̃ Junio, 2025
         link: /
       - title: Lathalaín 4
-        date: Ika-10 ng Marso , 2025
+        date: Ika-10 ng̃ Marzo, 2025
         link: /
 
 ja:
   page: 家
   description: 冷めたご飯のホームページ
   navigate: ナビゲートする
-  welcome: こんにちは👋!
-  intro: >-
-    本ウェブサイトは私のデジタルポートフォリオとして、専門的経歴、コンピュータプロジェクト、クリエイティブ作品、および各種出版物を紹介しています。
-    このランダムな人物についてもっと知りたい場合は、<a href="about">こちらをクリックしてください</a>。
+  welcome: こんにちは
+  intro:
+    - >-
+       本ウェブサイトは私のデジタルポートフォリオとして、専門的経歴、コンピュータプロジェクト、クリエイティブ作品、および各種出版物を紹介しています。
+       このランダムな人物についてもっと知りたい場合は、<a href="about">こちらをクリックしてください</a>。
   projects:
     label: 注目のプロジェクト
     list:
@@ -132,9 +139,6 @@ ja:
       - >-
         <a href="https://github.com/thericecold/kaizen">Kaizen (Archived)</a> -
         Hyprland Linux 向けの GJS/Ags ベースのデスクトップ環境。
-      - >-
-        <a href="https://github.com/thericecold/thericecold.github.io">Astíg</a> -
-        多言語対応の個人用ウェブサイトテンプレート。プロジェクト、アート作品、ブログなどを紹介できます。
   recentPosts:
     label: 最近のブログ
     list:
@@ -151,52 +155,20 @@ ja:
         date: 2025年3月10日
         link: /
 
-zh:
-  page: 家
-  description: 冷米饭的主页
-  navigate: 导航
-  welcome: 你好👋!
-  intro: >-
-    本网站作为我的数字作品集，展示了我的专业背景、计算机项目、创意作品以及各类出版物。
-    要了解更多关于这个随机个人的信息，<a href="about">请点击此处</a>。
-  projects:
-    label: 精選專案
-    list:
-      - >-
-        <a href="https://github.com/thericecold/likha">Likhâ</a> -
-        一款从零开始编写的高性能命令行文本编辑器。
-      - <a href="https://github.com/thericecold/laro">Larô Engine</a> - 轻量级游戏引擎。
-      - >-
-        <a href="https://github.com/thericecold/kaizen">Kaizen (Archived)</a> -
-        一款为Hyprland Linux系统开发的GJS/Ags桌面环境。
-      - >-
-        <a href="https://github.com/thericecold/thericecold.github.io">Astíg</a> -
-        多语言个人网站模板。展示您的项目、艺术作品、博客等内容。
-  recentPosts:
-    label: 近期博客
-    list:
-      - title: "C++系列: 一"
-        date: 2025年11月16日
-        link: zh/learn/the-cpp-saga-1
-      - title: "C++系列: 零"
-        date: 2025年11月6日
-        link: zh/learn/the-cpp-saga-0
-      - title: 博客 3
-        date: 2025年6月12日
-        link: /
-      - title: 博客 4
-        date: 2025年3月10日
-        link: /
-
 de:
   page: heim
   description: DerReisKalts Homepage
   navigate: navigieren
-  welcome: Halo👋!
-  intro: >-
-    Diese Website dient als digitales Portfolio, in dem ich meinen beruflichen Werdegang, 
-    meine IT-Projekte, meine kreativen Arbeiten und verschiedene Publikationen präsentiere. 
-    Weitere Informationen zu dieser zufälligen Person finden Sie <a href="about">hier</a>.
+  welcome: Wie geht's, Digga?
+  intro:
+    - >-
+       Ich heiße <b>Dale Walter</b>. Ich bin ein erbärmlicher <b>Emacs-Nutzer</b> und angeberischer Polyglott.
+       <br>Natürlich <b>code</b> ich code und schreibe Knoten in <b>Org-Mode</b>.
+       <br>Ich habe viele feste Überzeugungen, zum Beispiel, dass <b>C++</b> die <b>überlegene Programmiersprache</b> ist.
+    - >-
+       Diese Website dient als digitales Portfolio, in dem ich meinen beruflichen Werdegang,
+       <br>meine IT-Projekte, meine kreativen Arbeiten und verschiedene Publikationen präsentiere.
+       <br>Weitere Informationen zu dieser zufälligen Person finden Sie <a href="about">hier</a>.
   projects:
     label: vorgestellte Projekte
     list:
@@ -205,11 +177,8 @@ de:
         Ein von Grund auf neu entwickelter, leistungsstarker Texteditor für die Kommandozeile.
       - <a href="https://github.com/thericecold/laro">Larô Engine</a> - Eine leichtgewichtige Spiel-Engine.
       - >-
-        <a href="https://github.com/thericecold/kaizen">Kaizen (Archived)</a> -
-        Eine von GJS/Ags geschriebene Desktop-Umgebung für Hyprland Linux.
-      - >-
-        <a href="https://github.com/thericecold/thericecold.github.io">Astíg</a> -
-        Ein Template für mehrsprachige persönliche Websites. Präsentieren Sie Ihre Projekte, Kunstwerke, Blogs und mehr.
+        <a href="https://github.com/thericecold/kaizen">Kaizen (archiviert)</a> -
+        Eine von <b>GJS/Ags</b> geschriebene <b>Desktop-Umgebung</b> für Hyprland Linux.
   recentPosts:
     label: Aktuelle Beiträge
     list:

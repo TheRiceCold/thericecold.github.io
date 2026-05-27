@@ -14,11 +14,16 @@
     h3,h4{margin-bottom:8px}
 
     article {
-      padding:12px;border:var(--border);background:var(--surface);
-
+      padding:12px;
+      border:var(--border);
+      background:var(--surface);
       ul{gap:4px}
+			p{line-height: 1.6}
       &:not(:first-child) a:before {content:'✱ '}
-      &:first-child a {display:inline;text-transform:none}
+      &:first-child {
+		  ul{gap: 16px}
+		  a{display:inline;text-transform:none}
+	    }
 
       &:last-child li {
         padding-bottom:4px;
