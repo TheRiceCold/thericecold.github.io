@@ -1,5 +1,5 @@
 aside {
-  min-width:150px;
+  min-width:160px;
   max-width:225px;
   position:sticky;top:16px;
   display:flex;flex-direction:column;
@@ -22,7 +22,7 @@ aside {
   }
 
   ul {
-    gap: 8px;
+    gap: 6px;
     font-size: 15px;
     > ul{margin-left:8px}
   }
@@ -33,6 +33,7 @@ aside {
 }
 
 #sidebar{
+  min-width: 214px;
   grid-area:side;left:12px;border:var(--border);
   a:before{content:'❖'}
   h3,input{margin-bottom:8px}
@@ -70,7 +71,7 @@ aside {
   padding:0;
   position:fixed;
   top:0;right:0;bottom:0;
-  border-left: var(--border);
+  border-left:var(--border);
 
   transform:translateX(100%);
   transition:transform 0.3s ease;

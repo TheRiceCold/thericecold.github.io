@@ -1,6 +1,10 @@
 ---
 
-import {getLanguages, getTranslations, getSidebarTranslations} from '../scripts/getters'
+import {
+  getLanguages,
+  getTranslations,
+  getSidebarTranslations
+} from '../scripts/getters'
 
 const {lang = '', title = '', items = []} = Astro.props
 const isBlog = lang !== '', t = getTranslations(lang)
@@ -22,8 +26,13 @@ const {sidebarBlog} = getSidebarTranslations(lang || 'en')
         )}
     </nav>
     <div>
-      {isBlog ? <h3>{sidebarBlog.title}</h3> : <h3 data-i18n="sidebarBlog.title"/>}
-      {isBlog ? <input placeholder={t.search} /> : <input data-i18n-attr="placeholder:search" onclick="location.href='/blog'">}
+      {isBlog ?
+        <h3>{sidebarBlog.title}</h3> :
+          <h3 data-i18n="sidebarBlog.title"/>}
+      {isBlog ?
+        <input placeholder={t.search} /> :
+          <input data-i18n-attr="placeholder:search"
+            onclick="location.href='/blog'"/>}
     </div>
   </header>
 
@@ -48,15 +57,12 @@ const {sidebarBlog} = getSidebarTranslations(lang || 'en')
   </ul>
 
   <footer>
-    <!-- Language Button -->
     {isBlog ? null : (
       <button
         id="langBtn"
         data-i18n-sep=": "
         data-i18n="language,langName"/>
     )}
-
-    <!-- Theme Button -->
     {lang !== '' ? <button id="themeBtn"/> :
     <button
       id="themeBtn"

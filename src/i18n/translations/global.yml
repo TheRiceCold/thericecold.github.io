@@ -10,7 +10,7 @@ en:
   dark: dark
   outline: Outline
   footer: This is a footer.
-  links: [About, Projects, Artworks, Timeline]
+  links: [About, Projects, Timeline, Brain]
 
 es:
   language: idioma
@@ -24,7 +24,7 @@ es:
   dark: oscuro
   outline: Índice
   footer: Esto es pie de pagina.
-  links: [Sobre mí, Proyectos, Obras de Arte, Cronología]
+  links: [Sobre mí, Proyectos, Cronología, Cerebro]
 
 fil:
   language: Wikà
@@ -38,7 +38,7 @@ fil:
   dark: dilím
   outline: Nilálamán
   footer: Ito ay paanán ng̃ páhiná.
-  links: [Tungkól sa akin, Mg̃a gawâ, Mg̃a sining, Hanay ng̃ panahón]
+  links: [Tungkól sa akin, Mg̃a gawâ, Hanay ng̃ panahón, Utak]
 
 ja:
   language: 言語
@@ -52,7 +52,7 @@ ja:
   dark: 暗い
   outline: 目次
   footer: これはフッターです
-  links: [について, プロジェクト, 美術作品, 年表]
+  links: [について, プロジェクト, 年表, 脳みそ]
 
 de:
   language: Sprache
@@ -66,4 +66,4 @@ de:
   dark: dunkel
   outline: Gliederung
   footer: Dies ist eine Fußzeile.
-  links: [Über, Projekte, Kunstwerke, Zeitachse]
+  links: [Über, Projekte, Zeitachse, Gehirn]

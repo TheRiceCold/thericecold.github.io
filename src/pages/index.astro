@@ -7,62 +7,60 @@ import '../styles/aside.css'
 import Layout from '../layouts/Layout.astro'
 import Sidebar from '../components/Sidebar.astro'
 import Navigator from '../components/Navigator.astro'
+import MobileSidebar from '../components/MobileSidebar.astro'
 
 const script = await registerScript({ page: 'home' })
 
 ---
+
 <Layout description="TheRiceCold's homepage" page="home">
-	<Sidebar/>
-
-	<section>
-		{/*Intro*/}
-		<article>
-		  <h3 data-i18n="welcome"/>
-		  <ul>
-			<template data-i18n-list="intro">
-			  <p data-i18n-item data-i18n-html />
-			</template>
-		  </ul>
-		</article>
-
-		{/*Projects*/}
-		<article>
-			<h4 data-i18n="projects.label"/>
+  <Sidebar/>
+  <MobileSidebar/>
+  <section>
+	  {/*Intro*/}
+	  <article>
+      <h3 data-i18n="welcome"/>
       <ul>
-				<template data-i18n-list="projects.list">
-					<li data-i18n-item data-i18n-html />
-				</template>
+		    <template data-i18n-list="intro">
+          <p data-i18n-item data-i18n-html />
+		    </template>
       </ul>
-		</article>
-
-		{/*Artworks*/}
-		<article>
-			<h4 data-i18n="links-2"/>
-			<div>
-				<img src="home/art0.png" />
-				<img src="home/art1.png" />
-				<img src="home/art2.jpg" />
-				<img src="home/art0.png" />
-				<img src="home/art1.png" />
-				<img src="home/art2.jpg" />
-				<img src="home/art0.png" />
-			</div>
-		</article>
-
-		{/*Recent posts*/}
-		<article>
-			<h4 data-i18n="recentPosts.label"/>
+	  </article>
+	  {/*Projects*/}
+	  <article>
+      <h4 data-i18n="projects.label"/>
       <ul>
-				<template data-i18n-list="recentPosts.list">
-					<li>
-						<a data-i18n-item="title" data-i18n-item-attr="href:link" />
-						<small data-i18n-item="date"/>
-					</li>
-				</template>
+		    <template data-i18n-list="projects.list">
+          <li data-i18n-item data-i18n-html />
+		    </template>
       </ul>
-		</article>
-	</section>
-
-	<Navigator title="navigate" shortcuts="links" />
-	<script is:inline set:html={script.code}></script>
+	  </article>
+	  {/*Recent posts*/}
+	  <article>
+      <h4 data-i18n="recentPosts.label"/>
+      <ul>
+		    <template data-i18n-list="recentPosts.list">
+          <li>
+			      <a data-i18n-item="title" data-i18n-item-attr="href:link" />
+			      <small data-i18n-item="date"/>
+          </li>
+		    </template>
+      </ul>
+	  </article>
+	  {/*Artworks*
+	  <article>
+      <h4 data-i18n="links-2"/>
+      <div>
+		    <img src="home/art0.png" />
+		    <img src="home/art1.png" />
+		    <img src="home/art2.jpg" />
+		    <img src="home/art0.png" />
+		    <img src="home/art1.png" />
+		    <img src="home/art2.jpg" />
+		    <img src="home/art0.png" />
+      </div>
+	    </article>*/}
+  </section>
+  <Navigator title="navigate" shortcuts="links" />
+  <script is:inline set:html={script.code}></script>
 </Layout>

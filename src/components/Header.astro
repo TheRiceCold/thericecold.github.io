@@ -1,4 +1,5 @@
 ---
+
 import Me from '../../public/me.svg'
 import {getLanguages,getTranslations} from '../scripts/getters'
 
@@ -6,20 +7,22 @@ const {lang = ''} = Astro.props
 const
   url = new URL(Astro.request.url),
   pathSegments = url.pathname.split('/').filter(s => s),
-  slug = pathSegments[2],
-  collectionName = pathSegments[1],
+  slug = pathSegments[1],
   languages = getLanguages().filter(l => l !== lang)
 
 ---
-<header>
-  <a href="/" data-i18n="title"/>
 
-  <!-- Language Button -->
+<header>
+  {lang !== '' ? (
+    <a href="/">
+      {getTranslations(lang).title}
+    </a>) : <a href="/" data-i18n="title"/>}
+
   {lang !== '' ? (
     <div>
       <b>{getTranslations(lang).read}:</b>
       {languages.map(l => (
-        <a href={`/${l}/${collectionName}/${slug}`}>
+        <a href={`/${l}/${slug}`}>
           {getTranslations(l).langName}
         </a>
       ))}
@@ -31,7 +34,6 @@ const
       data-i18n="language,langName"/>
   )}
 
-  <!-- Theme Button -->
   {lang !== '' ? <button id="themeBtn"/> :
     <button
       id="themeBtn"

@@ -40,10 +40,10 @@
 }
 
 @media (prefers-color-scheme: dark){
-		html[data-theme="system"]{--bg:#0a0c14;--surface:#121620;--muted:#3a4058;--subtle:#a9b3d0;--txt:#d9e0f0;--cyan:#6bc3df;--ao:#5c9ce0;--green:#8fc9a3;--oro:#e5c76b;--orange:#e5a06b;--red:#e06c75;--rosa:#e394b8;--iris:#b392e0}
+	html[data-theme="system"]{--bg:#0a0c14;--surface:#121620;--muted:#3a4058;--subtle:#a9b3d0;--txt:#d9e0f0;--cyan:#6bc3df;--ao:#5c9ce0;--green:#8fc9a3;--oro:#e5c76b;--orange:#e5a06b;--red:#e06c75;--rosa:#e394b8;--iris:#b392e0}
 }
 @media (prefers-color-scheme: light){
-		html[data-theme="system"]{--bg:var(--bg);--surface:var(--surface);--muted:var(--muted);--subtle:var(--subtle);--txt:var(--txt);--red:var(--red);--oro:var(--oro);--rosa:var(--rosa);--cyan:var(--cyan);--ao:var(--ao);--iris:var(--iris);--orange:var(--orange)}
+	html[data-theme="system"]{--bg:var(--bg);--surface:var(--surface);--muted:var(--muted);--subtle:var(--subtle);--txt:var(--txt);--red:var(--red);--oro:var(--oro);--rosa:var(--rosa);--cyan:var(--cyan);--ao:var(--ao);--iris:var(--iris);--orange:var(--orange)}
 }
 
 /* Reset */
@@ -53,10 +53,10 @@
 a,button,input{all:unset;text-transform:capitalize}
 
 /* Cursor Pointer Tags */
-a,button,svg{cursor:pointer}
+a,b,button,svg{cursor:pointer}
 
 /* Flex Row Tags */
-div, header, footer, nav, li, a{display:flex}
+div,header,footer,nav,li,a{display:flex}
 
 /* Flex column */
 section,article,ul{display:flex;flex-direction:column}
@@ -64,7 +64,7 @@ section,article,ul{display:flex;flex-direction:column}
 /* Bold Text */
 a,button{font-weight: 600}
 
-body {
+body{
   margin: 0;
   display: grid;
   min-height: 100vh;
@@ -116,4 +116,37 @@ html {
 }
 :-webkit-scrollbar-thumb:hover {
   background: var(--scrollbar-thumb-hover);
+}
+
+#term:hover{cursor:pointer;color:var(--oro)}
+#modal{
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  cursor: pointer;
+  > section {
+    width: 40%;
+    margin: auto;
+    border: var(--border);
+    background: var(--surface);
+    h3 {
+      padding:8px;
+      text-transform:capitalize;
+      border-bottom:var(--dashed);
+    }
+    > p {font-size:14px;line-height:1.7;padding:8px 16px}
+    div {
+      padding:6px;
+      align-items: center;
+      border-top:var(--dashed);
+      overflow-x: auto;
+      font-size: 14px;
+      p {font-weight:700}
+      a {margin-left:8px}
+    }
+  }
 }

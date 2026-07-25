@@ -1,34 +1,56 @@
-import {minify} from 'terser'
-import {loadYaml} from './loadYaml'
+import {minify} from "terser"
+import {loadYaml} from "./loadYaml"
 
-import langStore from './langStore.js?raw'
+import langStore from "./langStore.js?raw"
 
 export const registerTranslations = page => `langStore.registerTranslations(${loadYaml(`./src/i18n/translations/${page}.yml`)})`
 
-const themeStore = (lang = '') => `
+const glossary = (isBlog) => `
+// Glossary Terms
+const modal = document.getElementById("modal"),
+      contentChild = modal.children[0].children
+
+for (const t of document.querySelectorAll("#term"))
+  t.onclick = e => {
+    const term = e.target.textContent.toLowerCase()
+    modal.style.display = "flex"
+let item = translations[${!isBlog ? "langStore.current" : "localStorage.getItem('lang')"}].glossary.find(i => i.term === term)
+
+    contentChild[0].textContent = item.title ?? item.term
+    contentChild[1].innerHTML = item.description
+    contentChild[2].innerHTML = "<p>Related: </p>"
+
+    for (let i = 0; i < item.related.length; i++) {
+      const relatedNode = document.createElement("a")
+      relatedNode.textContent = item.related[i]
+      contentChild[2].appendChild(relatedNode)
+    }
+  }`
+
+const themeStore = isBlog => `
 const themeStore = (() => {
-  const THEMES = ['system', 'light', 'dark']
-  let current = localStorage.getItem('theme') ||
-    (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+  const THEMES = ["system", "light", "dark"]
+  let current = localStorage.getItem("theme") ||
+    (matchMedia('(prefers-color-scheme: dark)').matches ?
+      "dark" : "light")
 
   const set = theme => {
     if (!THEMES.includes(theme)) return
     current = theme
-    localStorage.setItem('theme', theme)
+    localStorage.setItem("theme", theme)
     apply()
   }
 
   const apply = () => {
     document.documentElement.dataset.theme = current
-    ${lang !== ''
-      ? `for (const b of themeBtns) b.textContent = translations.${lang}.theme+': '+translations.${lang}[current]`
-      : 'langStore.updateI18nElements()'}
+    ${!isBlog ? 'langStore.updateI18nElements()' :
+      `const curTranslations = translations[localStorage.getItem("lang")];
+      for (const b of themeBtns)
+        b.textContent = curTranslations.theme+": "+curTranslations[current]`}
   }
 
   const next = () => {
-    set(THEMES[
-      (THEMES.indexOf(current) + 1) % THEMES.length
-    ])
+    set(THEMES[(THEMES.indexOf(current) + 1) % THEMES.length])
   }
 
   const store = { apply, next, get current() { return current; } };
@@ -38,51 +60,71 @@ const themeStore = (() => {
 
 // INFO: Why? To inline every script in one page/html.
 export const registerScript = async({
-  lang = '', page = '', extraScript = '',
+  page = "",
+  extraScript = "",
+  noSidebar = false,
 } = {}) => {
-  const isBlog = page === '' || page === undefined
+  const isBlog = page === "" || page === undefined
 
-  return await minify(`(()=>{
+  return await minify(`
+(()=>{
+  // Setup i18n
   const languages = ${loadYaml('./src/i18n/languages.yml')}
-  const themeBtns = document.querySelectorAll('#themeBtn')
+  ${isBlog ?
+    `const translations = ${loadYaml("./src/i18n/translations/global.yml")}`
+    : `${langStore}
+       ${registerTranslations("sidebar-blog")}
+       ${registerTranslations("global")}
+       ${registerTranslations(page)}
 
-  ${themeStore(lang)}
+      // Lang Buttons
+      for (const b of document.querySelectorAll("#langBtn"))
+        b.onclick = langStore.next
 
-  // Dynamic Translations
-  ${isBlog ? `const translations = ${loadYaml('./src/i18n/translations/global.yml')}` : `
-    ${langStore}
-    ${registerTranslations('sidebar-blog')}
-    ${registerTranslations('global')}
-    ${registerTranslations(page)}
-
-    // Lang Buttons
-    for (const b of document.querySelectorAll('#langBtn')) b.onclick = langStore.next
-
-    // Sidebar Dropdown Menu
-    langStore.onRebind(() => {
-      for(const b of document.querySelectorAll('#dropdownBtn'))
-        b.onclick = () => b.nextElementSibling.classList.toggle('show')
-    })
-
-    langStore.init()`}
+      langStore.init()`}
 
   // Theme Buttons
+  const themeBtns = document.querySelectorAll("#themeBtn")
+  ${themeStore(isBlog)}
   for (const b of themeBtns) b.onclick = themeStore.next
-
-  // Sidebar
-  const
-    xBtn = document.getElementById('xBtn'),
-    menu = document.getElementById('menuBtn'),
-    overlay = document.getElementById('overlay'),
-    mobileSidebar = document.getElementById('mobileSidebar');
-
-  // Mobile Sidebar
-  menu.onclick = () => { mobileSidebar.classList.toggle('show'); overlay.classList.toggle('show') }
-  const hideSidebar = () => { mobileSidebar.classList.remove('show'); overlay.classList.remove('show') }
-  overlay.onclick = hideSidebar
-
   themeStore.apply()
 
-  ${extraScript}
-  })()`, { toplevel: true, compress: true, mangle: true })
+  ${!noSidebar ?
+    `// Sidebar Elements
+    const
+      menu = document.getElementById("menuBtn"),
+      overlay = document.getElementById("overlay"),
+      mobileSidebar = document.getElementById('mobileSidebar')
+
+    // Show/Hide Mobile Sidebar
+    menu.onclick = () => {
+      mobileSidebar.classList.toggle("show")
+      overlay.classList.toggle("show")
+    }
+
+    overlay.onclick = () => {
+      mobileSidebar.classList.remove("show")
+      overlay.classList.remove("show")
+    }` : ''}
+
+  // Glossary Modal
+  window.onclick = e => {
+    const modal = document.getElementById("modal")
+    if (e.target === modal)
+      modal.style.display = "none"
+  }
+
+  // i18n Rebind Elements
+  ${!isBlog ?
+    `langStore.onRebind(() => {
+      // Sidebar dropdown
+      for (const b of document.querySelectorAll("#dropdownBtn"))
+        b.onclick = () => b.nextElementSibling.classList.toggle("show")
+      ${glossary(isBlog)}
+    })` : ''}
+
+    })();
+
+${extraScript}
+`,{toplevel:true,compress:true,mangle:true})
 }

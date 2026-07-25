@@ -1,0 +1,18 @@
+#+title: TheRiceCold
+
+Ultra lightweight and blazingly fast multilingual website using Bun + AstroJS + Org mode + Nix.
+
+This website serves as documentation of my professional background, projects and insights.
+
+* Setup
+** Bare
+*Prerequisite:* =Bun v1.3=
+- Clone the repo:
+  =git clone https://github.com/thericecode/thericecold.github.io=
+- Install modules:
+  =bun install=
+- Run server:
+  =bun run dev=
+
+** With Nix
+ Just run =nix-shell= then =bun dev=.

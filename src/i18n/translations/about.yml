@@ -1,71 +1,194 @@
+
 en:
   page: About me
   visit: Visit
-  profession: Programmer | Artist | <a>View resume</a>
-  summary: >-
-    I studied Arts and Game Development in college and completed a full-stack
-    web development bootcamp. I am fluent in both English and Tagalog. I also
-    understand some Spanish at B1 Level. Software development is a profession
-    that allows me to combine my creative talents and problem-solving skills.
+  profession: >-
+    <i id="term">Programmer</i> |
+    <i id="term">Artist</i> |
+    <a>View resume</a>
+  summary:
+    - >-
+      To put it bluntly, my aspiration to work in the field of
+      <b id="term">software development</b> stems from the urge to
+      make use both of my <b>creative</b> gifts and my
+      <b>problem-solving</b> skills.
+    - >-
+      I mainly have my eye on the field of
+      <b id="term">game development</b>.
+      However, I should note that I also hold some experience in
+      <b id="term">full-stack development</b>.
+    - >-
+      I am fluent in both <u>English</u> and <b id="term">Tagalog</b>,
+      and I can communicate in <u>Spanish</u>,
+      although I would like it to be <u>spoken slowly</u>.
+    - >-
+      Above all, I regard myself a <u>valuable</u> asset to all
+      I've worked with. I am always willing to take on new tasks
+      and <u>adapt</u> to changing surroundings.
+      I'm essencially practioner of <b id="term">autodidactism</b>.
   resume: Resume
-  programming: programming languages
-  database: database
+  education:
+    head: Education
+    content: >-
+      • <b id="term">BSEMC</b>/<b id="term">Game Development</b> |
+      <i id="term">University of Caloocan City</i> | 2017-2021<br>
+      • <b id="term">Software Engineering</b> |
+      <i id="term">Avion School</i> | 2022-2023
+  programming:
+    head: Programming
+    content: >-
+      <b id="term">C</b> |
+      <b id="term">C++</b> |
+      <b id="term">ELisp</b> |
+      <b id="term">JavaScript</b> |
+      <b id="term">Python</b> |
+      <b id="term">Nix</b>
   languages:
-    label: spoken languages
-    content: 'English: C1 | Tagalog: Native | Spanish: B1'
-  unix: unix tools
-  os: operating systems
-  softwares: softwares
+    head: Spoken Languages
+    content: >-
+      English: <b>C1</b> |
+      Spanish: <b>B2</b> |
+      <u id="term">Tagalog</u>: Native
   extra:
-    label: additional information
-    content: 'Gender: XY | MBTI: INTP | Generation: Z | Nation: Philippines'
-  follow: follow me
+    head: Small Information
+    content: >-
+      <b>Homosapien</b> |
+      <b id="term">Gen Z</b> |
+      <b>Austronesian</b> |
+      177cm short | 2B Hair
+  more: ❥ Read more (If you want)
+  glossary:
+    - term: programmer
+      description: >-
+        A programmer is a professional who writes, tests, and
+        maintains the code that tells computers and
+        software applications how to function.
+        They act as a translator, turning human-readable instructions
+        into computer-executable languages like
+        Python, JavaScript, Java, or C++.
+      related:
+        - python,
+        - javascript,
+        - c++,
+        - software development,
+        - game development,
+        - full-stack development,
+        - software engineering  
+    - term: game development
+      description: Game development is the multidisciplinary process of creating a video game. It encompasses every stage of production—from the initial concept, design, coding, and artistry to sound design, testing, and final release. Development can be handled by a single solo developer or a large, specialized studio.
+      related: [BSEMC, software engineering]
+    - term: full-stack development
+      description: >-
+        Full-stack web development involves building both the
+        <u>front-end</u> (user-facing interface) and
+        <u>back-end</u> (server logic and database) of a website.
+        It requires mastering HTML/CSS/JavaScript for the client side,
+        a server language like Node.js or Python, and
+        database management with tools like MongoDB or SQL.
+    - term: tagalog
+      description: >-
+        Tagalog is an Austronesian language native to the ethnic
+        Tagalog people, primarily spoken in the Philippines,
+        particularly in Manila, Central Luzon, and surrounding provinces.
+    - term: bsemc
+      title: BSEMC
+      description: >-
+        BSEMC stands for Bachelor of Science in Entertainment and Multimedia Computing. It is a 4-year degree program that integrates computing principles with creative arts. Students typically specialize in either <u>Game Development</u> or <u>Digital Animation Technology</u>, learning to create interactive software, 2D/3D assets, audio design, and visual effects.
+      related: [game development, software engineering]
+    - term: university of caloocan city
+      title: university of caloocan city (Philippines)
+      description: >-
+        The University of Caloocan City is a public-type
+        local university established in 1971 and
+        formerly called Caloocan City Community College and
+        Caloocan City Polytechnic College.
+      related: [BSEMC, avion school]
+    - term: software engineering
+      description: >-
+        Software engineering is the systematic process of designing,
+        developing, testing, and maintaining computer applications.
+        It applies engineering principles and computer science
+        to build scalable, reliable, and efficient software solutions
+        that solve real-world problems.
+      related: [avion school, full-stack development, software development]
+    - term: avion school
+      description: Avion School is an online school that teaches Filipinos to become software engineers globally. An online course that teaches how actual software engineers work through personalized hands-on projects.
+      related: [software engineering, full-stack development, software development]
+    - term: elisp
+      title: Emacs Lisp
+      description: Emacs Lisp is a dialect of the Lisp programming language used specifically to configure, extend, and program the GNU Emacs text editor. It acts as both the extension language and the primary implementation language for the editor; most of Emacs' built-in features (like Org-mode and Magit) are written entirely in Elisp.
+    - term: javascript
+      description: JavaScript (JS) is a lightweight, text-based programming language primarily used to create interactive and dynamic content on websites. Alongside HTML (which structures web content) and CSS (which designs its appearance), JavaScript serves as the third core technology powering the modern World Wide Web.
+    - term: python
+      description: Python is a highly versatile, beginner-friendly programming language famous for its clean, English-like syntax and emphasis on readability. It is widely used for web development, data analysis, automation, and artificial intelligence.
+    - term: gen z
+      description: Generation Z  refers to the demographic cohort of individuals born between <u>1997</u> and <u>2012</u>. Known as true <i>"digital natives,"</i> they were raised with smartphones, social media, and Web 2.0. This generation is highly pragmatic, socially conscious, and places a strong emphasis on mental health and inclusivity.
+    - term: ❥ read more (if you want)
+      title: More about me
+      description: >-
+        I haven't written much about my skills in arts.
+        And you might be wondering why I only have a few drawings
+        and almost all of them are quite old.<br>
+        For info, arts or drawing specifically is my first actual
+        professional level skill.
+        <br>I started learning to draw at early childhood due to
+        exposure to cartoons and video games.
+        <br>In fact, the reason I was studied game development was to
+        create cool video games. I didn't coding or at least I didn't
+        expect it to be as difficult as it is.
+        <br>Basically, programming started to takeover because the
+        more I learn it, the better and the more I because a
+        necesity in my class. Because almost everyone can draw,
+        a few are willing to code. <br>Nowadays I draw a lot,
+        lot less than usual, also back issues(not severe).
+      related: []   
 
 es:
   page: Sobre mí
-  visit: Visitar
+  visit: Ir a
   profession: Programador | Artista | <a>Ver currículum</a>
-  summary: >-
-    Me formé en Artes y Desarrollo de Videojuegos, y completé un bootcamp de
-    desarrollo web completo. Hablo con fluidez inglés y tagalo. También entiendo
-    algo de español, nivel B1. El desarrollo de software es una profesión que me
-    permite combinar mi creatividad y mi capacidad para resolver problemas.
+  summary:
+    - >-
+      Simplemente, la razón por qué me importa trabajar en desallorrar de software
+    - >-
+      Mi principio es trabjar en desallorar de video juegos. Sin embargo, también tengo experiencias en
+    - >-
+      Hablo fluido ambos Ingles y Tagalo, y puedo comunicar en Castellano, pero lo quisiera que se me hable lentamente.
+    - >-
+      Por lo tanto, me considero que
   resume: Currículum
-  programming: lenguajes de programación
-  database: base de datos
-  languages:
-    label: lenguas habladas
-    content: 'Inglés: C1 | Tagalo: Nativo | Español: B1'
-  unix: herramientas unix
-  os: sistemas operativos
-  softwares: programas informáticos
-  extra:
-    label: información adicional
-    content: 'Género: XY | MBTI: INTP | Generación: Z | Nación: Las Filipinas'
-  follow: sígueme
+  education:  
+    head: Education
+    content: >-
+      • <b id="term">BSEMC</b>/<b id="term">Game Development</b> | <i id="term">Universidad de Ciudad de Caloocan</i> | 2017-2021<br>
+      • <b id="term">Software Engineering</b> | <i id="term">Avion School</i> | 2022-2023
+
 
 fil:
   page: Tungkól sakin
-  visit: Puntahán
-  profession: Tagaprograma | Alagad ng sining | <a>Tingnán ang lagumbuhay</a>
-  summary: >-
-    Ako'y nag-aral ng sining at pagbuô larô at nagtapós ng buong stack sa pagbuo
-    ng pahinarya. Ako'y duri sa wikang Ingles at Tagalog, bahagyâ ding
-    nakakaintindi ng kastila sa antás na B1. Ang paggawâ ng software ay isang
-    kadalubhasaang nagpapahaya saking pagsamahin ang aking pagkamalikhain at
-    kahusayang paglulutás.
-  resume: Lagumbuhay
-  programming: Mga wikang pamprograma
+  visit: Tumungò sa
+  profession: Tagaprograma | Alagad ng̃ sining | <a>Tingnán ang lagumbuhay</a>
+  summary:
+    - >-
+      Sa makatuwid, ang ibig ko sa pagtrabaho sa larangan ng buo ng software ay mula sa kakayahan kong pangsining at paglulutas gamit ang lohika.
+    - >-
+      Ang
+    - >-
+      Ako ay pluwido sa pananalita ng Ingles at Tagalog, at kaya din makipagtalakayan sa wiking kastila, ngunit nais ko na ay mabagal napananalita.
+    - >-
+      Sa kabuuan, ako ay naniniwala sa aking halaga at bilang sa aking mga nakatrabaho. Ako ay mahilig matuto at lagi handa sa kahit ano mang gawain, pati sa pakikibagay sa aking nasasakupan.
+  programming: Mg̃a wikang pangprograma
+  education:
+    head: Edukasyon
+    content: >-
+      • <b id="term">BSEMC</b>/<b id="term">Game Development</b> | <i id="term">University of Caloocan City</i> | 2017-2021<br>
+      • <b id="term">Software Engineering</b> | <i id="term">Avion School</i> | 2022-2023
   languages:
-    label: Mga sinasalitang wika
-    content: 'Inglés: C1 | Tagalog: Tubò | Kastilà: B1'
-  unix: Mga kasangpan sa Unix
-  os: Mga kaayusang pantakbo
-  softwares: Mga kasangkapang panglikha
+    label: Mg̃a sinasalitang wika
+    content: 'Inglés: C1 | Kastilà: B2 | Tagalog: Tubò'
   extra:
     label: karagdagang batid
-    content: 'Kasarián: XY | MBTI: INTP | Henerasyón: Z | Bayan: Pilipinas'
-  follow: tumalunton sakin
+    content: 'Homosapyen | Henerasyón Z | Awstronesyo | 177cm kaliit | 2B na buhok'
 
 ja:
   page: について
@@ -74,38 +197,19 @@ ja:
   summary: >-
     私は大学でアートとゲーム開発を学び、フルスタックWeb開発ブートキャンプを修了しました。私は英語とタガログ語を流暢に話します。また、B1レベルのスペイン語も多少理解できます。ソフトウェア開発は、私の創造的な才能と問題解決能力を融合できる職業です。
   resume: 履歴書
+  education:
+    head: Education
+    content: >-
+      • <b id="term">BSEMC</b>/<b id="term">Game Development</b> | <i id="term">University of Caloocan City</i> | 2017-2021<br>
+      • <b id="term">Software Engineering</b> | <i id="term">Avion School</i> | 2022-2023
   programming: プログラミング言語
-  database: データベース
   languages:
     label: 話されている言語
-    content: '英語: C1 | タガログ語: 母語話者 | スペイン語: B1'
-  unix: Unixツール
-  os: オペレーティングシステム
-  softwares: ソフトウェア
+    content: '英語: C1 | スペイン語: B2 | タガログ語: 母語話者'
   extra:
     label: 追加情報
     content: '性別: XY | MBTI: INTP | 世代: Z | 国: フィリピン'
   follow: ついてきて。
-
-zh:
-  page: 关于
-  visit: 访问
-  profession: 程序员 | 艺术家 | <a>查看简历</a>
-  summary: >-
-    我在大学里学的是艺术和游戏开发，还完成了全栈网页开发训练营的学习。我能说一口流利的英语和菲律宾语。我还懂一点西班牙语，水平达到B1级。软件开发是一项让我能够将我的创造才能和解决问题的能力结合在一起的专业。
-  resume: 简历
-  programming: 编程语言
-  database: 数据库
-  languages:
-    label: 所说的语言
-    content: '英语: C1 | 他加禄语: 母语者 | 西班牙语: B1'
-  unix: Unix工具
-  os: 操作系统
-  softwares: 软件
-  extra:
-    label: 附加信息
-    content: '性别: XY | MBTI: INTP | 世代: Z | 国: 菲律宾'
-  follow: 关注我
 
 de:
   page: über
@@ -119,13 +223,9 @@ de:
     Talente und meine Fähigkeiten im Problemlösen zu vereinen.
   resume: Lebenslauf
   programming: Programmiersprachen
-  database: Datenbank
   languages:
     label: gesprochene Sprachen
-    content: 'Englisch: C1 | Tagalog: Muttersprachler | Spanisch: B1'
-  unix: Unix-Werkzeuge
-  os: Betriebssysteme
-  softwares: software
+    content: 'Englisch: C1 | Spanisch: B2 | Tagalog: Muttersprachler  '
   extra:
     label: zusätzliche Informationen
     content: 'Geschlecht: XY | MBTI: INTP | Generation: Z | Nation: Philippinen'

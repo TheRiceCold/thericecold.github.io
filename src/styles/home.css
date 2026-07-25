@@ -3,14 +3,13 @@
   grid-template-areas:"side content nav";
 
   section {
+    gap: 16px;
     margin: 0 auto;
     grid-area: content;
     width: min-content;
-    gap: 16px;
 
     li{gap:4px}
     p,li{font-size:14px}
-    a{white-space:nowrap}
     h3,h4{margin-bottom:8px}
 
     article {
@@ -18,14 +17,14 @@
       border:var(--border);
       background:var(--surface);
       ul{gap:4px}
-			p{line-height: 1.6}
       &:not(:first-child) a:before {content:'✱ '}
       &:first-child {
-		  ul{gap: 16px}
-		  a{display:inline;text-transform:none}
-	    }
+	      ul{gap: 16px}
+        p{line-height:1.7;white-space:nowrap}
+	      a{display:inline;text-transform:none}
+      }
 
-      &:last-child li {
+      &:nth-child(3) li {
         padding-bottom:4px;
         justify-content:space-between;
         &:not(:last-child) {border-bottom:var(--border)}

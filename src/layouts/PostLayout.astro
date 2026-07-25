@@ -14,92 +14,88 @@ import MobileSidebar from '../components/MobileSidebar.astro'
 
 const {
   lang, title,
-  description, pubDate,
-  prologue, tags, sidebar
+  description = '', pubDate,
+  prologue, sidebar
 } = Astro.props
+
+const tags = Astro.props.tags.split(/\s*,\s*/)
 
 const script = await registerScript({ extraScript: `
 // Generate outline/table of contents
-const article = document.querySelector('article')
-const outlineList = document.querySelector('#nav ul')
-const outlineItems = article.querySelectorAll('h1, h2, h3, hr')
+const article = document.querySelector("article")
+const outlineList = document.querySelector("#nav ul")
+const outlineItems = article.querySelectorAll("h1, h2, h3, hr")
 
 for (let i = 0; i < outlineItems.length; i++) {
   const item = outlineItems[i]
-  if (item.tagName === 'HR') {
-    const hr = document.createElement('hr')
+  if (item.tagName === "HR") {
+    const hr = document.createElement("hr")
     outlineList.appendChild(hr)
     continue
   }
 
-  if (!item.id) item.id = 'heading-'+i
+  if (!item.id) item.id = "heading-"+i
 
-  const li = document.createElement('li')
-  const a = document.createElement('a')
+  const li = document.createElement("li")
+  const a = document.createElement("a")
 
-  a.href = '#'+item.id
+  a.href = "#"+item.id
   a.textContent = item.textContent
-  a.id = 'lvl-'+parseInt(item.tagName.charAt(1))
+  a.id = "lvl-"+parseInt(item.tagName.charAt(1))
 
   a.onclick = e => {
     e.preventDefault()
-    item.scrollIntoView({behavior:'smooth'})
+    item.scrollIntoView({behavior: "smooth"})
   }
 
   li.appendChild(a)
   outlineList.appendChild(li)
 }
 
-window.addEventListener('scroll', () => {
-  let active = ''
-
+window.addEventListener("scroll", () => {
+  let active = ""
   for (const item of outlineItems) {
-    if (item.tagName === 'HR') continue
-    if(item.getBoundingClientRect().top <= 100) active = item.id
+    if (item.tagName === "HR") continue
+    if (item.getBoundingClientRect().top <= 100) active = item.id
   }
 
-  for (const l of outlineList.querySelectorAll('a')) {
-    l.classList.remove('active')
-    if (l.getAttribute('href') === '#'+active)
-      l.classList.add('active')
+  for (const l of outlineList.querySelectorAll("a")) {
+    l.classList.remove("active")
+    if (l.getAttribute("href") === "#"+active)
+      l.classList.add("active")
   }
 })`, lang})
 
-
 ---
+
 <!DOCTYPE html>
 <html lang={lang}>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{Astro.props.title}</title>
-  <link rel="icon" type="image/svg+xml" href="/me.svg">
-  <SEO {...Astro.props} />
-</head>
-<body>
-  <Header lang={lang}/>
-  <MobileSidebar lang={lang} {...sidebar}/>
-  <main>
-    <Sidebar lang={lang} {...sidebar}/>
-    <Navigator lang={lang} />
-    <article>
-      <header>
-        <b id="title">{title}</b>
-        <p>{description}</p>
-        <div>
-          <date>{pubDate.toLocaleDateString(lang, {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })}</date>
-          {tags.map(t => <span>{t}</span>)}
-        </div>
-      </header>
-      {prologue ? <i id="prologue">"{prologue}"</i> : null}
-      <slot/>
-    </article>
-  </main>
-  <Footer/>
-  <script is:inline set:html={script.code}></script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/me.svg">
+  </head>
+  <body>
+    <Header lang={lang}/>
+    <MobileSidebar lang={lang}{...sidebar}/>
+    <main>
+      <Sidebar lang={lang} {...sidebar}/>
+      <Navigator lang={lang}/>
+      <article>
+        <header>
+          <b id="title">{title}</b>
+          <p>{description}</p>
+          <div>
+            <date>{pubDate}</date>
+            {tags.map(t => <span>{t}</span>)}
+          </div>
+        </header>
+        {prologue ? <i id="prologue">"{prologue}"</i>:null}
+        <slot/>
+      </article>
+    </main>
+    <Footer/>
+    <script is:inline set:html={script.code}></script>
+  </body>
 </html>
