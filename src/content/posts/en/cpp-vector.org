@@ -1,0 +1,13 @@
+:PROPERTIES:
+:title: C++ Vector
+:pubDate: [2026-07-17]
+:tags: programming, cpp
+:availableLanguages: es, fil
+:sidebar: {"title": "C++ Saga", "items":[]}
+:END:
+
+* Terminologies
+*Why is it called a Vector?*
+
+Well, the truth it's just a <b id="term">dynamic array</b>, it's called a vector simply because that was the name given during the creation of Standard Language STL to distinguish from the built-in fixed-size C-style arrays.
+

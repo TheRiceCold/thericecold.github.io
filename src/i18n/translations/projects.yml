@@ -29,10 +29,10 @@ en:
         link: https://github.com/thericecold/kaivim
         desc: Personal standalone neovim Nix package configured using NVF.
         tags: [neovim, nix, lua]
-      - name: Kimacs
-        link: https://github.com/thericecold/kimacs
-        desc: Personal standalone Nix package for Emacs configuration.
-        tags: [elisp, emacs, nix]
+      - name: Zmacs
+        link: https://github.com/elarrozfrio/zmacs
+        desc: Emacs setup with Smartly utilize Meow Modal Editing and Zettelkasten.
+        tags: [elisp, nix]
 
   simple:
     label: Simple Projects
@@ -245,66 +245,6 @@ ja:
       - name: プロフェッショナル向けプラットフォーム
         link: https://github.com/thericecold/online-platform-for-professionals
         desc: フルスタックWeb開発ブートキャンプを修了するための古いプロジェクト。
-        tags: [nextjs, reactjs]
-
-zh:
-  page: 我的项目
-  category: 类别
-  shortcuts: [精选, 定制的, 简单, 已归档]
-  feature:
-    label: 精選專案
-    list:
-      - name: Likhâ
-        link: https://github.com/thericecold/likha
-        desc: 一款从零开始编写的高性能命令行文本编辑器。
-        tags: [c++, terminal]
-      - name: Larô Engine
-        link: https://github.com/thericecold/laro
-        desc: 轻量级游戏引擎。
-        tags: [c++, 图形, 物理学]
-      - name: Astíg
-        link: https://github.com/thericecold/thericecold.github.io
-        desc: 多语言个人网站模板。
-        tags: [javascript, astro, 模板]
-  config:
-    label: 定制的
-    list:
-      - name: dots
-        link: https://github.com/thericecold/dots
-        desc: 我的自定义 NixOS 配置。
-        tags: [nixos, hyprland, unixporn]
-      - name: Kaivim
-        link: https://github.com/thericecold/kaivim
-        desc: 一个使用NVF配置和构建的独立Nix Neovim软件包。
-        tags: [neovim, nix, lua]
-      - name: Kimacs
-        link: https://github.com/thericecold/kimacs
-        desc: 一个定制化的Emacs独立Nix软件包。
-        tags: [elisp, emacs, nix]
-
-  simple:
-    label: 简单项目
-    list:
-      - name: Lagumbuhay
-        link: https://github.com/thericecold/lagumbuhay
-        desc: 一份用Typst编写的简历模板。
-        tags: [typst, 图形, 文件]
-      - name: fzf-lua-projectile
-        link: https://github.com/thericecold/fzf-lua-projectile
-        desc: 一个用于通过 fzf-lua 搜索 Git 项目的 Neovim 插件。
-        tags: [neovim, lua, fzf]
-
-  archive:
-    label: 档案项目
-    list:
-      - name: 改善
-        link: https://github.com/thericecold/kaizen
-        desc: 一款为Hyprland Linux系统开发的GJS/Ags桌面环境。
-        tags: [typescript, gtk, hyprland]
-
-      - name: 专业人士平台
-        link: https://github.com/thericecold/online-platform-for-professionals
-        desc: 一个旧项目，用于完成我的全栈网页开发训练营。
         tags: [nextjs, reactjs]
 
 de:

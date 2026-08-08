@@ -5,38 +5,82 @@ en:
   welcome: Hello there.
   intro:
     - >-
-       My name is <b>Dale Walter</b>. I am a sad <b>Emacs</b> user and a tryhard polyglot.
-       <br>Well, of course I <b>code</b> and <b>write</b> nodes in <b>Org-mode</b>.
-       <br>I also have a lot of strong views, like <b>C++</b> being the <b>superior programming language</b>.<br>
+       My name is <b id="term">Dale Walter</b>. I am a sad <b id="term">Emacs</b> user and a tryhard <b id="term">polyglot</b>.
+       <br>Well, of course I <b id="term">code</b> and <b id="term">write</b> nodes in <b id="term">Org-mode</b>.
+       <br>I also have a lot of strong views, like <b id="term">C++</b> being the superior <b id="term">programming language</b>.<br>
     - >-
-       Anyways, this place is a showcase of my professional background, computing works, digital arts,
+       Anyways, this place is a showcase of my professional background, computing works, <b id="term">digital arts</b>,
        <br>as well as my thoughts on many topics, which I publish as blog posts.
-       <br>To find out more about this random fella, <a href="about">click here</a>.
+    - >-
+       To find out more about this random fella, <a href="about">click here</a>.
   projects:
     label: Featured Projects
     list:
-      - >-
-        <a href="https://github.com/thericecold/likha">Likhâ</a> -
-        A high-performance commandline text editor written from scratch.
-      - <a href="https://github.com/thericecold/laro">Larô Engine</a> - A lightweight game engine.
-      - >-
-        <a href="https://github.com/thericecold/kaizen">Kaizen (Archived)</a> -
-        A <b>desktop environment</b> for <b>Hyprland Linux</b>, written with <b>GJS/Ags</b>.
+      - <a href="https://github.com/thericecold/kaizen">Kaizen|Archived|</a> – A <b id="term">Unix Desktop Environment</b> for <b id="term">Hyprland</b> written with <b id="term">Ags.</b>
   recentPosts:
     label: Recent Posts
     list:
-      - title: "The C++ Saga 1: The Apprentice's Gate"
-        date: November 16, 2025
-        link: en/learn/the-cpp-saga-1
-      - title: "The C++ Saga 0: Raw Power for a Digital World"
-        date: November 06, 2025
-        link: en/learn/the-cpp-saga-0
-      - title: Post 3
-        date: June 12, 2025
-        link: /
-      - title: Post 4
-        date: March 10, 2025
-        link: /
+      - title: "Emacs: Introduction"
+        date: July 18, 2026
+        link: en/emacs-intro
+      - title: "Agape: The Excellence of Love"
+        date: May 23, 2026
+        link: en/agape
+
+  glossary:
+    - term: dale walter
+      title: The developers's name AKA me
+      description: >-
+        That's just my name. But I'm actual fullname is <b>Dale Walter García Hicban</b>. If you want more information *blushing* about me, just go to the <a href="/about">about page</a> or visit my social media pages below.
+      related: [X, Facebook, Instagram, BlueSky, GitHub]
+    - term: polyglot
+      description: Polyglotism is the ability to communicate fluently in multiple languages. Generally, while bilingualism refers to 2 languages, a polyglot is someone who speaks 5 or more, and a <i>"hyperpolyglot"</i> speaks 6 or more.
+      related: [languages]
+    - term: emacs
+      description: >-
+        GNU Emacs is a <b>highly extensible, customizable, and self-documenting, real-time display editor.</b>
+        Famous among programmers, writers, and power users.
+        Far more than a basic editor, it operates as a full computing environment–capable of managing tasks,
+        running terminal emulators, browsing the web, and compiling code–all driven by keyboard shortcuts.
+      related: [text editor, org-mode]
+    - term: code
+      title: Coding 💻
+      description: >-
+        Coding (or computer programming) is the process of writing sets of instructions, or algorithms, using specialized programming languages. These instructions tell a computer exactly how to perform specific tasks, such as displaying a website, processing data, or running a mobile app.
+    - term: write
+      description: >-
+        A writer is a person who uses written words to communicate ideas, tell stories, or convey information. The title covers anyone who writes, from people keeping personal journals to professional authors, journalists, and screenwriters.
+      related: [symbolism]
+    - term: org-mode
+      title: Org Mode 🦄
+      description: >-
+        A GNU Emacs major mode for keeping notes, authoring documents, computational notebooks, literate programming,
+        maintaining to-do lists, planning projects, and more — in a fast and effective plain text system.
+      related: [emacs]
+    - term: c++
+      title: C++ Programming Language
+      description: >-
+        C++ is a high-performance, general-purpose programming language widely used for system-level programming, game development, and high-frequency trading. Created by Bjarne Stroustrup as an extension of C, it provides high-level abstractions and low-level memory management.
+      related: [programming, game development]
+    - term: programming language
+      description: >-
+        A programming language is an engineered formal language used to direct a computer to execute specific tasks. It acts as a bridge between human logic and machine execution, allowing developers to write software, build applications, and build websites.
+      related: [c++]
+    - term: digital arts
+      description: >-
+        Digital art refers to artistic works that use digital technology as an essential part of the creative or presentation process. It is a broad term that covers everything from computer-generated 3D models and digital paintings to interactive installations, virtual reality experiences, and generative art created using software and algorithms
+    - term: hyprland
+      description: >-
+        Hyprland is an independent tiling Wayland compositor written in C++. Noteworthy features of Hyprland include dynamic tiling, tabbed windows, a clean and readable C++ code-base, and a custom renderer that provides window animations, rounded corners, and Dual-Kawase Blur on transparent windows.
+      related: [desktop environment, ags]
+    - term: unix desktop environment
+      description: >-
+        A desktop environment (DE) is the graphical user interface that bundles components like windows, taskbars, file managers, and settings. It dictates how your system looks a  nd functions, and you can freely swap it out or mix-and-match applications without reinstalling your OS.
+      related: [hyprland, ags]
+    - term: ags.
+      title: Aylur's GTK Shell
+      description: Aylur's GTK Shell (AGS) is a highly customizable framework used to design and build personal Wayland desktop widgets and complete status shells (bars, docks, notification popups, and app launchers). Inspired by similar tools like eww, it is incredibly popular in the Linux <i>"ricing"</i> and customization community, particularly alongside tiling window managers.
+      related: [desktop environment, hyprland]
 
 es:
   page: Inicio
@@ -45,37 +89,38 @@ es:
   welcome: Encantado.
   intro:
     - >-
-       Me llamo <b>Dalí</b>. Soy un usuario pobrecito de <b>Emacs</b> y un políglota poser.
+       Me llamo <b id="term">Dalí Wáli</b>. Soy un usuario pobrecito de <b>Emacs</b> y un políglota poser.
        <br>Sí, claro que sé <b>programar</b> y también <b>escribo</b> nodos en <b>Org-mode</b>.
        <br>Además, tengo convicciones firmes, como que <b>C++</b> es <b>el mejor lenguaje de programación</b>.<br>
     - >-
        Pero bueno, esto muestra mis experiencias profesionales, los proyectos de informática,
        <br>mis trabajos de arte digital, y mis reflexiones sobre muchos temas que publiqué en un blog.
-       <br>Si quieres saber más sobre mí, <a href="about">haz clic aquí</a>.
+    - >-
+      Si quieres saber más sobre mí, <a href="about">haz clic aquí</a>.
   projects:
     label: Proyectos destacados
     list:
       - >-
-        <a href="https://github.com/thericecold/likha">Likhâ</a> -
-        Un editor de texto de línea de comandos de alto rendimiento escrito desde cero.
-      - <a href="https://github.com/thericecold/laro">Larô Engine</a> - Un motor de video juego ligero.
-      - >-
-        <a href="https://github.com/thericecold/kaizen">Kaizen (Archived)</a> -
-        Un <b>entorno de escritorio</b> en <b>GJS/Ags</b> para <b>Hyprland Linux</b>.
+        <a href="https://github.com/thericecold/kaizen">Kaizen (Archived)</a> - Un <b>entorno de escritorio</b> en <b>Ags</b> para <b>Hyprland Linux</b>.
+  glossary:
+    - term: dalí wáli
+      title: El nombre de programmador o yo
+      description: >-
+        Es mi nombre. Pero no es mi nombre entero de verdad. Me llamo <b>Dale Walter García Hicban</b>. Si quieres más información sobre mi, solo visita a <a href="/about">esto</a> o mis redes sociales.
   recentPosts:
     label: Últimas entradas
     list:
+      - title: "Emacs moggs"
+        date: 5 de Junio de 2026
+        link: es/emacs-moggs
       - title: "Serie C++: UNO"
         date: 16 de noviembre de 2025
-        link: es/learn/the-cpp-saga-1
+        link: es/the-cpp-saga-1
       - title: "Serie C++ 0: Poder bruto para un Mundo Digital"
         date: 6 de noviembre de 2025
-        link: es/learn/the-cpp-saga-0
+        link: es/the-cpp-saga-0
       - title: Entrada 3
         date: 12 de junio de 2025
-        link: /
-      - title: Entrada 4
-        date: 10 de marzo de 2025
         link: /
 
 fil:
@@ -86,39 +131,24 @@ fil:
   intro:
     - >-
        Ako si Wali. Ako'y gumagamit ng̃ <b>Emacs</b> at pilit na políglota.
-       <br>Oo, malamáng <b>nagcocode</b> ako, at <b>nagsusulat</b> din ng̃ mg̃a nodo sa <b>Org-mode</b>.
-       <br>Madami din mg̃a pananáw, tulad ng̃ <b>C++</b>, ang <b>pinakaangat</b> ng̃ wikà na pang-programa.
+       <br>Aba oo naman <b>nagcocode</b> ako. At <b>nagsusulat</b> din ng̃ mg̃a nodo(nodes) sa <b>Org-mode</b>.
+       <br>Ako'y madami din mg̃a pananáw. Halimbawa, ang <b>pinakaangat</b> na wikàng pang-programa ay <b>C++</b>.
     - >-
-       O, s'ya pala, itóng páhiná ay pagpapakita at pagmamapurí sa aking mg̃a kadalubhasàang kakayahán,
-       <br>mg̃a guhit dihitál, at aking mg̃a kaisipá bilang lathalà sa aking blog.
-       <br>Kung ibig mo pa akóng mabatíd, <a href="about">pindutín itó</a>.
+       O, s'ya pala, itóng páhiná ay pagpapakita at pagmamapurí sa aking mg̃a kadalubhasàang kakayahán.
+       <br>Sa larangan ng̃ inpormatica, mg̃a guhit dihitál, at aking mg̃a kaisipáng nakalathalà sa aking blog.
+    - >-
+      Kung ibig mo pa akóng mabatíd, <a href="about">pindutín itó</a>.
   projects:
     label: Tampók na mg̃a gawâ
     list:
       - >-
-        <a href="https://github.com/thericecold/likha">Likhâ</a> -
-        Isang matindí at banat na pangwasto ng̃ sulatin sa commandline na gawa mula sa kahig.
-      - >-
-        <a href="https://github.com/thericecold/laro">Larô Engine</a> -
-        Isang langkág na pangawâ ng̃ larô.
-      - >-
-        <a href="https://github.com/thericecold/kaizen">Kaizen (Sínupan)</a> -
-        Isang <b>desktop environment</b> gawâ gamit ang <b>GJS/Ags</b> ukol sa <b>Hyprland Linux</b>.
+        <a href="https://github.com/thericecold/kaizen">Kaizen|Sínupan|</a> - Isang <b id="term">desktop environment</b> gawâ gamit ang <b id="term">Ags</b> ukol sa <b>Hyprland Linux</b>.
   recentPosts:
     label: Mg̃a hulíng paglalathalà
     list:
-      - title: "Doktrina C++ 1:"
-        date: Ika-16 ng̃ Noviembre, 2025
-        link: fil/learn/the-cpp-saga-1
-      - title: "Doktrina C++ 0: Bisà sa Isang Mundo ng̃ Dihitál"
-        date: Ika-6 ng̃ Noviembre, 2025
-        link: fil/learn/the-cpp-saga-0
-      - title: Lathalaín 3
-        date: Ika-12 ng̃ Junio, 2025
-        link: /
-      - title: Lathalaín 4
-        date: Ika-10 ng̃ Marzo, 2025
-        link: /
+      - title: "Emacs: Panimula"
+        date: Ika-5 ng̃ Hunyo, 2026
+        link: fil/emacs-moggs
 
 ja:
   page: 家
@@ -127,32 +157,26 @@ ja:
   welcome: こんにちは
   intro:
     - >-
-       本ウェブサイトは私のデジタルポートフォリオとして、専門的経歴、コンピュータプロジェクト、クリエイティブ作品、および各種出版物を紹介しています。
-       このランダムな人物についてもっと知りたい場合は、<a href="about">こちらをクリックしてください</a>。
+       私の名前は<u>デール・ウォルター</u>です。私は悲しげな<u id="term">Emacs</u>ユーザーであり、名ばかりの<u id="term">多言語話者</u>です。
   projects:
     label: 注目のプロジェクト
     list:
       - >-
-        <a href="https://github.com/thericecold/likha">Likhâ</a> -
-        ゼロから書き上げられた高性能なコマンドラインテキストエディタ。
-      - <a href="https://github.com/thericecold/laro">Larô Engine</a> - 軽量ゲームエンジン。
-      - >-
-        <a href="https://github.com/thericecold/kaizen">Kaizen (Archived)</a> -
-        Hyprland Linux 向けの GJS/Ags ベースのデスクトップ環境。
+        <a href="https://github.com/thericecold/kaizen">Kaizen (Archived)</a> - Hyprland Linux 向けの Ags ベースのデスクトップ環境。
   recentPosts:
     label: 最近のブログ
     list:
+      - title: "Emacs moggs"
+        date: 2026年6月5日
+        link: jp/emacs-moggs
       - title: "C++シリーズ: 一"
         date: 2025年11月16日
-        link: ja/learn/the-cpp-saga-1
+        link: ja/the-cpp-saga-1
       - title: "C++シリーズ: ゼロ"
         date: 2025年11月6日
-        link: ja/learn/the-cpp-saga-0
+        link: ja/the-cpp-saga-0
       - title: ブログ 3
         date: 2025年6月12日
-        link: /
-      - title: ブログ 4
-        date: 2025年3月10日
         link: /
 
 de:
@@ -173,24 +197,10 @@ de:
     label: vorgestellte Projekte
     list:
       - >-
-        <a href="https://github.com/thericecold/likha">Likhâ</a> -
-        Ein von Grund auf neu entwickelter, leistungsstarker Texteditor für die Kommandozeile.
-      - <a href="https://github.com/thericecold/laro">Larô Engine</a> - Eine leichtgewichtige Spiel-Engine.
-      - >-
-        <a href="https://github.com/thericecold/kaizen">Kaizen (archiviert)</a> -
-        Eine von <b>GJS/Ags</b> geschriebene <b>Desktop-Umgebung</b> für Hyprland Linux.
+        <a href="https://github.com/thericecold/kaizen">Kaizen|archiviert|</a> - Eine von <b>Ags</b> geschriebene <b>Desktop-Umgebung</b> für Hyprland Linux.
   recentPosts:
     label: Aktuelle Beiträge
     list:
-      - title: "C++-Reihe: EINS"
-        date: 16. November 2025
-        link: de/learn/the-cpp-saga-1
-      - title: "C++-Reihe: NULL"
-        date: 6. November 2025
-        link: de/learn/the-cpp-saga-0
-      - title: Beitrag 3
-        date: 12. Juni 2025
-        link: /
-      - title: Beitrag 4
-        date: 10. März 2025
-        link: /
+      - title: "Emacs moggs"
+        date: 5. Juni 2026
+        link: en/emacs-moggs

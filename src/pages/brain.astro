@@ -1,0 +1,24 @@
+---
+import {registerScript} from '../scripts/registerScript'
+import brainjs from '../scripts/brain.js?raw'
+
+import '../styles/aside.css'
+import '../styles/brain.css'
+
+import Layout from '../layouts/Layout.astro'
+import Navigator from '../components/Navigator.astro'
+
+const script = await registerScript({
+  page: 'home',
+  noSidebar: true,
+  extraScript: brainjs,
+})
+
+---
+
+<Layout description="TheRiceCold's brain" page="brain" noFooter>
+  <canvas/>
+  <input id="search" placeholder="Search node..."/>
+  {/*<Navigator title="navigate" shortcuts="links"/>*/}
+  <script is:inline set:html={script.code}></script>
+</Layout>

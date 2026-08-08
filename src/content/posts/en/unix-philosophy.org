@@ -1,0 +1,8 @@
+:PROPERTIES:
+:title: Unix Philosophy
+:pubDate: 2026-07-18
+:tags: unix, software
+:sidebar: []
+:END:
+
+* Unix Philosophy

@@ -1,0 +1,29 @@
+:PROPERTIES:
+:title: Emacs Introduction
+:pubDate: 2026-07-17
+:tags: emacs, lisp
+:availableLanguages: es, fil
+:sidebar: {"title": "Emacs", "items":[]}
+:END:
+
+* What "is" Emacs?
+This is a typical question most beginner's will hear because is not exactly a "text editor" at least base on how we commonly define in nowadays. But I think that the shouldn't what Emacs is, ask what does Emacs provide, why use this piece of software from the 80s?
+
+To give you an answer, I believe Emacs is the only "text editing" tool you would need and you may need.
++ Do you code editor?
++ Do you need a task organizer?
++ Do you need a scheduled agenda?
++ Do you write Math equations and documentations with LaTeX?
++ Do you write for the sake of writing?
++ Do you want them all connected and link together?
++ Do you want a full Zettlekasten workflow?
++ Are you looking for an application the can be your vscode, vim, session manager, obsidian/notion, overleaf, office suite, basically any text editing work? Welp you Emacs might be the one for you
+
+* Misconceptions
+** Emacs is bloated
+If you're in the world Unix computing, or even just the software development space in general. You've probably heard of the term "bloated". The term is overused, not every software has to abide by the "Unix Philosophy". Like Emacs is *GNU* Emacs, yes it does a lot more than a Lisp interpreter. Also it's 2026, most users only don't actually care about "bloat", it's more like personality thing or "larp" thing nowadays. If users so care so much about minimalism you should start by avoiding applications like spotity, discord, video games, youtube, netflix, social media, chatgpt and like a bunch more applications that are way way way more bloated than Emacs. When have you ever heard someone complain about a video game being to bloated? Well no one cares because it's entertainment.
+Another thing, almost everything people complain about bloat in Emacs are literally just lisp code being executed in a lisp interpreter application. Tetris is just a lisp code it's like opening an html+ javascript code in your browser and calling the browser bloated. Or a saved ringtone in your phone and calling android bloated because of it. 
+
+* Why use Emacs in 2026?
+
+* Start with a simple configuration

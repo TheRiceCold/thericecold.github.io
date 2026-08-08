@@ -1,0 +1,23 @@
+#brain{
+  grid-template-columns:auto 1fr auto;
+  grid-template-areas:"side content nav";
+
+  #search {
+    position: absolute;
+    top: 60px; right: 24px;
+    width: 160px;
+    outline: none;
+    font-size: 12px;
+    padding: 6px 10px;
+    border: var(--border);
+    background: var(--surface);
+  }
+}
+
+body{
+  height: 100vh;
+  >header{
+    width:100vw;
+    position:absolute;
+  }
+}

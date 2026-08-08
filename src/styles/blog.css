@@ -26,20 +26,20 @@ main {
     #lvl-1 {
       margin-left: 12px;
       &:before{content: '⦿ '}
-      &:hover{color:var(--rose)}
-      &.active{color:var(--rose)}
+      &:hover{color:var(--head1)}
+      &.active{color:var(--head1)}
     }
     #lvl-2 {
       margin-left: 16px;
       &:before{content:'○ '}
-      &:hover{color:var(--foam)}
-      &.active{color:var(--foam)}
+      &:hover{color:var(--head2)}
+      &.active{color:var(--head2)}
     }
     #lvl-3 {
       margin-left: 20px;
       &:before{content:'✸ '}
-      &:hover{color:var(--gold)}
-      &.active{color:var(--gold)}
+      &:hover{color:var(--head3)}
+      &.active{color:var(--head3)}
     }
   }
 
@@ -66,7 +66,7 @@ main {
         font-size: 15px;
         cursor: pointer;
         &:before{content: '#'}
-        &:hover{color: var(--love)}
+        &:hover{color: var(--red)}
       }
     }
 
@@ -87,10 +87,10 @@ main {
       blockquote{
         margin:12px 0;
         padding:8px 0;
-        color:var(--love);
+        color:var(--rosa);
         text-align:center;
         background:var(--bg);
-        border:1px dashed var(--love);
+        border:1px dashed var(--red);
       }
 
       p{margin:0 20px}
@@ -105,11 +105,11 @@ main {
       p,b{font-size:15px}
       b+ul{margin-top:4px}
       b{margin:0;white-space:nowrap}
-      a{display:inline;font-weight:600;color:var(--pine)}
+      a{display:inline;font-weight:600;color:var(--ao)}
       h1 {
         font-size:22px;
         margin-left:16px;
-        color:var(--rose);
+        color:var(--head1);
         &:before{content:'◉ '}
         ~ ul li{margin-left:40px}
         ~ p{margin:4px 24px 8px 28px}
@@ -118,7 +118,7 @@ main {
       h2 {
         font-size:20px;
         margin-left:24px;
-        color:var(--foam);
+        color:var(--head2);
         &:before{content:'○ '}
         ~ ul li{margin-left:48px}
         ~ p{margin:4px 24px 8px 36px}
@@ -127,7 +127,7 @@ main {
       h3 {
         font-size:18px;
         margin-left:32px;
-        color:var(--gold);
+        color:var(--head3);
         &:before{content:'✸ '}
         ~ ul li{margin-left:56px}
         ~ p{margin:4px 24px 8px 44px}
@@ -137,7 +137,7 @@ main {
       h4 {
         font-size:16px;
         margin-left:40px;
-        color:var(--iris);
+        color:var(--head4);
         &:before{content:'✿ '}
         ~ ul li{margin-left:60px}
         ~ p{margin:4px 24px 8px 52px}

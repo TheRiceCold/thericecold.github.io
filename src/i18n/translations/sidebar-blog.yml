@@ -1,100 +1,100 @@
 en:
   sidebarBlog:
-    title: Blog Posts
+    title: My Nodes
     list:
     - category: notes
       posts:
-        - title: note 1
-          link: /
-        - title: note 2
-          link: /
-    - category: learn with me
-      posts:
-        - title: The C++ Saga
-          link: /en/learn/the-cpp-saga-0
+        - title: C++ Vector
+          link: /en/cpp-vector
+        - title: Nix ❄
+          link: /en/nix
+        - title: "Emacs: Introduction"
+          link: /en/emacs-intro
     - category: insights
       posts:
-        - title: insight 1
-          link: /
-        - title: insight 2
-          link: /
+        - title: Agape
+          link: /en/agape
+        - title: Unix Philosophy
+          link: /en/unix-philosohpy
+        - title: Forgiveness
+          link: /en/forgiveness
+        - title: Human Intelligence
+          link: /en/human-intelligence
+        - title: Pseudo Intellectualism
+          link: /en/pseudo-intellectualism
+    - category: analysis
+      posts:
+        - title: "TV Series: Bojack Horseman"
+          link: /en/hxh-hunter-exam
+        - title: "HxH 0: Hunter Exam"
+          link: /en/hxh-hunter-exam
+        - title: "HxH 1: Heavens Arena"
+          link: /en/hxh-heavens-arena
+        # - title: "HxH 2: Yorknew City"
+        #   link: /en/hxh-yorknew-city
+        # - title: "HxH 3: Greed Island"
+        #   link: /en/hxh-greed-island
+        # - title: "HxH 4: Chimera Ant"
+        #   link: /en/hxh-chimera-ant
+        - title: "Miniseries: Hilda Furacão"
+          link: /en/american-beauty
+        - title: "TV Series: Dark"
+          link: /en/netflix-dark
+        - title: "Movie: American Beauty"
+          link: /en/american-beauty
     - category: research
       posts:
-        - title: research 1
-          link: /
-        - title: research 2
-          link: /
+        - title: Raw Milk
+          link: /en/raw-milk
     - category: writings
       posts:
-        - title: a poetry
-          link: /
-        - title: a letter
-          link: /
+        - title: Una Carta
+          link: /es/una-carta
 es:
   sidebarBlog:
-    title: Entradas de Blog
+    title: Mis Nodos
     list:
     - category: apuntes
       posts:
-        - title: apunte 1
-          link: /
-        - title: apunte 2
-          link: /
-    - category: aprende conmigo
-      posts:
-        - title: Serie C++
-          link: /es/learn/the-cpp-saga-0
+        - title: Vector de C++
+          link: /es/cpp-vector
     - category: pensamientos
       posts:
-        - title: pensamiento 1
-          link: /
-        - title: pensamiento 2
-          link: /
+        - title: Agape
+          link: /es/agape
     - category: investigaciones
       posts:
-        - title: investigación 1
-          link: /
-        - title: investigación 2
-          link: /
+        - title: "HxH Arc 0: Examen de Cazador"
+          link: /en/hxh-hunter-exam
+        - title: "Pelicula: American Beauty 1999"
+          link: /es/american-beauty
     - category: escritos
       posts:
-        - title: un poesía
-          link: /
-        - title: una carta
-          link: /
+        - title: Una Carta
+          link: /es/una-carta
 
 fil:
   sidebarBlog:
-    title: Mga paglalathalà
+    title: Aking mg̃a Nodos
     list:
-    - category: mga talâ
+    - category: mg̃a talâ
       posts:
-        - title: talâ 1
-          link: /
-        - title: talâ 2
-          link: /
-    - category: aralin
+        - title: C++ Vector
+          link: /fil/cpp-vector
+    - category: mg̃a kaisipán
       posts:
-        - title: Serye C++
-          link: /fil/learn/the-cpp-saga-0
-    - category: mga kaisipán
+        - title: Agape
+          link: /fil/agape
+    - category: mg̃a pananaliksík
       posts:
-        - title: kaisipán 1
-          link: /
-        - title: kaisipán 2
-          link: /
-    - category: mga pananaliksík
+        - title: "HxH Arc 0: Pagsusulit ng Kasador"
+          link: /en/hxh-hunter-exam
+        - title: "Pelikula: American Beauty 1999"
+          link: /fil/american-beauty
+    - category: mg̃a kasulatán
       posts:
-        - title: pananaliksík 1
-          link: /
-        - title: pananaliksík 2
-          link: /
-    - category: mga kasulatán
-      posts:
-        - title: isáng tulâ
-          link: /
-        - title: isáng kasulatán
-          link: /
+        - title: Una Carta
+          link: /es/una-carta
 
 ja:
   sidebarBlog:
@@ -102,65 +102,20 @@ ja:
     list:
     - category: メモ
       posts:
-        - title: メモ 1
-          link: /
-        - title: メモ 2
-          link: /
-    - category: 学びましょう
-      posts:
-        - title: C++シリーズ
-          link: /ja/learn/the-cpp-saga-0
+        - title: C++ Vector
+          link: /jp/cpp-vector
     - category: 考え
       posts:
-        - title: 考え1
-          link: /
-        - title: 考え2
-          link: /
+        - title: Agape
+          link: /jp/agape
     - category: 研究
       posts:
-        - title: 研究 1
-          link: /
-        - title: 研究 2
-          link: /
+        - title: "映画: American Beauty 1999"
+          link: /jp/american-beauty
     - category: 著作
       posts:
-        - title: 一編の詩
-          link: /
-        - title: 手紙
-          link: /
-
-zh:
-  sidebarBlog:
-    title: 博客文章
-    list:
-    - category: 笔记
-      posts:
-        - title: 注释 1
-          link: /
-        - title: 注释 2
-          link: /
-    - category: 和我一起学习吧
-      posts:
-        - title: C++系列
-          link: /zh/learn/the-cpp-saga-0
-    - category: 思想
-      posts:
-        - title: 思想 1
-          link: /
-        - title: 思想 2
-          link: /
-    - category: 研究
-      posts:
-        - title: 研究 1
-          link: /
-        - title: 研究 2
-          link: /
-    - category: 书面帖子
-      posts:
-        - title: 一首诗
-          link: /
-        - title: 一封信
-          link: /
+        - title: Una Carta
+          link: /es/una-carta
 
 de:
   sidebarBlog:
@@ -172,20 +127,12 @@ de:
           link: /
         - title: Notiz 2
           link: /
-    - category: Lerne mit mir
-      posts:
-        - title: C++-Reihe
-          link: /de/learn/the-cpp-saga-0
     - category: Gedanken
       posts:
-        - title: Gedanke 1
-          link: /
-        - title: Gedanke 2
-          link: /
+        - title: Agape 1
+          link: /de/agape
     - category: Forschungen
       posts:
-        - title: Forschung 1
-          link: /
         - title: Forschung 2
           link: /
     - category: Schriften
