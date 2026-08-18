@@ -1,6 +1,6 @@
 ---
 import {registerScript} from '../scripts/registerScript'
-import brainjs from '../scripts/brain.js?raw'
+// import brainjs from '../scripts/brain.js?raw'
 
 import '../styles/aside.css'
 import '../styles/brain.css'
@@ -11,7 +11,7 @@ import Navigator from '../components/Navigator.astro'
 const script = await registerScript({
   page: 'home',
   noSidebar: true,
-  extraScript: brainjs,
+  // extraScript: brainjs,
 })
 
 ---
