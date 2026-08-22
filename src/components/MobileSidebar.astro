@@ -57,16 +57,8 @@ const {sidebarBlog} = getSidebarTranslations(lang || 'en')
   </ul>
 
   <footer>
-    {isBlog ? null : (
-      <button
-        id="langBtn"
-        data-i18n-sep=": "
-        data-i18n="language,langName"/>
-    )}
+    {isBlog ? null :  <button id="langBtn" data-i18n="langName"/>}
     {lang !== '' ? <button id="themeBtn"/> :
-    <button
-      id="themeBtn"
-      data-i18n-sep=": "
-      data-i18n="theme,themeVal"/>}
+    <button id="themeBtn" data-i18n="themeVal"/>}
   </footer>
 </aside>

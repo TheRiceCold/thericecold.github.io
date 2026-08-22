@@ -27,18 +27,13 @@ const
         </a>
       ))}
     </div>
-  ) : (
-    <button
-      id="langBtn"
-      data-i18n-sep=": "
-      data-i18n="language,langName"/>
-  )}
+  ) : (<>
+    <button id="langBtn" data-i18n="langName"/>
+    <i>❙</i>
+  </>)}
 
   {lang !== '' ? <button id="themeBtn"/> :
-    <button
-      id="themeBtn"
-      data-i18n-sep=": "
-      data-i18n="theme,themeVal"/>}
+    <button id="themeBtn" data-i18n="themeVal"/>}
 
   <button id="menuBtn">☰</button>
 </header>

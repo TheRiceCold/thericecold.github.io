@@ -1,10 +1,10 @@
-
 en:
   page: About me
   visit: Visit
   profession: >-
     <i id="term">Programmer</i> |
     <i id="term">Artist</i> |
+    <i id="term">Writer</i> |
     <a>View resume</a>
   summary:
     - >-
@@ -18,7 +18,7 @@ en:
       However, I should note that I also hold some experience in
       <b id="term">full-stack development</b>.
     - >-
-      I am fluent in both <u>English</u> and <b id="term">Tagalog</b>,
+      <br>I am fluent in both <u>English</u> and <b id="term">Tagalog</b>,
       and I can communicate in <u>Spanish</u>,
       although I would like it to be <u>spoken slowly</u>.
     - >-
@@ -28,14 +28,14 @@ en:
       I'm essencially practioner of <b id="term">autodidactism</b>.
   resume: Resume
   education:
-    head: Education
+    head: 🎓 Education
     content: >-
       • <b id="term">BSEMC</b>/<b id="term">Game Development</b> |
       <i id="term">University of Caloocan City</i> | 2017-2021<br>
       • <b id="term">Software Engineering</b> |
       <i id="term">Avion School</i> | 2022-2023
   programming:
-    head: Programming
+    head: 👨‍💻 Programming
     content: >-
       <b id="term">C</b> |
       <b id="term">C++</b> |
@@ -44,19 +44,18 @@ en:
       <b id="term">Python</b> |
       <b id="term">Nix</b>
   languages:
-    head: Spoken Languages
+    head: 🗣️ Spoken Languages
     content: >-
       English: <b>C1</b> |
       Spanish: <b>B2</b> |
-      <u id="term">Tagalog</u>: Native
+      Tagalog: Native
   extra:
-    head: Small Information
+    head: More Info
     content: >-
       <b>Homosapien</b> |
+      <b>Filipino (Tagalog)</b> |
       <b id="term">Gen Z</b> |
-      <b>Austronesian</b> |
-      177cm short | 2B Hair
-  more: ❥ Read more (If you want)
+      177cm | <b id="term">2B Hair</b>
   glossary:
     - term: programmer
       description: >-

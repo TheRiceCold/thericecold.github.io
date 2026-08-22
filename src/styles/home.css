@@ -10,50 +10,35 @@
 
     li{gap:4px}
     p,li{font-size:14px}
-    h3,h4{margin-bottom:8px}
+    h3:before{content:'👋 '}
+    h3,h4{margin-bottom:12px}
 
     article {
-      padding:12px;
+      padding:16px;
       border:var(--border);
       background:var(--surface);
       ul{gap:4px}
-      &:not(:first-child) a:before {content:'✱ '}
       &:first-child {
-	      ul{gap: 16px}
+	ul{gap:16px}
         p{line-height:1.7;white-space:nowrap}
-	      a{display:inline;text-transform:none}
+	a{display:inline;text-transform:none}
       }
 
-      &:nth-child(3) li {
-        padding-bottom:4px;
-        justify-content:space-between;
-        &:not(:last-child) {border-bottom:var(--border)}
+      &:nth-child(3) li, &:nth-child(2) li{
+        padding:4px;
+        &:not(:last-child){border-bottom:var(--border)}
       }
+      &:nth-child(3) li{justify-content:space-between}
 
       /* Artworks */
       div{
         gap:12px;
-        img {
+        img{
           opacity:75%;
           object-fit:cover;
           width:100px;height:100px;
           &:hover{opacity:100%}
         }
-
-        /*Desktop*/
-        @media(max-width:1440px){img:last-child{display:none}}
-        /* Hides Last 2 Images to display only 6 */
-        @media(max-width:1200px){img:nth-last-child(-n+2){display:none}}
-        /* Hides Last 3 Images to display only 5 */
-        @media(max-width:1100px){img:nth-last-child(-n+3){display:none}}
-
-        /* Tablets and Smartphones */
-        /* Displays all, bc sidebars are hidden */
-        @media(max-width:1000px){img{display:block !important}}
-        @media(max-width:900px){img:last-child{display:none !important}}
-        @media(max-width:800px){img:nth-last-child(-n+2){display:none !important}}
-        @media(max-width:700px){img:nth-last-child(-n+3){display:none !important}}
-        @media(max-width:550px){img:nth-last-child(-n+4){display:none !important}}
       }
     }
   }

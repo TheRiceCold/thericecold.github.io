@@ -7,74 +7,35 @@ import '../styles/aside.css'
 import Layout from '../layouts/Layout.astro'
 import Sidebar from '../components/Sidebar.astro'
 import Navigator from '../components/Navigator.astro'
+import MobileSidebar from '../components/MobileSidebar.astro'
 
 const script = await registerScript({ page: 'projects' })
+const categories = ['feature', 'config', 'package', 'old', 'simple']
 
 ---
 <Layout description="TheRiceCold's projects" page="projects">
-  <Sidebar/>
+  <Sidebar/><MobileSidebar/>
 
   <section>
-    <h3 data-i18n="feature.label"/>
-    <article>
-      <template data-i18n-list="feature.list">
-        <div>
-          <b data-i18n-item="name"/>
-          <p data-i18n-item="desc"/>
-          <span>
-            <template data-i18n-sublist="tags">
-              <small data-i18n-item/>
-            </template>
-          </span>
-        </div>
-      </template>
-    </article><br>
+    <h2 data-i18n="page"/><br>
+    <p data-i18n="description"/><hr>
 
-    <h3 data-i18n="config.label"/>
-    <article>
-      <template data-i18n-list="config.list">
-        <div>
-          <b data-i18n-item="name"/>
-          <p data-i18n-item="desc"/>
-          <span>
-            <template data-i18n-sublist="tags">
-              <small data-i18n-item/>
-            </template>
-          </span>
-        </div>
-      </template>
-    </article><br>
-
-
-    <h3 data-i18n="simple.label"/>
-    <article>
-      <template data-i18n-list="simple.list">
-        <div>
-          <b data-i18n-item="name"/>
-          <p data-i18n-item="desc"/>
-          <span>
-            <template data-i18n-sublist="tags">
-              <small data-i18n-item/>
-            </template>
-          </span>
-        </div>
-      </template>
-    </article><br>
-
-    <h3 data-i18n="archive.label"/>
-    <article>
-      <template data-i18n-list="archive.list">
-        <div>
-          <b data-i18n-item="name"/>
-          <p data-i18n-item="desc"/>
-          <span>
-            <template data-i18n-sublist="tags">
-              <small data-i18n-item/>
-            </template>
-          </span>
-        </div>
-      </template>
-    </article>
+    {categories.map(c => (<>
+      <h3 data-i18n={c+".label"}/>
+      <article>
+        <template data-i18n-list={c+".list"}>
+	  <div>
+	    <b data-i18n-item="name"/>
+	    <p data-i18n-item="desc"/>
+	    <span>
+	      <template data-i18n-sublist="tags">
+	        <small data-i18n-item/>
+	      </template>
+	    </span>
+	  </div>
+	</template>
+      </article>
+    </>))}
   </section>
 
   <Navigator title="category" shortcuts="shortcuts" />

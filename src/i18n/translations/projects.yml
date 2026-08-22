@@ -2,8 +2,9 @@ en:
   page: My Projects
   category: Categories
   shortcuts: [Featured, Configurations, Simple projects, Archived]
+  description: My collection of software development projects that I worked, enjoyed and find useful to create and contribute. 
   feature:
-    label: Featured Projects
+    label: ✨ Featured
     list:
       - name: Likhâ
         link: https://github.com/thericecold/likha
@@ -19,7 +20,7 @@ en:
         tags: [javascript, astro, template]
 
   config:
-    label: Configurations
+    label: ⚙️ Configurations
     list:
       - name: dots
         link: https://github.com/thericecold/dots
@@ -33,14 +34,9 @@ en:
         link: https://github.com/elarrozfrio/zmacs
         desc: Emacs setup with Smartly utilize Meow Modal Editing and Zettelkasten.
         tags: [elisp, nix]
-
-  simple:
-    label: Simple Projects
+  package:
+    label: 📦 Package
     list:
-      - name: Lagumbuhay
-        link: https://github.com/thericecold/lagumbuhay
-        desc: A resume template written in Typst.
-        tags: [typst, template, document]
       - name: fzf-lua-projectile
         link: https://github.com/thericecold/fzf-lua-projectile
         desc: A neovim plugin for searching git projects using fzf-lua.
@@ -50,8 +46,8 @@ en:
         desc: A small js script for converting markdown to html.
         tags: [javascript, package]
 
-  archive:
-    label: Archived Projects
+  old:
+    label: 🕸️ Archived / Old
     list:
       - name: Kaizen
         link: https://github.com/thericecold/kaizen
@@ -62,6 +58,15 @@ en:
         link: https://github.com/thericecold/online-platform-for-professionals
         desc: An old project to finish my fullstack web bootcamp.
         tags: [nextjs, reactjs]
+
+  simple:
+    label: 👌 Simple
+    list:
+      - name: Lagumbuhay
+        link: https://github.com/thericecold/lagumbuhay
+        desc: A resume template written in Typst.
+        tags: [typst, template, document]
+
 
 es:
   page: Mis Proyectos

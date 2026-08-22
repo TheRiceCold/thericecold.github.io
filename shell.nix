@@ -16,4 +16,3 @@ pkgs.mkShell {
     echo "✨ Ready for development!"
   '';
 }
-

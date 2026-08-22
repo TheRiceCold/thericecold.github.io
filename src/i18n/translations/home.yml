@@ -1,22 +1,22 @@
 en:
   page: Home
   description: TheRiceCold's Homepage
-  navigate: Navigate
+  jump: Jump to
   welcome: Hello there.
   intro:
     - >-
        My name is <b id="term">Dale Walter</b>. I am a sad <b id="term">Emacs</b> user and a tryhard <b id="term">polyglot</b>.
        <br>Well, of course I <b id="term">code</b> and <b id="term">write</b> nodes in <b id="term">Org-mode</b>.
-       <br>I also have a lot of strong views, like <b id="term">C++</b> being the superior <b id="term">programming language</b>.<br>
+       <br>I also have a lot of strong views, like <b id="term">C++</b> being the superior <b id="term">programming language</b>.
     - >-
        Anyways, this place is a showcase of my professional background, computing works, <b id="term">digital arts</b>,
        <br>as well as my thoughts on many topics, which I publish as blog posts.
-    - >-
-       To find out more about this random fella, <a href="about">click here</a>.
+    - To find out more about this random fella, <a href="about">click here</a>.
   projects:
     label: Featured Projects
     list:
-      - <a href="https://github.com/thericecold/kaizen">Kaizen|Archived|</a> – A <b id="term">Unix Desktop Environment</b> for <b id="term">Hyprland</b> written with <b id="term">Ags.</b>
+      - '<a href="https://github.com/thericecold/zmacs">Config: Zmacs</a> - A <b id="term">Zettelkasten</b> Optimized <b id="term">Emacs</b> Configuration.'
+      - '<a href="https://github.com/thericecold/kaizen">Archived 2024: Kaizen</a> – A <b id="term">Unix Desktop Environment</b> for <b id="term">Hyprland</b> written with <b id="term">Ags.</b>'
   recentPosts:
     label: Recent Posts
     list:
@@ -85,7 +85,7 @@ en:
 es:
   page: Inicio
   description: Página web de ElArrozFrio
-  navigate: Navegar
+  jump: Salta a
   welcome: Encantado.
   intro:
     - >-
@@ -95,8 +95,7 @@ es:
     - >-
        Pero bueno, esto muestra mis experiencias profesionales, los proyectos de informática,
        <br>mis trabajos de arte digital, y mis reflexiones sobre muchos temas que publiqué en un blog.
-    - >-
-      Si quieres saber más sobre mí, <a href="about">haz clic aquí</a>.
+    - Si quieres saber más sobre mí, <a href="about">haz clic aquí</a>.
   projects:
     label: Proyectos destacados
     list:
@@ -126,7 +125,7 @@ es:
 fil:
   page: Tahanan
   description: Tahanan ni KaningLamig
-  navigate: Manalaktak
+  jump: Tumalon sa
   welcome: Uy.
   intro:
     - >-
@@ -136,8 +135,7 @@ fil:
     - >-
        O, s'ya pala, itóng páhiná ay pagpapakita at pagmamapurí sa aking mg̃a kadalubhasàang kakayahán.
        <br>Sa larangan ng̃ inpormatica, mg̃a guhit dihitál, at aking mg̃a kaisipáng nakalathalà sa aking blog.
-    - >-
-      Kung ibig mo pa akóng mabatíd, <a href="about">pindutín itó</a>.
+    - Kung ibig mo pa akóng mabatíd, <a href="about">pindutín itó</a>.
   projects:
     label: Tampók na mg̃a gawâ
     list:
@@ -153,7 +151,7 @@ fil:
 ja:
   page: 家
   description: 冷めたご飯のホームページ
-  navigate: ナビゲートする
+  jump: ここにジャンプ
   welcome: こんにちは
   intro:
     - >-
@@ -182,7 +180,7 @@ ja:
 de:
   page: heim
   description: DerReisKalts Homepage
-  navigate: navigieren
+  jump: Weiter zu
   welcome: Wie geht's, Digga?
   intro:
     - >-

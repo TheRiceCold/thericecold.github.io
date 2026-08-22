@@ -1,41 +1,33 @@
 en:
   sidebarBlog:
-    title: My Nodes
+    title: Posts
     list:
     - category: notes
       posts:
         - title: C++ Vector
           link: /en/cpp-vector
-        - title: Nix ❄
+        - title: "Larp Series: Nix"
           link: /en/nix
-        - title: "Emacs: Introduction"
-          link: /en/emacs-intro
+        - title: Containerization
+          link: /en/containerization
+        - title: "Larp Series: Emacs"
+          link: /en/larp-emacs
     - category: insights
       posts:
         - title: Agape
           link: /en/agape
+        - title: Intellectual Pride
+          link: /en/intellectual-pride
         - title: Unix Philosophy
-          link: /en/unix-philosohpy
+          link: /en/unix-philosophy
         - title: Forgiveness
           link: /en/forgiveness
-        - title: Human Intelligence
-          link: /en/human-intelligence
-        - title: Pseudo Intellectualism
-          link: /en/pseudo-intellectualism
-    - category: analysis
+    - category: Review
       posts:
-        - title: "TV Series: Bojack Horseman"
+        - title: Bojack Horseman
           link: /en/hxh-hunter-exam
-        - title: "HxH 0: Hunter Exam"
-          link: /en/hxh-hunter-exam
-        - title: "HxH 1: Heavens Arena"
-          link: /en/hxh-heavens-arena
-        # - title: "HxH 2: Yorknew City"
-        #   link: /en/hxh-yorknew-city
-        # - title: "HxH 3: Greed Island"
-        #   link: /en/hxh-greed-island
-        # - title: "HxH 4: Chimera Ant"
-        #   link: /en/hxh-chimera-ant
+        - title: Hunter x Hunter
+          link: /en/hxh
         - title: "Miniseries: Hilda Furacão"
           link: /en/american-beauty
         - title: "TV Series: Dark"
@@ -46,10 +38,18 @@ en:
       posts:
         - title: Raw Milk
           link: /en/raw-milk
+        - title: Death of Industrial Age
+          link: /en/raw-milk
+    - category: journal
+      posts:
+        - title: Life of a Yearner
+          link: /en/yearn
+        - title: My CPTSD
+          link: /en/cptsd
     - category: writings
       posts:
-        - title: Una Carta
-          link: /es/una-carta
+        - title: Ruisu
+          link: /es/ruisu
 es:
   sidebarBlog:
     title: Mis Nodos

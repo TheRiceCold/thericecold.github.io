@@ -5,6 +5,7 @@ Ultra lightweight and blazingly fast multilingual website using *Bun* + *AstroJS
 This website serves as documentation of my professional background, projects and insights.
 
 *** Setup
+
 **** Bare
 *Prerequisite:* =Bun v1.3=
 + Clone the repo:
@@ -14,5 +15,15 @@ This website serves as documentation of my professional background, projects and
 + Run server:
   =bun run dev=
 
+**** Container
++ Install and run the server with Docker or Podman:
+#+begin_src sh
+  docker run --rm -it \
+  -v "$(pwd)":/app -w /app \
+  -p 4321:4321 \
+  oven/bun:alpine \
+  sh -c "bun i; bun run dev -- --host"
++#end_src
+
 **** With Nix
-+ Just run =nix-shell= then =bun dev=.
++ Just run =nix-shell=, then run =bun dev=.

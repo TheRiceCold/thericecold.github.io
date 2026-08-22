@@ -2,6 +2,11 @@
   grid-template-columns:auto 1fr auto;
   grid-template-areas:"side content nav";
 
+  h2{
+    margin-top:20px;
+    color:var(--green);
+    &:before{content:'🗃️ '}
+  }
   span{align-self:end}
   small{font-size:14px;&:before{content: '★ '}}
   p{font-size:15px;margin-bottom:auto}
@@ -10,7 +15,8 @@
     grid-area:content;
     margin:0 auto;
 
-    h3 {margin-bottom:8px}
+    hr{margin-bottom:0}
+    h3{margin:20px 0}
     article{
       gap:16px;
       border:none;

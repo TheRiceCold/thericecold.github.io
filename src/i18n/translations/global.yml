@@ -1,52 +1,44 @@
 en:
-  language: language
   langName: English
   title: TheRiceCold
   search: search...
   read: Read in
-  theme: theme
   system: system
   light: light
   dark: dark
   outline: Outline
   footer: This is a footer.
-  links: [About, Projects, Timeline, Brain]
+  links: [About, Projects, Timeline, Drawings, Brain]
 
 es:
-  language: idioma
   langName: Español
   title: ElArrozFrio
   read: Leer en
   search: buscar...
-  theme: tema
   system: sistema
   light: claro
   dark: oscuro
   outline: Índice
   footer: Esto es pie de pagina.
-  links: [Sobre mí, Proyectos, Cronología, Cerebro]
+  links: [Sobre mí, Proyectos, Cronología, Dibujos, Cerebro]
 
 fil:
-  language: Wikà
   langName: Tagalog
   title: KaningLamíg
   read: Basahin sa
   search: hanapin..
-  theme: tema
   system: kaayusán
   light: liwanag
   dark: dilím
   outline: Nilálamán
   footer: Ito ay paanán ng̃ páhiná.
-  links: [Tungkól sa akin, Mg̃a gawâ, Hanay ng̃ panahón, Utak]
+  links: [Tungkól sa akin, Mg̃a gawâ, Hanay ng̃ panahón, Mg̃a guhit, Utak]
 
 ja:
-  language: 言語
   langName: 日本語
   title: 冷やご飯
   read: 読む
   search: 検索...
-  theme: 体裁
   system: システム
   light: 光
   dark: 暗い
@@ -55,12 +47,10 @@ ja:
   links: [について, プロジェクト, 年表, 脳みそ]
 
 de:
-  language: Sprache
   langName: deutsch
   title: DerReisKalt
   read: einlesen
   search: suchen...
-  theme: Thema
   system: system
   light: Licht
   dark: dunkel

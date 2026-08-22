@@ -5,29 +5,26 @@
   article{
     width:600px;
     margin:0 auto;
+    padding: 20px 0;
     grid-area:content;
     height:fit-content;
     border:var(--border);
     background:var(--surface);
     b,p{font-size:14px}
 
-    h3,h4{padding:16px 28px 4px} /* Name,More */
-    small{margin:0 28px 16px} /* Profession */
+    h3{padding:0 28px 4px} /* Name,More */
+    small{padding:0 28px} /* Profession */
     a{display:inline} /* View Resume */
 
-    p{padding:0 28px 12px;line-height:1.5}
+    p{padding:0 28px;line-height:1.5}
 
-    /* Summary */
-    ul p:last-child{padding-bottom:18px;border-bottom:var(--dashed)}
-
-    h5{
-      color:var(--green);
-      padding:16px 28px 8px;
-      &:before{content:'☘ '}
+    h4 {
+      font-size:14px;
+      color:var(--subtle);
+      padding:0 28px 12px;
       + b{padding-left:36px}
-      ~ p{padding:0 28px 4px 36px}
+      ~ p{padding:0 28px 0 36px}
     }
-    h4{color:var(--red);border-top:var(--dashed)}
   }
 }
 

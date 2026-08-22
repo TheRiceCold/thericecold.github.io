@@ -10,17 +10,16 @@ import Me from '../../public/me.svg'
 import Layout from '../layouts/Layout.astro'
 import Sidebar from '../components/Sidebar.astro'
 import Navigator from '../components/Navigator.astro'
+import MobileSidebar from '../components/MobileSidebar.astro'
 
 const name = 'Dale Walter García Hicban'
 
 const shortcuts = [
-  {isI18n: true, label: 'Resume', link:''},
   {isI18n: true, label: 'Projects', link:'/projects'},
   {label: 'GitHub', link: 'https://github.com/thericecold' },
-  {label: 'Twitter', link: 'https://x.com/thericecold'},
-  {label: 'TikTok', link: 'https://tiktok.com/@thericecold'},
-  {label: 'Instagram', link: 'https://instagram.com/thericecold'},
+  {label: 'X (Twitter)', link: 'https://x.com/thericecold'},
   {label: 'Spotify', link: 'https://invite.duolingo.com/BDHTZTB5CWWKT5KLM744IL2KSY'},
+  {label: 'TikTok', link: 'https://tiktok.com/@thericecold'},
 ]
 
 const script = await registerScript({page:'about'})
@@ -28,31 +27,29 @@ const script = await registerScript({page:'about'})
 ---
 
 <Layout page="about" description="About TheRiceCold">
-  <Sidebar/>
-
+  <Sidebar/><MobileSidebar/>
   <article>
     <h3>{name}</h3>
-    <small data-i18n-html="profession"/>
+    <small data-i18n-html="profession"/><hr/>
     <ul>
       <template data-i18n-list="summary">
         <p data-i18n-item data-i18n-html/>
       </template>
-    </ul>
+    </ul><hr/>
 
-    <h5 data-i18n="education.head"/>
-    <p data-i18n-html="education.content"/>
+    <h4 data-i18n="education.head"/>
+    <p data-i18n-html="education.content"/><hr/>
 
-    <h5 data-i18n="programming.head"/>
-    <p data-i18n-html="programming.content"/>
+    <h4 data-i18n="programming.head"/>
+    <p data-i18n-html="programming.content"/><hr/>
 
-    <h5 data-i18n="languages.head"/>
-    <p data-i18n-html="languages.content"/>
+    <h4 data-i18n="languages.head"/>
+    <p data-i18n-html="languages.content"/><hr/>
 
-    <h5 data-i18n="extra.head"/>
-    <p data-i18n-html="extra.content"/>
-
-    <h4 data-i18n="more" id="term"/>
+    <h4 data-i18n="extra.head"/>
+    <p data-i18n-html="extra.content"/></hr>
   </article>
+
   <Navigator title="visit" shortcuts={shortcuts} />
-  <script is:inline set:html={script.code}></script>
+  <script is:inline set:html={script.code}/>
 </Layout>
