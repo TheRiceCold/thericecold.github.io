@@ -48,8 +48,8 @@ en:
           link: /en/cptsd
     - category: writings
       posts:
-        - title: Ruisu
-          link: /es/ruisu
+        - title: Trash
+          link: /es/basura
 es:
   sidebarBlog:
     title: Mis Nodos
